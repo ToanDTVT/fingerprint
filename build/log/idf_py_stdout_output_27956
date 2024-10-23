@@ -1,0 +1,5 @@
+-- Configuring incomplete, errors occurred!
+See also "D:/ESP/ESP project/fingerprint/build/CMakeFiles/CMakeOutput.log".
+[0/1] Re-running CMake...
+FAILED: build.ninja 
+D:\ESP\ESP\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -S"D:\ESP\ESP project\fingerprint" -B"D:\ESP\ESP project\fingerprint\build"
