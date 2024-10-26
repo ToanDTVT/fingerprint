@@ -26,11 +26,6 @@
 #define COL_3 GPIO_NUM_27             //pin3 keypad
 
 
-
-
-
-extern DataPacket USER[MAX_USERS];
-
 void func1(void);
 
 void gpio_init();

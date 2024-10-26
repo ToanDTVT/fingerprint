@@ -5,11 +5,18 @@
 #include "handle_password.h"
 
 DataPacket USER[MAX_USERS];
+volatile enum statemachine currentstate = STATE_IDLE;
+
 
 void app_main(void)
 {
+    gpio_init();
     uart_init();
-    PS_Enroll(1);
+    keypad_init();
+    
+    create_password_task();
+
     func();
     func1();
+    func2();
 }

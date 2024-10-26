@@ -656,6 +656,13 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/list_install_co
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install/local.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install/strip.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/__idf_handle_password.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/edit_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/rebuild_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/list_install_components.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install/local.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install/strip.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

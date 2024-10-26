@@ -1,0 +1,31 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\bootloader\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/ESP/ESP project/fingerprint/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/9] Building C object esp-idf/handle_password/CMakeFiles/__idf_handle_password.dir/handle_password.c.obj
+D:/ESP/ESP project/fingerprint/components/handle_password/handle_password.c: In function 'create_password_task':
+D:/ESP/ESP project/fingerprint/components/handle_password/handle_password.c:197:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  197 |     xTaskCreate(password_task, "password task", 2048, NULL, 5, &password_task_handle);
+      |                 ^~~~~~~~~~~~~
+      |                 |
+      |                 void (*)(void)
+In file included from D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from D:/ESP/ESP project/fingerprint/components/gpio_lib/include/gpio_lib.h:4,
+                 from D:/ESP/ESP project/fingerprint/components/handle_password/include/handle_password.h:4,
+                 from D:/ESP/ESP project/fingerprint/components/handle_password/handle_password.c:2:
+D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:371:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  371 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+[4/9] Linking C static library esp-idf\handle_password\libhandle_password.a
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable fingerprint.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP/ESP project/fingerprint/build/fingerprint.bin
+[9/9] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/ESP/ESP project/fingerprint/build/partition_table/partition-table.bin" "D:/ESP/ESP project/fingerprint/build/fingerprint.bin""
+fingerprint.bin binary size 0x31670 bytes. Smallest app partition is 0x100000 bytes. 0xce990 bytes (81%) free.

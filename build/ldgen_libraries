@@ -64,4 +64,5 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/wifi_provisioning/libwifi_provision
 D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/libuart_lib.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/libuser_data.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/libgpio_lib.a
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/libhandle_password.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/libmain.a

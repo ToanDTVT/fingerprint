@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 #define MAX_USERS 10
 #define SIZE_OF_PASSWORD 5
@@ -14,6 +15,13 @@ typedef struct {
     uint8_t user_fingerprint;
 } DataPacket;
 
+enum statemachine {
+	STATE_IDLE,
+	STATE_OPENDOOR,
+	STATE_DISABLE,
+	STATE_SETTING,
+	STATE_IDLE_FINGERPRINT
+};
 
 void func(void);
 
