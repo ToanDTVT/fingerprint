@@ -103,8 +103,6 @@ uint8_t PS_RegModel() {
 
 
 
-
-
 // Lưu mẫu vân tay vào bộ nhớ (page_id: vị trí lưu trữ)
 uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
     uint8_t data[3];
