@@ -3,6 +3,7 @@
 #include "gpio_lib.h"
 #include "user_data.h"
 #include "handle_password.h"
+#include "handle_fingerprint.h"
 
 DataPacket USER[MAX_USERS];
 volatile enum statemachine currentstate = STATE_IDLE;
@@ -19,4 +20,5 @@ void app_main(void)
     func();
     func1();
     func2();
+    func3();
 }

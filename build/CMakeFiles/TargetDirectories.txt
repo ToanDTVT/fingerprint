@@ -663,6 +663,13 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/list_ins
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install/local.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/install/strip.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/__idf_handle_fingerprint.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/edit_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/rebuild_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/list_install_components.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/install.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/install/local.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/CMakeFiles/install/strip.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/__idf_main.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/edit_cache.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
