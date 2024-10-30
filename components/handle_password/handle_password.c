@@ -181,6 +181,12 @@ void password_task (void * pvParameters){
                 case STATE_IDLE_FINGERPRINT:
                 break;
 
+                case STATE_ADD_FINGERPRINT:
+                break;
+
+                case STATE_DELETE_FINGERPRINT:
+                break;
+
                 case STATE_OPENDOOR:
                     open_door();
                     vTaskDelay(1000/portTICK_PERIOD_MS);

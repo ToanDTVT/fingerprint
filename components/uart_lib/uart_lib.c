@@ -2,6 +2,9 @@
 #include <stdint.h>
 #include "uart_lib.h"
 
+
+static const char* TAG = "FINGERPRINT";
+
 void uart_init() {
     const uart_config_t uart_config = {
         .baud_rate = 57600,
@@ -113,26 +116,27 @@ bool verify_password_of_AS608(){
 
 // Lấy ảnh vân tay từ cảm biến
 uint8_t PS_GetImage() {
-    printf("================GET IMAGE=================== \n");
+
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x01, 0x00, 0x05};
                      // | Header   | Address               | PI  | Length    | Cmmd||Checksum  |
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
-    printf("Send %d byte: ", sizeof(command));
-    for (int t = 0; t < sizeof(command); t++){
-        printf("%02x ", command[t]);
-    }
-    printf("\n");
+    // printf("Send %d byte: ", sizeof(command));
+    // for (int t = 0; t < sizeof(command); t++){
+    //     printf("%02x ", command[t]);
+    // }
+    //printf("\n");
 
     uint8_t response[128];
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-    printf("============================================ \n");
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    //int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    ESP_LOGW(TAG, "PS_GETIMAGE: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -140,21 +144,20 @@ uint8_t PS_GetImage() {
 // Tạo đặc trưng vân tay từ hình ảnh (buffer_id = 1 hoặc 2)
 uint8_t PS_GenChar(uint8_t buffer_id) {
     //uint8_t data[1] = {buffer_id};
-    printf("================GET CHAR=================== \n");
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x02, buffer_id, 0x00, (0x07 + buffer_id)};
                      // | Header   | Address               | PI  | Length    | Cmmd|  Data    |Checksum                 |
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     
     uint8_t response[128];
     int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-    printf("============================================ \n");
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    ESP_LOGW(TAG, "PS_GENCHAR: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -162,26 +165,26 @@ uint8_t PS_GenChar(uint8_t buffer_id) {
 // Kết hợp hai đặc trưng vân tay thành mẫu
 uint8_t PS_RegModel() {
     //send_command(0x03, NULL, 0); // Gửi lệnh kết hợp đặc trưng vân tay
-    printf("================RegModel=====================\n");
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x05, 0x00, 0x09};
                      // | Header   | Address               | PI  | Length    | Cmmd||Checksum   |
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
-    printf("Send %d byte: ", sizeof(command));
-    for (int t = 0; t < sizeof(command); t++){
-        printf("%02x ", command[t]);
-    }
-    printf("\n");
+    // printf("Send %d byte: ", sizeof(command));
+    // for (int t = 0; t < sizeof(command); t++){
+    //     printf("%02x ", command[t]);
+    // }
+    // printf("\n");
 
     uint8_t response[128];
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-    printf("============================================ \n");
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    ESP_LOGW(TAG, "PS_REGMODEL: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -194,29 +197,35 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
     // data[1] = (page_id >> 8) & 0xFF;
     // data[2] = page_id & 0xFF;
     // send_command(0x06, data, 3); // Gửi lệnh lưu mẫu vân tay
-    printf("================PS STORE=====================\n");
     uint8_t high_byte_page_id = (page_id >> 8) & 0xFF; 
     uint8_t low_byte_page_id = page_id & 0xFF ;
     uint16_t check_sum = 0x01 + 0x06 + 0x06 + buffer_id + page_id;
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x06, 0x06, buffer_id, high_byte_page_id, low_byte_page_id, (check_sum >> 8) & 0xFF, (check_sum & 0xFF)};
                      // | Header   | Address               | PI  | Length    | Cmmd|  Data                                         |Checksum                                    |
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
-    printf("Send %d byte: ", sizeof(command));
-    for (int t = 0; t < sizeof(command); t++){
-        printf("%02x ", command[t]);
-    }
-    printf("\n");
+    // printf("Send %d byte: ", sizeof(command));
+    // for (int t = 0; t < sizeof(command); t++){
+    //     printf("%02x ", command[t]);
+    // }
+    // printf("\n");
 
     uint8_t response[128];
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    ESP_LOGW(TAG, "PS_STORE: response: %02x", response[9]);
+    if (response[9] == 0x00) {
+        ESP_LOGI(TAG, "PS_STORE: Fingerprint stored successfully.");
+    } else {
+        ESP_LOGI(TAG, "PS_STORE: Failed to store fingerprint.");
     }
-    printf("============================================ \n");
+    
     return response[9]; // Mã phản hồi
 }
 
@@ -224,7 +233,7 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
 // Hàm PS_Enroll: Đăng ký vân tay
 void PS_Enroll(uint16_t page_id) {
     uint8_t status;
-    printf("Place your finger on the sensor.\n");
+    ESP_LOGW(TAG, "Place your finger on the sensor.");
     
     // Lần 1: Lấy ảnh và tạo đặc trưng
     do {
@@ -233,11 +242,11 @@ void PS_Enroll(uint16_t page_id) {
 
     status = PS_GenChar(1); // Tạo đặc trưng ở buffer 1
     if (status != 0x00) {
-        printf("Failed to generate character from image. Error: %d\n", status);
+        ESP_LOGE(TAG, "PS_GENCHAR_1: Failed to generate character from image. Error: %d\n", status);
         return;
     }
 
-    printf("Remove your finger and place it again.\n");
+    ESP_LOGW(TAG, "Remove your finger and place it again.\n");
     vTaskDelay(2000 / portTICK_PERIOD_MS); // Chờ người dùng bỏ tay ra
 
     // Lần 2: Lấy ảnh và tạo đặc trưng lần 2
@@ -247,64 +256,72 @@ void PS_Enroll(uint16_t page_id) {
 
     status = PS_GenChar(2); // Tạo đặc trưng ở buffer 2
     if (status != 0x00) {
-        printf("Failed to generate character from image. Error: %d\n", status);
+        ESP_LOGE(TAG, "PS_GENCHAR_2: Failed to generate character from image. Error: %d\n", status);
         return;
     }
 
     // Kết hợp hai đặc trưng thành mẫu vân tay
     status = PS_RegModel();
     if (status != 0x00) {
-        printf("Failed to combine fingerprint templates. Error: %d\n", status);
+        ESP_LOGE(TAG, " PS_REGMODEL: Failed to combine fingerprint templates. Error: %d\n", status);
         return;
     }
 
     // Lưu mẫu vân tay vào bộ nhớ
     status = PS_Store(1, page_id); // Lưu mẫu ở buffer 1 vào vị trí page_id
     if (status == 0x00) {
-        printf("Fingerprint enrolled successfully at position %d.\n", page_id);
+        ESP_LOGI(TAG, "PS_STORE: Fingerprint enrolled successfully at position %d.\n", page_id);
     } else {
-        printf("Failed to store fingerprint. Error: %d\n", status);
+        ESP_LOGE(TAG, "PS_STORE: Failed to store fingerprint. Error: %d\n", status);
     }
 }
 
 
-void PS_Search(uint16_t start_page, uint16_t page_num) {
-    uint8_t data[4];
-    data[0] = (start_page >> 8) & 0xFF;
-    data[1] = start_page & 0xFF;
-    data[2] = (page_num >> 8) & 0xFF;
-    data[3] = page_num & 0xFF;
+uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
+    // uint8_t data[4];
+    // data[0] = (start_page >> 8) & 0xFF;
+    // data[1] = start_page & 0xFF;
+    // data[2] = (page_num >> 8) & 0xFF;
+    // data[3] = page_num & 0xFF;
     
-    send_command(0x04, data, 4);
-    
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
+    // send_command(0x04, data, 4);
+    uint8_t high_byte_start_page = (start_page >> 8) & 0xFF; 
+    uint8_t low_byte_start_page = start_page & 0xFF ;
+    uint8_t high_byte_page_num = (page_num >> 8) & 0xFF; 
+    uint8_t low_byte_page_num = page_num & 0xFF ;
 
+    uint16_t checksum = 0x01 + 0x08 + 0x04 + buffer_id + start_page + page_num;
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x08, 0x04, buffer_id, high_byte_start_page, low_byte_start_page, high_byte_page_num, low_byte_page_num, (checksum >> 8) & 0xFF, (checksum & 0xFF)};
+                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                                                                                      |Checksum                                    |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    // printf("Send %d byte: ", sizeof(command));
+    // for (int t = 0; t < sizeof(command); t++){
+    //     printf("%02x ", command[t]);
+    // }
+    // printf("\n");
+
+
+    uint8_t response[128];
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+
+    ESP_LOGW(TAG, "PS_SEARCH: response: %02x", response[9]);
     if (response[9] == 0x00) {
-        printf("Fingerprint found at position: %d\n", (response[10] << 8) | response[11]);
+        ESP_LOGI(TAG, "PS_SEARCH: Fingerprint found at position: %d\n", (response[10] << 8) | response[11]);
+        return ((response[10] << 8) | response[11]);
     } else {
-        printf("Fingerprint not found.\n");
+        ESP_LOGI(TAG, "PS_SEARCH: Fingerprint not found.\n");
+        return 0;
     }
 }
 
-
-void PS_Store_1(uint8_t buffer_id, uint16_t page_id) {
-    uint8_t data[3];
-    data[0] = buffer_id;  // Buffer ID (1 hoặc 2)
-    data[1] = (page_id >> 8) & 0xFF;  // Page ID
-    data[2] = page_id & 0xFF;
-    
-    send_command(0x06, data, 3);
-    
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
-
-    if (response[9] == 0x00) {
-        printf("Fingerprint stored successfully.\n");
-    } else {
-        printf("Failed to store fingerprint.\n");
-    }
-}
 
 
 void PS_Delete(uint16_t page_id, uint16_t num) {

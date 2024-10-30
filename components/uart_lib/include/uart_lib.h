@@ -20,10 +20,14 @@ void uart_init();
 uint16_t calculate_checksum(uint8_t *packet, int length);
 void send_command(uint8_t command, uint8_t *data, int data_len);
 void receive_response(uint8_t *response, int len);
+
+uint8_t PS_GetImage();
+uint8_t PS_GenChar(uint8_t buffer_id);
+uint8_t PS_RegModel();
+
 uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id);
 void PS_Enroll(uint16_t page_id);
-void PS_Search(uint16_t start_page, uint16_t page_num);
-void PS_Store_1(uint8_t buffer_id, uint16_t page_id);
+uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num);
 void PS_Delete(uint16_t page_id, uint16_t num);
 void PS_Identify();
 bool verify_password_of_AS608();
