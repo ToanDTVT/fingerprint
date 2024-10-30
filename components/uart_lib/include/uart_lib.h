@@ -26,3 +26,4 @@ void PS_Search(uint16_t start_page, uint16_t page_num);
 void PS_Store_1(uint8_t buffer_id, uint16_t page_id);
 void PS_Delete(uint16_t page_id, uint16_t num);
 void PS_Identify();
+bool verify_password_of_AS608();

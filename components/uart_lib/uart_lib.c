@@ -20,10 +20,10 @@ void uart_init() {
 
 
 
-// Hàm tính tổng kiểm tra
+//Hàm tính tổng kiểm tra
 uint16_t calculate_checksum(uint8_t *packet, int length) {
     uint16_t checksum = 0;
-    for (int i = 0; i < length; i++) {
+    for (int i = 6; i < length; i++) {
         checksum += packet[i];
     }
     return checksum;
@@ -31,7 +31,7 @@ uint16_t calculate_checksum(uint8_t *packet, int length) {
 
 // Hàm gửi gói lệnh
 void send_command(uint8_t command, uint8_t *data, int data_len) {
-    uint8_t packet[64];
+    uint8_t packet[data_len + 12];
     int index = 0;
 
     // Header
@@ -43,12 +43,15 @@ void send_command(uint8_t command, uint8_t *data, int data_len) {
         packet[index++] = 0xFF; printf("Address: %02x \n", packet[index - 1]);
     }
 
-    // Command
-    packet[index++] = command;  printf("Command: %02x \n", packet[index - 1]);
+    // Xác định loại gói (01: gói lệnh,    02: gói dữ liệu,     07: gói phản hồi)
+    packet[index++] = 0x01;  printf("Packet identifier: %02x \n", packet[index - 1]);
 
     // Length
-    packet[index++] = (data_len >> 8) & 0xFF;  printf("Lenghth: %02x ", packet[index - 1]);
-    packet[index++] = data_len & 0xFF;         printf("%02x \n", packet[index - 1]);
+    packet[index++] = ((data_len + 2) >> 8) & 0xFF;  printf("Lenghth: %02x ", packet[index - 1]);
+    packet[index++] = (data_len + 2) & 0xFF;         printf("%02x \n", packet[index - 1]);
+
+    //Command (13: xác minh mật khẩu,    01: lấy hình ảnh,     02: chuyển đổi hình ảnh thành vân tay,  05: tìm kiếm vân tay)
+    packet[index++] = command;                 printf("command: %02x \n", packet[index - 1]);
 
     // Data
     for (int i = 0; i <= data_len; i++) {
@@ -83,31 +86,102 @@ void receive_response(uint8_t *response, int len) {
 }
 
 
+bool verify_password_of_AS608(){
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x07, 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1B};
+                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                 |Checksum   |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    printf("Send %d byte: ", sizeof(command));
+    for (int t = 0; t < sizeof(command); t++){
+        printf("%02x ", command[t]);
+    }
+    printf("\n");
+
+    uint8_t response[128];
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
+    if(response[9] == 0x00){
+        return true;
+    }else return false;
+}
+
+
 // Lấy ảnh vân tay từ cảm biến
 uint8_t PS_GetImage() {
-    uint8_t data[116] = {0};
-    send_command(0x01, data, sizeof(data)); // Gửi lệnh lấy ảnh vân tay
+    printf("================GET IMAGE=================== \n");
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x01, 0x00, 0x05};
+                     // | Header   | Address               | PI  | Length    | Cmmd||Checksum  |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    printf("Send %d byte: ", sizeof(command));
+    for (int t = 0; t < sizeof(command); t++){
+        printf("%02x ", command[t]);
+    }
+    printf("\n");
+
     uint8_t response[128];
-    receive_response(response, sizeof(response));
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
+    printf("============================================ \n");
     return response[9]; // Mã phản hồi
 }
 
 
 // Tạo đặc trưng vân tay từ hình ảnh (buffer_id = 1 hoặc 2)
 uint8_t PS_GenChar(uint8_t buffer_id) {
-    uint8_t data[1] = {buffer_id};
-    send_command(0x02, data, 1); // Gửi lệnh tạo đặc trưng vân tay
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
+    //uint8_t data[1] = {buffer_id};
+    printf("================GET CHAR=================== \n");
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x02, buffer_id, 0x00, (0x07 + buffer_id)};
+                     // | Header   | Address               | PI  | Length    | Cmmd|  Data    |Checksum                 |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    
+    uint8_t response[128];
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
+    printf("============================================ \n");
     return response[9]; // Mã phản hồi
 }
 
 
 // Kết hợp hai đặc trưng vân tay thành mẫu
 uint8_t PS_RegModel() {
-    send_command(0x05, NULL, 0); // Gửi lệnh kết hợp đặc trưng vân tay
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
+    //send_command(0x03, NULL, 0); // Gửi lệnh kết hợp đặc trưng vân tay
+    printf("================RegModel=====================\n");
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x05, 0x00, 0x09};
+                     // | Header   | Address               | PI  | Length    | Cmmd||Checksum   |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    printf("Send %d byte: ", sizeof(command));
+    for (int t = 0; t < sizeof(command); t++){
+        printf("%02x ", command[t]);
+    }
+    printf("\n");
+
+    uint8_t response[128];
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
+    printf("============================================ \n");
     return response[9]; // Mã phản hồi
 }
 
@@ -115,13 +189,34 @@ uint8_t PS_RegModel() {
 
 // Lưu mẫu vân tay vào bộ nhớ (page_id: vị trí lưu trữ)
 uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
-    uint8_t data[3];
-    data[0] = buffer_id;
-    data[1] = (page_id >> 8) & 0xFF;
-    data[2] = page_id & 0xFF;
-    send_command(0x06, data, 3); // Gửi lệnh lưu mẫu vân tay
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
+    // uint8_t data[3];
+    // data[0] = buffer_id;
+    // data[1] = (page_id >> 8) & 0xFF;
+    // data[2] = page_id & 0xFF;
+    // send_command(0x06, data, 3); // Gửi lệnh lưu mẫu vân tay
+    printf("================PS STORE=====================\n");
+    uint8_t high_byte_page_id = (page_id >> 8) & 0xFF; 
+    uint8_t low_byte_page_id = page_id & 0xFF ;
+    uint16_t check_sum = 0x01 + 0x06 + 0x06 + buffer_id + page_id;
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x06, 0x06, buffer_id, high_byte_page_id, low_byte_page_id, (check_sum >> 8) & 0xFF, (check_sum & 0xFF)};
+                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                                         |Checksum                                    |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+    printf("Send %d byte: ", sizeof(command));
+    for (int t = 0; t < sizeof(command); t++){
+        printf("%02x ", command[t]);
+    }
+    printf("\n");
+
+    uint8_t response[128];
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
+    printf("============================================ \n");
     return response[9]; // Mã phản hồi
 }
 

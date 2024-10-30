@@ -27,7 +27,7 @@
 
 
 /*GPIO for relay*/
-#define RELAY GPIO_NUM_34             
+#define RELAY GPIO_NUM_13             
 
 
 void func1(void);

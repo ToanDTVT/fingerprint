@@ -15,7 +15,6 @@ int check_pass_open_door(char *enter_password){
     int i;
     for(i = 0; i <= MAX_USERS; i++){
         if((strcmp(enter_password, correct_password) == 0) || (strcmp(enter_password, USER[i].user_password) == 0)){
-            currentstate = STATE_OPENDOOR;
             printf("=========================================== \n");
             printf("SUCCESSFUL!! OPEN THE DOOR! \n");
             printf("id: %d \n", USER[i].id);
@@ -155,7 +154,7 @@ void password_task (void * pvParameters){
                 case STATE_IDLE:
                     memset(enter_password, 0, sizeof(enter_password));
                     handle_input_password_idle(enter_password);
-                    vTaskDelay(2000 / portTICK_PERIOD_MS);
+                    vTaskDelay(500 / portTICK_PERIOD_MS);
                 break;
 
                 case STATE_SETTING:
