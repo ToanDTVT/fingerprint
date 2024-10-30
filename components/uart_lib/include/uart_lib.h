@@ -15,6 +15,8 @@
 #define RX_PIN GPIO_NUM_16
 
 void uart_init();
+
+
 uint16_t calculate_checksum(uint8_t *packet, int length);
 void send_command(uint8_t command, uint8_t *data, int data_len);
 void receive_response(uint8_t *response, int len);

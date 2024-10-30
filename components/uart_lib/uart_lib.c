@@ -18,6 +18,8 @@ void uart_init() {
 }
 
 
+
+
 // Hàm tính tổng kiểm tra
 uint16_t calculate_checksum(uint8_t *packet, int length) {
     uint16_t checksum = 0;
@@ -33,33 +35,40 @@ void send_command(uint8_t command, uint8_t *data, int data_len) {
     int index = 0;
 
     // Header
-    packet[index++] = 0xEF;
-    packet[index++] = 0x01;
+    packet[index++] = 0xEF; printf("Header: %02x ", packet[index - 1]);
+    packet[index++] = 0x01; printf("%02x \n", packet[index - 1]);
 
     // Address (mặc định 4 byte 0xFFFFFFFF)
     for (int i = 0; i < 4; i++) {
-        packet[index++] = 0xFF;
+        packet[index++] = 0xFF; printf("Address: %02x \n", packet[index - 1]);
     }
 
     // Command
-    packet[index++] = command;
+    packet[index++] = command;  printf("Command: %02x \n", packet[index - 1]);
 
     // Length
-    packet[index++] = (data_len >> 8) & 0xFF;
-    packet[index++] = data_len & 0xFF;
+    packet[index++] = (data_len >> 8) & 0xFF;  printf("Lenghth: %02x ", packet[index - 1]);
+    packet[index++] = data_len & 0xFF;         printf("%02x \n", packet[index - 1]);
 
     // Data
-    for (int i = 0; i < data_len; i++) {
-        packet[index++] = data[i];
+    for (int i = 0; i <= data_len; i++) {
+        packet[index++] = data[i];             
     }
+    printf("Data_len: %d \n", index - 1);
+
 
     // Checksum
     uint16_t checksum = calculate_checksum(packet, index);
-    packet[index++] = (checksum >> 8) & 0xFF;
-    packet[index++] = checksum & 0xFF;
+    packet[index++] = (checksum >> 8) & 0xFF;  printf("Checksum: %02x ", packet[index - 1]);
+    packet[index++] = checksum & 0xFF;         printf("%02x ", packet[index - 1]);   printf("   %d \n", index);  
 
     // Gửi gói lệnh qua UART
     uart_write_bytes(UART_NUM, (const char *)packet, index);
+    printf("send %d bytes: ", index);
+    for (int t = 0; t < index; t++){
+        printf("%02x ", packet[t]);
+    }
+    printf("\n");
 }
 
 void receive_response(uint8_t *response, int len) {
@@ -76,8 +85,9 @@ void receive_response(uint8_t *response, int len) {
 
 // Lấy ảnh vân tay từ cảm biến
 uint8_t PS_GetImage() {
-    send_command(0x01, NULL, 0); // Gửi lệnh lấy ảnh vân tay
-    uint8_t response[64];
+    uint8_t data[116] = {0};
+    send_command(0x01, data, sizeof(data)); // Gửi lệnh lấy ảnh vân tay
+    uint8_t response[128];
     receive_response(response, sizeof(response));
     return response[9]; // Mã phản hồi
 }

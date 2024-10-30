@@ -1,24 +1,1797 @@
-[1/11] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\bootloader\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/ESP/ESP project/fingerprint/build/bootloader/bootloader.bin""
-Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
-[2/9] Building C object esp-idf/gpio_lib/CMakeFiles/__idf_gpio_lib.dir/gpio_lib.c.obj
-FAILED: esp-idf/gpio_lib/CMakeFiles/__idf_gpio_lib.dir/gpio_lib.c.obj 
-ccache D:\ESP\ESP\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I"D:/ESP/ESP project/fingerprint/build/config" -I"D:/ESP/ESP project/fingerprint/components/gpio_lib/include" -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/platform_include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/port/esp32/. -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/heap/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/log/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/analog_comparator/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/dac/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gpio/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gptimer/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2c/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2s/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/ledc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/mcpwm/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/parlio/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/pcnt/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/rmt/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdio_slave/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdmmc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sigma_delta/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/spi/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/temperature_sensor/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/twai/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/uart/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_pm/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_ringbuf/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap "-fmacro-prefix-map=D:/ESP/ESP project/fingerprint=." -fmacro-prefix-map=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/gpio_lib/CMakeFiles/__idf_gpio_lib.dir/gpio_lib.c.obj -MF esp-idf\gpio_lib\CMakeFiles\__idf_gpio_lib.dir\gpio_lib.c.obj.d -o esp-idf/gpio_lib/CMakeFiles/__idf_gpio_lib.dir/gpio_lib.c.obj -c "D:/ESP/ESP project/fingerprint/components/gpio_lib/gpio_lib.c"
-In file included from D:/ESP/ESP project/fingerprint/components/gpio_lib/gpio_lib.c:2:
-D:/ESP/ESP project/fingerprint/components/gpio_lib/include/gpio_lib.h:14:8: error: unknown type name 'DataPacket'
-   14 | extern DataPacket USER[MAX_USERS];
-      |        ^~~~~~~~~~
-[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
-FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
-ccache D:\ESP\ESP\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I"D:/ESP/ESP project/fingerprint/build/config" -I"D:/ESP/ESP project/fingerprint/main" -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/platform_include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/port/esp32/. -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/heap/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/log/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32 -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -I"D:/ESP/ESP project/fingerprint/components/uart_lib/include" -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/analog_comparator/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/dac/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gpio/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gptimer/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2c/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2s/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/ledc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/mcpwm/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/parlio/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/pcnt/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/rmt/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdio_slave/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdmmc/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sigma_delta/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/spi/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/temperature_sensor/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/twai/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/uart/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/esp32/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_pm/include -ID:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_ringbuf/include -I"D:/ESP/ESP project/fingerprint/components/gpio_lib/include" -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap "-fmacro-prefix-map=D:/ESP/ESP project/fingerprint=." -fmacro-prefix-map=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c "D:/ESP/ESP project/fingerprint/main/main.c"
-In file included from D:/ESP/ESP project/fingerprint/main/main.c:3:
-D:/ESP/ESP project/fingerprint/components/gpio_lib/include/gpio_lib.h:14:8: error: unknown type name 'DataPacket'
-   14 | extern DataPacket USER[MAX_USERS];
-      |        ^~~~~~~~~~
-D:/ESP/ESP project/fingerprint/main/main.c:16:12: error: conflicting types for 'USER'; have 'DataPacket[10]'
-   16 | DataPacket USER[MAX_USERS];
-      |            ^~~~
-D:/ESP/ESP project/fingerprint/components/gpio_lib/include/gpio_lib.h:14:19: note: previous declaration of 'USER' with type 'int[10]'
-   14 | extern DataPacket USER[MAX_USERS];
-      |                   ^~~~
-ninja: build stopped: subcommand failed.
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0cch ( 45260) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b0f4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d350 vaddr=40080000 size=02cc8h ( 11464) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16fb0h ( 94128) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00036fd8 vaddr=40082cc8 size=0ab00h ( 43776) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      01c4b90-dirty[0m
+[0;32mI (225) cpu_start: Compile time:     Oct 28 2024 13:52:21[0m
+[0;32mI (231) cpu_start: ELF file SHA256:  22fe7b466...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Place your finger on the sensor.
+Header: ef 01 
+Address: ff 
+Address: ff 
+Address: ff 
+Address: ff 
+Command: 01 
+Lenghth: 00 01 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d5907  PS      : 0x00060030  A0      : 0x800d59cd  A1      : 0x3ffb4d10  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x0000000a  
+A6      : 0x00000000  A7      : 0x00000009  A8      : 0x00000000  A9      : 0x3ffb4cc0  
+A10     : 0x00000004  A11     : 0x00000001  A12     : 0x3ffb4d80  A13     : 0x00000000  
+A14     : 0x3f40a405  A15     : 0x3ffb4d80  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffff7  
+
+
+Backtrace: 0x400d5904:0x3ffb4d10 0x400d59ca:0x3ffb4d70 0x400d5a4c:0x3ffb4dd0 0x400d57ae:0x3ffb4df0 0x400e6680:0x3ffb4e10 0x40087069:0x3ffb4e40
+
+
+
+
+ELF file SHA256: 22fe7b466
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m

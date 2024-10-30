@@ -1,0 +1,402 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM5 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5907: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d5904: send_command at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:55
+0x400d59ca: PS_GetImage at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:86
+0x400d5a4c: PS_Enroll at D:/ESP/ESP project/fingerprint/components/uart_lib/uart_lib.c:133
+0x400d57ae: app_main at D:/ESP/ESP project/fingerprint/main/main.c:18
+0x400e6680: main_task at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x40087069: vPortTaskWrapper at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
+Traceback (most recent call last):
+  File "D:\ESP\ESP\Espressif\frameworks\esp-idf-v5.2.2\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

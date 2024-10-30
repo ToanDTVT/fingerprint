@@ -26,11 +26,16 @@
 #define COL_3 GPIO_NUM_27             //pin3 keypad
 
 
+/*GPIO for relay*/
+#define RELAY GPIO_NUM_34             
+
+
 void func1(void);
 
 void gpio_init();
 void keypad_init();
 char keypad_get_char();
+void open_door(void);
 
 
 #endif // GPIO_LIB_H

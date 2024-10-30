@@ -7,12 +7,13 @@
 
 #define MAX_USERS 10
 #define SIZE_OF_PASSWORD 5
+#define SIZE_OF_FINGERPRINT 512
 
 typedef struct {
     //uint8_t username;
     uint8_t id;
     char user_password[SIZE_OF_PASSWORD];
-    uint8_t user_fingerprint;
+    uint8_t user_fingerprint[SIZE_OF_FINGERPRINT];
 } DataPacket;
 
 enum statemachine {

@@ -8,7 +8,7 @@ void gpio_init(){
     gpio_config_t io_conf_row_keypad;
     io_conf_row_keypad.intr_type = GPIO_INTR_DISABLE;                                                     // Không có ngắt
     io_conf_row_keypad.mode = GPIO_MODE_OUTPUT;                                                           // Chế độ đầu ra
-    io_conf_row_keypad.pin_bit_mask = (1ULL << ROW_1)|(1ULL << ROW_2)|(1ULL << ROW_3)|(1ULL << ROW_4);    // Chọn chân GPIO
+    io_conf_row_keypad.pin_bit_mask = (1ULL << ROW_1)|(1ULL << ROW_2)|(1ULL << ROW_3)|(1ULL << ROW_4)|(1ULL << RELAY);    // Chọn chân GPIO
     io_conf_row_keypad.pull_down_en = 1;                                                                  // kéo xuống
     io_conf_row_keypad.pull_up_en = 0;                                                                    // Không kéo lên
     gpio_config(&io_conf_row_keypad); 
@@ -81,6 +81,12 @@ void keypad_init(){
     gpio_set_level(ROW_4, 1);
 }
 
+
+void open_door(void){
+    gpio_set_level(RELAY, 1);
+    vTaskDelay(5000 / portTICK_PERIOD_MS);
+    gpio_set_level(RELAY, 0);
+}
 
 
 void func1(void)
