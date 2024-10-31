@@ -35,13 +35,17 @@ void app_main(void)
                 ESP_LOGE(TAG, "PS_GENCHAR_1: Failed to generate character from image. Error: %d\n", status);
             }
 
-            //PS_Search(1, 0, 160);
+            PS_Search(1, 0, 160);
+
+            PS_Delete(1, 1);
+
+            PS_Search(1, 0, 160);
             
-            PS_UpChar(1, USER[1].user_fingerprint);
+            // PS_UpChar(1, USER[1].user_fingerprint);
 
-            PS_DownChar(2, USER[1].user_fingerprint);
+            // PS_DownChar(2, USER[1].user_fingerprint);
 
-            PS_UpChar(2, USER[1].user_fingerprint);
+            // PS_UpChar(2, USER[1].user_fingerprint);
 
         //}
 

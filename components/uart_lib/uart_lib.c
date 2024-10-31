@@ -476,35 +476,34 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
 
 
 void PS_Delete(uint16_t page_id, uint16_t num) {
-    uint8_t data[4];
-    data[0] = (page_id >> 8) & 0xFF;
-    data[1] = page_id & 0xFF;
-    data[2] = (num >> 8) & 0xFF;
-    data[3] = num & 0xFF;
+    // uint8_t data[4];
+    // data[0] = (page_id >> 8) & 0xFF;
+    // data[1] = page_id & 0xFF;
+    // data[2] = (num >> 8) & 0xFF;
+    // data[3] = num & 0xFF;
     
-    send_command(0x0C, data, 4);
-    
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
+    // send_command(0x0C, data, 4);
+    uint16_t checksum = 0x01 + 0x07 + 0x0C + page_id + num;
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x07, 0x0C, ((page_id >> 8) & 0xFF), (page_id & 0xFF), ((num >> 8) & 0xFF), (num & 0xFF), ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
+                     // | Header   | Address               | PI  | Length    | Cmmd| page_id                                  | num                              | Checksum                                   |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
 
-    if (response[9] == 0x00) {
+    uint8_t ACK_packet[12];
+    int ACK_len = uart_read_bytes(UART_NUM, ACK_packet, sizeof(ACK_packet), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_DELETE_ACK: response: %02x", ACK_packet[9]);
+    if (ACK_len > 0) {
+        printf("Received %d bytes ACK: ", ACK_len);
+        for (int i = 0; i < ACK_len; i++) {
+            printf("%02X ", ACK_packet[i]);
+        }
+        printf("\n");
+    }
+
+    if (ACK_packet[9] == 0x00) {
         printf("Fingerprint deleted successfully.\n");
     } else {
         printf("Failed to delete fingerprint.\n");
     }
 }
 
-
-void PS_Identify() {
-    send_command(0x03, NULL, 0);
-    
-    uint8_t response[64];
-    receive_response(response, sizeof(response));
-
-    if (response[9] == 0x00) {
-        printf("Fingerprint identified at position: %d\n", (response[10] << 8) | response[11]);
-    } else {
-        printf("Failed to identify fingerprint.\n");
-    }
-}
 

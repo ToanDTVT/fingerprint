@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include "handle_fingerprint.h"
 
+static const char* TAG = "handle_fingerprint";
 
-
-
-
-
+//TaskHandle_t fingerprint_task_handle = NULL;
 
 // void fingerprint_task(){
 
@@ -65,6 +63,10 @@
 
 //     vTaskDelay(1000/portTICK_PERIOD_MS);
 
+// }
+
+// void create_fingerprint_task(void){
+//     xTaskCreate(fingerprint_task, "fingerprint task", 2048, NULL, 5, &fingerprint_task_handle);
 // }
 
 void func3(void){}
