@@ -36,12 +36,12 @@ void app_main(void)
             }
 
             //PS_Search(1, 0, 160);
-            uint8_t buffer_data[139];
-            PS_UpChar(1, buffer_data);
+            
+            PS_UpChar(1, USER[1].user_fingerprint);
 
-            PS_DownChar(2, buffer_data);
+            PS_DownChar(2, USER[1].user_fingerprint);
 
-            PS_UpChar(2, buffer_data);
+            PS_UpChar(2, USER[1].user_fingerprint);
 
         //}
 

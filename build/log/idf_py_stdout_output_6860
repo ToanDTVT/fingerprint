@@ -1,0 +1,154 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b65ch ( 46684) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b684 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d8e0 vaddr=40080000 size=02738h ( 10040) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1754ch ( 95564) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00037574 vaddr=40082738 size=0b090h ( 45200) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (193) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) cpu_start: Application information:[0m
+[0;32mI (216) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      cb2b85b-dirty[0m
+[0;32mI (227) cpu_start: Compile time:     Oct 31 2024 21:49:59[0m
+[0;32mI (233) cpu_start: ELF file SHA256:  48a7ff817...[0m
+[0;32mI (238) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (253) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (258) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFB4BE8 len 0002B418 (173 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (298) spi_flash: detected chip: generic[0m
+[0;32mI (301) spi_flash: flash io: dio[0m
+[0;32mI (306) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (316) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (316) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (326) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (336) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (346) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (356) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (366) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (376) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1396) UART: Place your finger on the sensor.[0m
+[0;33mW (1796) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (3236) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (3236) UART: Remove your finger and place it again.
+[0m
+[0;33mW (5566) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (7026) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (8146) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (9176) UART: PS_STORE: response: 00[0m
+[0;32mI (9176) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (9176) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (10176) main: Place your finger on the sensor.[0m
+[0;33mW (10586) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (10586) main: PS_GetImage response: 00[0m
+[0;33mW (12036) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (12056) UART: PS_UPCHAR_ACK: response: 00[0m
+Received 12 bytes ACK: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (12076) UART: PS_UPCHAR_DATA_1: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 03 03 49 32 00 01 20 01 6B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FC FF FF FF FF FF FF EE AA AA AA AA AA AA 66 55 95 55 56 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 83 
+[0;33mW (12116) UART: PS_UPCHAR_DATA_2: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 4D 14 40 7E 49 9B 80 5E 5B 28 48 DE 63 BD 8E 5E 59 8F 41 3F 2C 9C 27 DF 77 9F 86 5F 73 24 C7 DF 2C 25 4D 1F 19 2B 4C FF 74 33 CB 7F 68 34 4B 5F 3B 38 01 9F 26 38 C9 3F 50 42 93 1F 3D 92 EA 3C 62 99 43 3C 57 22 C6 5C 69 8B 01 9D 6A 8E 18 3D 36 93 A8 7D 62 96 57 DD 5A 1D C4 3D 47 09 92 7A 40 0A 12 DA 51 9F 43 7A 43 BA D9 5B 50 09 53 38 50 27 08 D8 53 3B D3 18 4F 8B AC 39 4C 23 C5 59 32 B3 
+[0;33mW (12156) UART: PS_UPCHAR_DATA_3: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 5C B5 4F D9 4A B9 AB F9 4E BA 66 19 39 09 11 76 5A B7 8F 56 4D A9 0B 17 57 34 CC F7 58 B6 61 77 0F 09 D0 34 15 8D A5 B4 22 89 8F 32 48 A8 CB D2 1E 8D 26 B3 46 2A 4B F0 1A 89 8F 6E 3F 33 21 8E 45 31 23 2F 1E 09 CF 8C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E 40 
+[0;33mW (12206) UART: PS_UPCHAR_DATA_4: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 03 03 4E 30 00 01 20 01 6C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FC FF FF FF FF FF FF EE AA AA AA AA AA AA 66 56 55 95 55 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 87 
+[0;33mW (12246) UART: PS_UPCHAR_DATA_5: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 4D 14 40 9E 5B A8 49 1E 63 BD 8E 5E 59 8F 41 3F 2C 9C 27 DF 77 9F 86 5F 73 24 C7 BF 0E 25 0E 5F 2C 25 4D 1F 19 2B 8C FF 74 33 CB 7F 68 34 4B 5F 3B 38 01 9F 26 38 C9 5F 43 BA DB FF 4F 42 D3 1F 62 99 43 3C 49 9B 80 5C 42 26 8D 1C 62 96 57 DD 4F 9E 02 DD 47 09 92 7A 40 0A 12 DA 69 0B 01 3B 6C 0E 98 9B 3B 92 6A 3B 36 93 A8 BB 5E A0 45 7B 59 A1 05 FB 57 B5 8F 3B 50 09 53 38 48 30 62 B8 32 B1 
+[0;33mW (12296) UART: PS_UPCHAR_DATA_6: Packet Identifier: 08[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 08 00 82 41 B3 E0 18 50 0B 6C 99 44 31 A1 B9 4F BA 28 19 39 89 11 76 4F 26 88 76 56 BB 91 36 53 3B D3 16 70 0A 81 D7 73 0B 81 57 4B A3 C4 F7 53 B7 92 37 4A 26 0A B5 4C A7 4A 75 15 8D A5 F0 1E 8D 26 ED 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 74 
+[0;32mI (12336) UART: Buffer_data_fingerprint[0][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 03 03 49 32 00 01 20 01 6b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7f 00 00 00 00 00 00 00 00 ff fc ff ff ff ff ff ff ee aa aa aa aa aa aa 66 55 95 55 56 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 83 
+[0;32mI (12376) UART: Buffer_data_fingerprint[1][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 4d 14 40 7e 49 9b 80 5e 5b 28 48 de 63 bd 8e 5e 59 8f 41 3f 2c 9c 27 df 77 9f 86 5f 73 24 c7 df 2c 25 4d 1f 19 2b 4c ff 74 33 cb 7f 68 34 4b 5f 3b 38 01 9f 26 38 c9 3f 50 42 93 1f 3d 92 ea 3c 62 99 43 3c 57 22 c6 5c 69 8b 01 9d 6a 8e 18 3d 36 93 a8 7d 62 96 57 dd 5a 1d c4 3d 47 09 92 7a 40 0a 12 da 51 9f 43 7a 43 ba d9 5b 50 09 53 38 50 27 08 d8 53 3b d3 18 4f 8b ac 39 4c 23 c5 59 32 b3 
+[0;32mI (12416) UART: Buffer_data_fingerprint[2][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 5c b5 4f d9 4a b9 ab f9 4e ba 66 19 39 09 11 76 5a b7 8f 56 4d a9 0b 17 57 34 cc f7 58 b6 61 77 0f 09 d0 34 15 8d a5 b4 22 89 8f 32 48 a8 cb d2 1e 8d 26 b3 46 2a 4b f0 1a 89 8f 6e 3f 33 21 8e 45 31 23 2f 1e 09 cf 8c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1e 40 
+[0;32mI (12456) UART: Buffer_data_fingerprint[3][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 03 03 4e 30 00 01 20 01 6c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7f 00 00 00 00 00 00 00 00 ff fc ff ff ff ff ff ff ee aa aa aa aa aa aa 66 56 55 95 55 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 87 
+[0;32mI (12506) UART: Buffer_data_fingerprint[4][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 4d 14 40 9e 5b a8 49 1e 63 bd 8e 5e 59 8f 41 3f 2c 9c 27 df 77 9f 86 5f 73 24 c7 bf 0e 25 0e 5f 2c 25 4d 1f 19 2b 8c ff 74 33 cb 7f 68 34 4b 5f 3b 38 01 9f 26 38 c9 5f 43 ba db ff 4f 42 d3 1f 62 99 43 3c 49 9b 80 5c 42 26 8d 1c 62 96 57 dd 4f 9e 02 dd 47 09 92 7a 40 0a 12 da 69 0b 01 3b 6c 0e 98 9b 3b 92 6a 3b 36 93 a8 bb 5e a0 45 7b 59 a1 05 fb 57 b5 8f 3b 50 09 53 38 48 30 62 b8 32 b1 
+[0;32mI (12546) UART: Buffer_data_fingerprint[5][]: 
+[0m
+ef 01 ff ff ff ff 08 00 82 41 b3 e0 18 50 0b 6c 99 44 31 a1 b9 4f ba 28 19 39 89 11 76 4f 26 88 76 56 bb 91 36 53 3b d3 16 70 0a 81 d7 73 0b 81 57 4b a3 c4 f7 53 b7 92 37 4a 26 0a b5 4c a7 4a 75 15 8d a5 f0 1e 8d 26 ed 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1b 74 
+[0;33mW (12616) UART: PS_DOWNCHAR_ACK: response: 00[0m
+Received 12 bytes ACK: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+packet_data 0: ef 01 ff ff ff ff 02 00 82 03 03 49 32 00 01 20 01 6b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7f 00 00 00 00 00 00 00 00 ff fc ff ff ff ff ff ff ee aa aa aa aa aa aa 66 55 95 55 56 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 83  
+packet_data 1: ef 01 ff ff ff ff 02 00 82 5c b5 4f d9 4a b9 ab f9 4e ba 66 19 39 09 11 76 5a b7 8f 56 4d a9 0b 17 57 34 cc f7 58 b6 61 77 0f 09 d0 34 15 8d a5 b4 22 89 8f 32 48 a8 cb d2 1e 8d 26 b3 46 2a 4b f0 1a 89 8f 6e 3f 33 21 8e 45 31 23 2f 1e 09 cf 8c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1e 40  
+packet_data 2: ef 01 ff ff ff ff 02 00 82 4d 14 40 9e 5b a8 49 1e 63 bd 8e 5e 59 8f 41 3f 2c 9c 27 df 77 9f 86 5f 73 24 c7 bf 0e 25 0e 5f 2c 25 4d 1f 19 2b 8c ff 74 33 cb 7f 68 34 4b 5f 3b 38 01 9f 26 38 c9 5f 43 ba db ff 4f 42 d3 1f 62 99 43 3c 49 9b 80 5c 42 26 8d 1c 62 96 57 dd 4f 9e 02 dd 47 09 92 7a 40 0a 12 da 69 0b 01 3b 6c 0e 98 9b 3b 92 6a 3b 36 93 a8 bb 5e a0 45 7b 59 a1 05 fb 57 b5 8f 3b 50 09 53 38 48 30 62 b8 32 b1  
+packet_data 3: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  
+packet_data 4: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  
+packet_data 5: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  
+[0;33mW (12906) UART: PS_UPCHAR_ACK: response: 41[0m
+Received 12 bytes ACK: EF 01 FF FF FF FF 02 00 82 41 B3 E0 
+[0;33mW (12906) UART: PS_UPCHAR_DATA_1: Packet Identifier: 31[0m
+Received 139 bytes Data: 18 50 0B 6C 99 44 31 A1 B9 4F BA 28 19 39 89 11 76 4F 26 88 76 56 BB 91 36 53 3B D3 16 70 0A 81 D7 73 0B 81 57 4B A3 C4 F7 53 B7 92 37 4A 26 0A B5 4C A7 4A 75 15 8D A5 F0 1E 8D 26 ED 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 6E EF 01 FF FF FF FF 02 00 82 00 00 00 
+[0;33mW (12956) UART: PS_UPCHAR_DATA_2: Packet Identifier: 00[0m
+Received 139 bytes Data: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 02 00 82 00 00 00 
+[0;33mW (12996) UART: PS_UPCHAR_DATA_3: Packet Identifier: 00[0m
+Received 139 bytes Data: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (13046) UART: PS_UPCHAR_DATA_4: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 03 03 49 32 00 01 20 01 6B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FC FF FF FF FF FF FF EE AA AA AA AA AA AA 66 55 95 55 56 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 83 
+[0;33mW (13086) UART: PS_UPCHAR_DATA_5: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 5C B5 4F D9 4A B9 AB F9 4E BA 66 19 39 09 11 76 5A B7 8F 56 4D A9 0B 17 57 34 CC F7 58 B6 61 77 0F 09 D0 34 15 8D A5 B4 22 89 8F 32 48 A8 CB D2 1E 8D 26 B3 46 2A 4B F0 1A 89 8F 6E 3F 33 21 8E 45 31 23 2F 1E 09 CF 8C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E 40 
+[0;33mW (13126) UART: PS_UPCHAR_DATA_6: Packet Identifier: 02[0m
+Received 139 bytes Data: EF 01 FF FF FF FF 02 00 82 4D 14 40 9E 5B A8 49 1E 63 BD 8E 5E 59 8F 41 3F 2C 9C 27 DF 77 9F 86 5F 73 24 C7 BF 0E 25 0E 5F 2C 25 4D 1F 19 2B 8C FF 74 33 CB 7F 68 34 4B 5F 3B 38 01 9F 26 38 C9 5F 43 BA DB FF 4F 42 D3 1F 62 99 43 3C 49 9B 80 5C 42 26 8D 1C 62 96 57 DD 4F 9E 02 DD 47 09 92 7A 40 0A 12 DA 69 0B 01 3B 6C 0E 98 9B 3B 92 6A 3B 36 93 A8 BB 5E A0 45 7B 59 A1 05 FB 57 B5 8F 3B 50 09 53 38 48 30 62 B8 32 B1 
+[0;32mI (13176) UART: Buffer_data_fingerprint[0][]: 
+[0m
+18 50 0b 6c 99 44 31 a1 b9 4f ba 28 19 39 89 11 76 4f 26 88 76 56 bb 91 36 53 3b d3 16 70 0a 81 d7 73 0b 81 57 4b a3 c4 f7 53 b7 92 37 4a 26 0a b5 4c a7 4a 75 15 8d a5 f0 1e 8d 26 ed 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1b 6e ef 01 ff ff ff ff 02 00 82 00 00 00 
+[0;32mI (13216) UART: Buffer_data_fingerprint[1][]: 
+[0m
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 ef 01 ff ff ff ff 02 00 82 00 00 00 
+[0;32mI (13256) UART: Buffer_data_fingerprint[2][]: 
+[0m
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 ef 01 ff ff ff ff 07 00 03 00 00 0a 
+[0;32mI (13296) UART: Buffer_data_fingerprint[3][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 03 03 49 32 00 01 20 01 6b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7f 00 00 00 00 00 00 00 00 ff fc ff ff ff ff ff ff ee aa aa aa aa aa aa 66 55 95 55 56 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 83 
+[0;32mI (13346) UART: Buffer_data_fingerprint[4][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 5c b5 4f d9 4a b9 ab f9 4e ba 66 19 39 09 11 76 5a b7 8f 56 4d a9 0b 17 57 34 cc f7 58 b6 61 77 0f 09 d0 34 15 8d a5 b4 22 89 8f 32 48 a8 cb d2 1e 8d 26 b3 46 2a 4b f0 1a 89 8f 6e 3f 33 21 8e 45 31 23 2f 1e 09 cf 8c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1e 40 
+[0;32mI (13386) UART: Buffer_data_fingerprint[5][]: 
+[0m
+ef 01 ff ff ff ff 02 00 82 4d 14 40 9e 5b a8 49 1e 63 bd 8e 5e 59 8f 41 3f 2c 9c 27 df 77 9f 86 5f 73 24 c7 bf 0e 25 0e 5f 2c 25 4d 1f 19 2b 8c ff 74 33 cb 7f 68 34 4b 5f 3b 38 01 9f 26 38 c9 5f 43 ba db ff 4f 42 d3 1f 62 99 43 3c 49 9b 80 5c 42 26 8d 1c 62 96 57 dd 4f 9e 02 dd 47 09 92 7a 40 0a 12 da 69 0b 01 3b 6c 0e 98 9b 3b 92 6a 3b 36 93 a8 bb 5e a0 45 7b 59 a1 05 fb 57 b5 8f 3b 50 09 53 38 48 30 62 b8 32 b1 
+[0;32mI (13426) main_task: Returned from app_main()[0m

@@ -231,7 +231,7 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
 }
 
 
-void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
+void PS_UpChar(uint8_t buffer_id, uint8_t buffer_data_fingerprint[6][139]){
     uint16_t checksum = 0x01 + 0x04 + 0x08 + buffer_id;
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x08, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
                      // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
@@ -262,6 +262,7 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_1 > 0) {
         printf("Received %d bytes Data: ", Data_len_1);
         for (int i = 0; i < Data_len_1; i++) {
+            buffer_data_fingerprint[0][i] = Data_packet_1[i];
             printf("%02X ", Data_packet_1[i]);
         }
         printf("\n");
@@ -272,6 +273,7 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_2 > 0) {
         printf("Received %d bytes Data: ", Data_len_2);
         for (int i = 0; i < Data_len_2; i++) {
+            buffer_data_fingerprint[1][i] = Data_packet_2[i];
             printf("%02X ", Data_packet_2[i]);
         }
         printf("\n");
@@ -282,6 +284,7 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_3 > 0) {
         printf("Received %d bytes Data: ", Data_len_3);
         for (int i = 0; i < Data_len_3; i++) {
+            buffer_data_fingerprint[2][i] = Data_packet_3[i];
             printf("%02X ", Data_packet_3[i]);
         }
         printf("\n");
@@ -292,6 +295,7 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_4 > 0) {
         printf("Received %d bytes Data: ", Data_len_4);
         for (int i = 0; i < Data_len_4; i++) {
+            buffer_data_fingerprint[3][i] = Data_packet_4[i];
             printf("%02X ", Data_packet_4[i]);
         }
         printf("\n");
@@ -303,6 +307,7 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_5 > 0) {
         printf("Received %d bytes Data: ", Data_len_5);
         for (int i = 0; i < Data_len_5; i++) {
+            buffer_data_fingerprint[4][i] = Data_packet_5[i];
             printf("%02X ", Data_packet_5[i]);
         }
         printf("\n");
@@ -314,46 +319,26 @@ void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
     if (Data_len_6 > 0) {
         printf("Received %d bytes Data: ", Data_len_6);
         for (int i = 0; i < Data_len_6; i++) {
+            buffer_data_fingerprint[5][i] = Data_packet_6[i];
             printf("%02X ", Data_packet_6[i]);
         }
         printf("\n");
     }
 
 
-    // int Data_len_7 = uart_read_bytes(UART_NUM, Data_packet_7, sizeof(Data_packet_7), 1000 / portTICK_PERIOD_MS);
-    // ESP_LOGW(TAG, "PS_UPCHAR_DATA_7: Packet Identifier: %02x", Data_packet_7[6]);
-    // if (Data_len_7 > 0) {
-    //     printf("Received %d bytes Data: ", Data_len_7);
-    //     for (int i = 0; i < Data_len_7; i++) {
-    //         printf("%02X ", Data_packet_7[i]);
-    //     }
-    //     printf("\n");
-    // }
-
-
-    // uint8_t buffer_data_finger[140];
-    // int length = uart_read_bytes(UART_NUM, buffer_data_finger, sizeof(buffer_data_finger), 1000 / portTICK_PERIOD_MS);
-    // if (length > 0) {
-    //     printf("Received data finger: \n");
-    //     printf("Received %d bytes: ", length);
-    //     for (int i = 0; i < length; i++) {
-    //         printf("%02X ", buffer_data_finger[i]);
-    //     }
-    //     printf("\n");
-    // }
-
-    printf("Save in buffer_data: \n");
-    printf("Received %d bytes of buffer_data: ", Data_len_1);
-    for(uint8_t i = 0; i < Data_len_1; i++){
-        buffer_data[i] = Data_packet_1[i];
-        printf("%02X ", buffer_data[i]);
+    for(int i = 0; i < 6; i++){
+        ESP_LOGI(TAG, "Buffer_data_fingerprint[%d][]: ", i);
+        for(int x = 0; x < 139; x++){
+            printf("%02x ", buffer_data_fingerprint[i][x]);
+        }
+        printf("\n");
     }
-    printf("\n");
+
     
 }
 
 
-void PS_DownChar(uint8_t buffer_id, uint8_t *buffer_data){
+void PS_DownChar(uint8_t buffer_id, uint8_t buffer_data_fingerprint[6][139]){
     uint16_t checksum = 0x01 + 0x04 + 0x09 + buffer_id;
     uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x09, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
                      // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
@@ -372,22 +357,27 @@ void PS_DownChar(uint8_t buffer_id, uint8_t *buffer_data){
     }
 
     for(int num_packet = 0; num_packet < 6; num_packet++){
-        uint8_t small_packet_data[139];
-        printf("packet_data %d: ", num_packet);
+        uint8_t small_packet_data[139] = {0};
+        ESP_LOGI(TAG, "PS_DOWNCHAR: Send packet_data %d in sensor: ", num_packet);
         for(int x = 0; x < sizeof(small_packet_data); x++){
-            small_packet_data[x] = buffer_data[x + (num_packet*139)];
+            small_packet_data[x] = buffer_data_fingerprint[num_packet][x];
             printf("%02x ", small_packet_data[x]);
         }
         printf(" \n");
         uart_write_bytes(UART_NUM, (const char*) small_packet_data, sizeof(small_packet_data));
     }
 
-    // printf("Write buffer_data in buffer_id %02x  \n", buffer_id);
-    // for(uint8_t i = 0; i < sizeof(buffer_data); i++){
-    //     printf("%02X ", buffer_data[i]);
-    // }
-    // printf("\n");
-    // uart_write_bytes(UART_NUM, (const char*) buffer_data, sizeof(buffer_data));
+    uint8_t ACK_packet_2[12];
+    //uart_read_bytes(UART_NUM, ACK_packet, sizeof(ACK_packet), 1000 / portTICK_PERIOD_MS);
+    int ACK_len_2 = uart_read_bytes(UART_NUM, ACK_packet_2, sizeof(ACK_packet_2), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_DOWNCHAR_ACK_2: response: %02x", ACK_packet_2[9]);
+    if (ACK_len_2 > 0) {
+        printf("Received %d bytes ACK_2: ", ACK_len_2);
+        for (int i = 0; i < ACK_len_2; i++) {
+            printf("%02X ", ACK_packet_2[i]);
+        }
+        printf("\n");
+    }
 }
 
 
