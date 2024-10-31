@@ -1,0 +1,139 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d6a0 vaddr=40080000 size=02978h ( 10616) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=171ach ( 94636) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=000371d4 vaddr=40082978 size=0ae50h ( 44624) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (220) cpu_start: App version:      1f6ebc2-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Oct 31 2024 11:55:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  3ae0fc860...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) UART: Place your finger on the sensor.[0m
+[0;33mW (2725) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (4155) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (4155) UART: Remove your finger and place it again.
+[0m
+[0;33mW (7475) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (8925) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (10045) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (11075) UART: PS_STORE: response: 00[0m
+[0;32mI (11075) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (11075) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (12075) main: Place your finger on the sensor.[0m
+[0;33mW (13475) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (13475) main: PS_GetImage response: 00[0m
+[0;33mW (14925) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (14965) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 03 03 58 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA AA AA 99 66 55 55 55 55 55 55 55 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 65 EF 01 FF FF FF FF 02 00 82 50 89 54 9E 12 8E 68 5E 61 0F 41 1E 6E 21 C4 7E 26 A2 A9 BE 64 32 47 5E 64 C1 CA 5E 1B 12 27 BF 56 9C 42 9F 44 20 41 BF 3A 26 00 DF 1E AD 0D DF 6C AD C6 1F 0C 31 4E 1F 49 B3 88 FF 16 40 8A 9F 4D 42 0B FF 59 C2 0A BF 2B 43 03 5F 3C 88 D2 BC 44 89 13 5C 41 0C EB 5C 41 13 EC 7C 34 99 EA DC 6B 1C 59 9C 46 2E 05 FC 50 17 41 1D 68 19 43 5D 38 1C AB FD 41 AA 02 FD 3C BA 4D BD 2E 88 D1 BA 34 B2 EF 01 FF FF FF FF 02 00 82 34 88 D1 FA 27 89 11 FA 20 09 51 FA 3D 30 85 FA 1F 0C 51 3B 24 11 29 3B 4B 95 55 DB 5B A4 19 1B 58 25 C3 DB 4E A9 04 9B 36 B5 8B DB 33 3D 22 3B 38 C3 D9 1B 35 11 52 78 34 41 46 18 39 91 AB 19 3A B4 08 D9 39 3E A1 F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1C C8 EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA 
+[0;33mW (15185) main: Place your finger on the sensor.[0m
+[0;33mW (15195) UART: PS_GETIMAGE: response: 16[0m
+[0;32mI (15195) main: PS_GetImage response: 16[0m
+[0;33mW (16585) UART: PS_GETIMAGE: response: 3c[0m
+[0;32mI (16585) main: PS_GetImage response: 3c[0m
+[0;33mW (17965) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (17965) main: PS_GetImage response: 00[0m
+[0;33mW (19415) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (19455) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 03 03 58 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 01 00 83 00 30 00 00 00 00 00 00 3F FF F3 FF FF FF FF FF FB AA AA AA AA AA AA A6 59 95 55 55 55 55 55 55 94 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 DD EF 01 FF FF FF FF 02 00 82 0B 86 15 FE 50 89 54 7E 61 8F 41 3E 6E 21 C4 7E 26 A2 A9 BE 64 32 47 5E 40 94 AC 9F 56 1C 42 7F 43 A0 41 9F 3A 26 00 DF 4C 28 84 3F 1E AD 4D FF 6C AD C6 1F 3B AF 84 3F 0C 31 4E 1F 49 B3 88 FF 16 40 8A DF 62 41 09 FF 4D C2 0C 7F 59 C2 0A BF 3C 88 D2 BC 44 89 13 5C 41 8C EB 3C 34 1A 2A BC 6B 1C 59 9C 1A 92 67 BD 4B 95 56 5D 50 17 41 1D 68 19 43 5D 37 9C AB FD 3C BA 4D 5D 2B 43 03 7D 34 63 EF 01 FF FF FF FF 02 00 82 27 89 11 FA 20 09 51 FA 0C 0D 4C FA 43 AB 03 FA 5B A4 19 1B 58 25 C3 DB 43 AE 05 7B 34 08 D1 F8 2E 89 11 F8 13 8B 51 B8 13 0E 68 38 35 11 52 D8 1F 0C 51 39 24 11 29 19 39 91 AB 19 33 3D 22 79 37 40 D8 59 18 09 95 B6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1A 32 EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA 
+[0;33mW (19675) main: Place your finger on the sensor.[0m
+[0;33mW (19675) UART: PS_GETIMAGE: response: 16[0m
+[0;32mI (19685) main: PS_GetImage response: 16[0m
+[0;33mW (21065) UART: PS_GETIMAGE: response: 3c[0m
+[0;32mI (21065) main: PS_GetImage response: 3c[0m
+[0;33mW (22445) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (22445) main: PS_GetImage response: 00[0m
+[0;33mW (23895) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (23935) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 01 00 83 00 30 00 00 00 00 00 00 3F FF F3 FF FF FF FF FF BE EA AA AA AA AA AA A6 59 95 55 55 55 55 55 55 94 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 DF EF 01 FF FF FF FF 02 00 82 50 89 54 9E 41 0C EB 5E 13 0E 68 3E 61 8F 41 1E 6E 21 C4 7E 26 A2 A9 BE 64 32 47 5E 1A 92 67 BF 50 17 41 1F 56 9C 42 9F 43 A0 41 9F 3A 26 00 BF 1E AD 0D DF 6C AD C6 1F 3B AF 84 3F 0C 31 4E 1F 49 B3 88 FF 15 C0 8A 7F 62 41 09 FF 4D C2 0C 7F 5A 42 0B 5F 2B 43 03 7F 46 89 13 DC 25 91 69 3C 41 13 EC 7C 4A 14 95 DC 34 99 EA DC 6B 1C 59 9C 38 B5 CB DC 68 19 43 5D 38 1C AB FD 4C A8 84 5D 34 65 EF 01 FF FF FF FF 02 00 82 34 08 D1 FA 27 09 11 BA 20 09 51 FA 43 AB 03 DA 1F 0C 51 3B 5B A4 19 1B 58 25 C3 DB 43 AE 05 7B 2E 88 D1 B8 35 11 52 78 39 91 AA F9 39 43 D9 B9 44 BE 4F F7 45 40 0E 97 41 BD E0 94 2E 90 EA 15 51 2C 59 55 51 AC 86 55 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E A9 EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA 
+[0;33mW (24155) main: Place your finger on the sensor.[0m
+[0;33mW (24155) UART: PS_GETIMAGE: response: 16[0m
+[0;32mI (24165) main: PS_GetImage response: 16[0m
+[0;33mW (25395) UART: PS_GETIMAGE: response: 3c[0m
+[0;32mI (25395) main: PS_GetImage response: 3c[0m
+[0;33mW (26475) UART: PS_GETIMAGE: response: 02[0m
+[0;32mI (26475) main: PS_GetImage response: 02[0m
+[0;33mW (27645) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (27645) main: PS_GetImage response: 00[0m
+[0;33mW (28675) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (28675) main: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (28725) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 01 00 83 00 30 00 00 00 00 00 00 3F FF F3 FF FF FF FF FF BE EA AA AA AA AA AA A6 59 95 55 55 55 55 55 55 94 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 DF EF 01 FF FF FF FF 02 00 82 50 89 54 9E 41 0C EB 5E 13 0E 68 3E 61 8F 41 1E 6E 21 C4 7E 26 A2 A9 BE 64 32 47 5E 1A 92 67 BF 50 17 41 1F 56 9C 42 9F 43 A0 41 9F 3A 26 00 BF 1E AD 0D DF 6C AD C6 1F 3B AF 84 3F 0C 31 4E 1F 49 B3 88 FF 15 C0 8A 7F 62 41 09 FF 4D C2 0C 7F 5A 42 0B 5F 2B 43 03 7F 46 89 13 DC 25 91 69 3C 41 13 EC 7C 4A 14 95 DC 34 99 EA DC 6B 1C 59 9C 38 B5 CB DC 68 19 43 5D 38 1C AB FD 4C A8 84 5D 34 65 EF 01 FF FF FF FF 02 00 82 34 08 D1 FA 27 09 11 BA 20 09 51 FA 43 AB 03 DA 1F 0C 51 3B 5B A4 19 1B 58 25 C3 DB 43 AE 05 7B 2E 88 D1 B8 35 11 52 78 39 91 AA F9 39 43 D9 B9 44 BE 4F F7 45 40 0E 97 41 BD E0 94 2E 90 EA 15 51 2C 59 55 51 AC 86 55 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E A9 EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA 
+[0;33mW (28935) main: Place your finger on the sensor.[0m
+[0;33mW (28945) UART: PS_GETIMAGE: response: 16[0m
+[0;32mI (28945) main: PS_GetImage response: 16[0m
+[0;33mW (30265) UART: PS_GETIMAGE: response: 3c[0m
+[0;32mI (30265) main: PS_GetImage response: 3c[0m
+[0;33mW (31335) UART: PS_GETIMAGE: response: 02[0m
+[0;32mI (31335) main: PS_GetImage response: 02[0m
+[0;33mW (32505) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (32505) main: PS_GetImage response: 00[0m
+[0;33mW (33535) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (33535) main: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (33585) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 01 00 83 00 30 00 00 00 00 00 00 3F FF F3 FF FF FF FF FF BE EA AA AA AA AA AA A6 59 95 55 55 55 55 55 55 94 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 DF EF 01 FF FF FF FF 02 00 82 50 89 54 9E 41 0C EB 5E 13 0E 68 3E 61 8F 41 1E 6E 21 C4 7E 26 A2 A9 BE 64 32 47 5E 1A 92 67 BF 50 17 41 1F 56 9C 42 9F 43 A0 41 9F 3A 26 00 BF 1E AD 0D DF 6C AD C6 1F 3B AF 84 3F 0C 31 4E 1F 49 B3 88 FF 15 C0 8A 7F 62 41 09 FF 4D C2 0C 7F 5A 42 0B 5F 2B 43 03 7F 46 89 13 DC 25 91 69 3C 41 13 EC 7C 4A 14 95 DC 34 99 EA DC 6B 1C 59 9C 38 B5 CB DC 68 19 43 5D 38 1C AB FD 4C A8 84 5D 34 65 EF 01 FF FF FF FF 02 00 82 34 08 D1 FA 27 09 11 BA 20 09 51 FA 43 AB 03 DA 1F 0C 51 3B 5B A4 19 1B 58 25 C3 DB 43 AE 05 7B 2E 88 D1 B8 35 11 52 78 39 91 AA F9 39 43 D9 B9 44 BE 4F F7 45 40 0E 97 41 BD E0 94 2E 90 EA 15 51 2C 59 55 51 AC 86 55 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E A9 EF 01 FF FF FF FF 02 00 82 03 03 57 32 00 01 20 01 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 7F 00 00 00 00 00 00 00 00 FF FF CF FF FF FF FF FF EE AA AA AA AA 
+[0;33mW (33795) main: Place your finger on the sensor.[0m
+[0;33mW (33805) UART: PS_GETIMAGE: response: 16[0m
+[0;32mI (33805) main: PS_GetImage response: 16[0m

@@ -1,6 +1,21 @@
 {
     "files.associations": {
-        "uart_lib.h": "c"
+        "uart_lib.h": "c",
+        "random": "c",
+        "array": "c",
+        "deque": "c",
+        "format": "c",
+        "initializer_list": "c",
+        "list": "c",
+        "ranges": "c",
+        "regex": "c",
+        "span": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "xhash": "c",
+        "xstring": "c",
+        "xtree": "c",
+        "xutility": "c"
     },
     "idf.adapterTargetName": "esp32"
 }

@@ -3,7 +3,7 @@
 #include "uart_lib.h"
 
 
-static const char* TAG = "FINGERPRINT";
+static const char* TAG = "UART";
 
 void uart_init() {
     const uart_config_t uart_config = {
@@ -126,7 +126,7 @@ uint8_t PS_GetImage() {
     // }
     //printf("\n");
 
-    uint8_t response[128];
+    uint8_t response[12];
     uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
     //int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
     // if (length > 0) {
@@ -149,7 +149,8 @@ uint8_t PS_GenChar(uint8_t buffer_id) {
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     
     uint8_t response[128];
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    //int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
     // if (length > 0) {
     //     printf("Received %d bytes: ", length);
     //     for (int i = 0; i < length; i++) {
@@ -228,6 +229,167 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
     
     return response[9]; // Mã phản hồi
 }
+
+
+void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data){
+    uint16_t checksum = 0x01 + 0x04 + 0x08 + buffer_id;
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x08, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
+                     // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+
+    uint8_t ACK_packet[12];  //gói ACK gồm 12 bytes
+    //uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    int ACK_len = uart_read_bytes(UART_NUM, ACK_packet, sizeof(ACK_packet), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_ACK: response: %02x", ACK_packet[9]);
+    if (ACK_len > 0) {
+        printf("Received %d bytes ACK: ", ACK_len);
+        for (int i = 0; i < ACK_len; i++) {
+            printf("%02X ", ACK_packet[i]);
+        }
+        printf("\n");
+    }
+    
+    uint8_t Data_packet_1[139]; 
+    uint8_t Data_packet_2[139];
+    uint8_t Data_packet_3[139]; 
+    uint8_t Data_packet_4[139];
+    uint8_t Data_packet_5[139];
+    uint8_t Data_packet_6[139];
+    //uint8_t Data_packet_7[139];
+    
+    int Data_len_1 = uart_read_bytes(UART_NUM, Data_packet_1, sizeof(Data_packet_1), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_1: Packet Identifier: %02x", Data_packet_1[6]);
+    if (Data_len_1 > 0) {
+        printf("Received %d bytes Data: ", Data_len_1);
+        for (int i = 0; i < Data_len_1; i++) {
+            printf("%02X ", Data_packet_1[i]);
+        }
+        printf("\n");
+    }
+
+    int Data_len_2 = uart_read_bytes(UART_NUM, Data_packet_2, sizeof(Data_packet_2), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_2: Packet Identifier: %02x", Data_packet_2[6]);
+    if (Data_len_2 > 0) {
+        printf("Received %d bytes Data: ", Data_len_2);
+        for (int i = 0; i < Data_len_2; i++) {
+            printf("%02X ", Data_packet_2[i]);
+        }
+        printf("\n");
+    }
+
+    int Data_len_3 = uart_read_bytes(UART_NUM, Data_packet_3, sizeof(Data_packet_3), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_3: Packet Identifier: %02x", Data_packet_3[6]);
+    if (Data_len_3 > 0) {
+        printf("Received %d bytes Data: ", Data_len_3);
+        for (int i = 0; i < Data_len_3; i++) {
+            printf("%02X ", Data_packet_3[i]);
+        }
+        printf("\n");
+    }
+
+    int Data_len_4 = uart_read_bytes(UART_NUM, Data_packet_4, sizeof(Data_packet_4), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_4: Packet Identifier: %02x", Data_packet_4[6]);
+    if (Data_len_4 > 0) {
+        printf("Received %d bytes Data: ", Data_len_4);
+        for (int i = 0; i < Data_len_4; i++) {
+            printf("%02X ", Data_packet_4[i]);
+        }
+        printf("\n");
+    }
+    
+
+    int Data_len_5 = uart_read_bytes(UART_NUM, Data_packet_5, sizeof(Data_packet_5), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_5: Packet Identifier: %02x", Data_packet_5[6]);
+    if (Data_len_5 > 0) {
+        printf("Received %d bytes Data: ", Data_len_5);
+        for (int i = 0; i < Data_len_5; i++) {
+            printf("%02X ", Data_packet_5[i]);
+        }
+        printf("\n");
+    }
+
+
+    int Data_len_6 = uart_read_bytes(UART_NUM, Data_packet_6, sizeof(Data_packet_6), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_UPCHAR_DATA_6: Packet Identifier: %02x", Data_packet_6[6]);
+    if (Data_len_6 > 0) {
+        printf("Received %d bytes Data: ", Data_len_6);
+        for (int i = 0; i < Data_len_6; i++) {
+            printf("%02X ", Data_packet_6[i]);
+        }
+        printf("\n");
+    }
+
+
+    // int Data_len_7 = uart_read_bytes(UART_NUM, Data_packet_7, sizeof(Data_packet_7), 1000 / portTICK_PERIOD_MS);
+    // ESP_LOGW(TAG, "PS_UPCHAR_DATA_7: Packet Identifier: %02x", Data_packet_7[6]);
+    // if (Data_len_7 > 0) {
+    //     printf("Received %d bytes Data: ", Data_len_7);
+    //     for (int i = 0; i < Data_len_7; i++) {
+    //         printf("%02X ", Data_packet_7[i]);
+    //     }
+    //     printf("\n");
+    // }
+
+
+    // uint8_t buffer_data_finger[140];
+    // int length = uart_read_bytes(UART_NUM, buffer_data_finger, sizeof(buffer_data_finger), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received data finger: \n");
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", buffer_data_finger[i]);
+    //     }
+    //     printf("\n");
+    // }
+
+    printf("Save in buffer_data: \n");
+    printf("Received %d bytes of buffer_data: ", Data_len_1);
+    for(uint8_t i = 0; i < Data_len_1; i++){
+        buffer_data[i] = Data_packet_1[i];
+        printf("%02X ", buffer_data[i]);
+    }
+    printf("\n");
+    
+}
+
+
+void PS_DownChar(uint8_t buffer_id, uint8_t *buffer_data){
+    uint16_t checksum = 0x01 + 0x04 + 0x09 + buffer_id;
+    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x09, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
+                     // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
+    uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
+
+    uint8_t ACK_packet[12];
+    //uart_read_bytes(UART_NUM, ACK_packet, sizeof(ACK_packet), 1000 / portTICK_PERIOD_MS);
+    int ACK_len = uart_read_bytes(UART_NUM, ACK_packet, sizeof(ACK_packet), 1000 / portTICK_PERIOD_MS);
+    ESP_LOGW(TAG, "PS_DOWNCHAR_ACK: response: %02x", ACK_packet[9]);
+    if (ACK_len > 0) {
+        printf("Received %d bytes ACK: ", ACK_len);
+        for (int i = 0; i < ACK_len; i++) {
+            printf("%02X ", ACK_packet[i]);
+        }
+        printf("\n");
+    }
+
+    for(int num_packet = 0; num_packet < 6; num_packet++){
+        uint8_t small_packet_data[139];
+        printf("packet_data %d: ", num_packet);
+        for(int x = 0; x < sizeof(small_packet_data); x++){
+            small_packet_data[x] = buffer_data[x + (num_packet*139)];
+            printf("%02x ", small_packet_data[x]);
+        }
+        printf(" \n");
+        uart_write_bytes(UART_NUM, (const char*) small_packet_data, sizeof(small_packet_data));
+    }
+
+    // printf("Write buffer_data in buffer_id %02x  \n", buffer_id);
+    // for(uint8_t i = 0; i < sizeof(buffer_data); i++){
+    //     printf("%02X ", buffer_data[i]);
+    // }
+    // printf("\n");
+    // uart_write_bytes(UART_NUM, (const char*) buffer_data, sizeof(buffer_data));
+}
+
 
 
 // Hàm PS_Enroll: Đăng ký vân tay
@@ -321,7 +483,6 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
         return 0;
     }
 }
-
 
 
 void PS_Delete(uint16_t page_id, uint16_t num) {

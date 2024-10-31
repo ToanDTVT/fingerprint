@@ -26,6 +26,9 @@ uint8_t PS_GenChar(uint8_t buffer_id);
 uint8_t PS_RegModel();
 
 uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id);
+void PS_UpChar(uint8_t buffer_id, uint8_t *buffer_data);
+void PS_DownChar(uint8_t buffer_id, uint8_t *buffer_data);
+
 void PS_Enroll(uint16_t page_id);
 uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num);
 void PS_Delete(uint16_t page_id, uint16_t num);

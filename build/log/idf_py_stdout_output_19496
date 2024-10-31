@@ -1,0 +1,93 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b48ch ( 46220) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b4b4 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17288h ( 94856) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=000372b0 vaddr=40082908 size=0aec0h ( 44736) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      1f6ebc2-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Oct 31 2024 11:55:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  6716a3cba...[0m
+[0;32mI (238) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) UART: Place your finger on the sensor.[0m
+[0;33mW (2815) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (4155) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (4155) UART: Remove your finger and place it again.
+[0m
+[0;33mW (7565) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (9015) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (10095) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (11125) UART: PS_STORE: response: 00[0m
+[0;32mI (11125) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (11125) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (12125) main: Place your finger on the sensor.[0m
+[0;33mW (13245) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (13245) main: PS_GetImage response: 00[0m
+[0;33mW (14695) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (14735) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 21 EF 01 FF FF FF FF 02 00 82 42 09 43 9E 50 89 43 BE 16 94 15 1E 1B 9A D7 3E 0E 1B 54 BE 5B 2B 5B 7E 62 B4 48 1E 21 0A 01 DF 37 0A 02 9F 15 8A 41 1F 29 8A 41 3F 0E 8D 43 FF 40 13 D9 7F 63 95 9B 3F 35 17 58 7F 4C 19 D9 BF 5B 20 9B 1F 34 AA 16 5F 17 AE D3 5F 31 2F 95 1F 44 B3 58 FF 72 B3 C7 1F 26 34 D1 5F 54 36 88 BF 18 B6 D0 5F 5F 38 89 3F 70 39 C8 BF 23 BD 0D 1F 1F 16 C1 BC 48 95 C4 5D 38 1F 18 1D 2C 24 16 5D 2F BE EF 01 FF FF FF FF 02 00 82 35 35 54 3D 5A 89 84 7A 31 C1 C9 5B 3E 43 5E FB 61 89 C1 B8 33 A3 41 78 38 A3 D7 F8 66 0A 42 79 69 8B C3 19 30 38 51 39 31 3A CE 59 38 BD 08 19 38 C3 88 39 33 3C CA 97 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 18 0D EF 01 FF FF FF FF 02 00 82 03 03 5C 32 00 01 20 01 6D 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 81 00 00 00 00 00 00 00 00 FF FF FC FF FF FF FF FF EE AA AA AA AA AA AA AA 65 55 55 51 55 55 55 55 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 BD EF 01 FF FF FF FF 02 00 82 3F 12 D9 BE 4A 95 84 7E 1B 1B 17 5E 0E 1B 54 BE 37 9E 58 3E 5B AB 5B 5E 25 34 11 3E 62 B4 48 1E 6F BB 09 3E 30 C3 08 5E 21 8A 41 3F 63 95 9B 1F 35 17 58 7F 4C 19 D9 BF 5A A0 9B 5F 34 AA 16 
+Save in buffer_data: 
+Received 4 bytes of buffer_data: 00 00 00 00 
+[0;33mW (14965) UART: PS_DOWNCHAR: response: 44[0m
+[0;33mW (14985) UART: PS_UPCHAR: response: 3a[0m
+Received data finger: 
+Received 512 bytes: 0C D5 59 6F 0E 1D 19 30 38 50 F9 33 3C C9 79 35 8B 59 F6 6D 0B 50 B6 36 8A 02 97 6B 0C C2 D7 31 3A CE 57 0D 91 45 B5 0D 91 E8 15 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 8E EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Save in buffer_data: 
+Received 4 bytes of buffer_data: 0C D5 59 6F 
+[0;32mI (15215) main_task: Returned from app_main()[0m

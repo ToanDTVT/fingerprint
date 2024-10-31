@@ -1,0 +1,135 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b45ch ( 46172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b484 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d6e0 vaddr=40080000 size=02938h ( 10552) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17230h ( 94768) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037258 vaddr=40082938 size=0ae90h ( 44688) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      1f6ebc2-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Oct 31 2024 11:55:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  33d99c4f6...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) UART: Place your finger on the sensor.[0m
+[0;33mW (2755) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (4205) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (4205) UART: Remove your finger and place it again.
+[0m
+[0;33mW (7535) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (8995) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (10105) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (11135) UART: PS_STORE: response: 00[0m
+[0;32mI (11135) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (11135) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (12135) main: Place your finger on the sensor.[0m
+[0;33mW (13555) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (13555) main: PS_GetImage response: 00[0m
+[0;33mW (15025) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (15065) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (15095) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (15115) UART: PS_UPCHAR: response: 89[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (15115) main: Place your finger on the sensor.[0m
+[0;33mW (15135) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (15135) main: PS_GetImage response: 00[0m
+[0;33mW (16995) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (17035) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (17065) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (17085) UART: PS_UPCHAR: response: 89[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (17085) main: Place your finger on the sensor.[0m
+[0;33mW (17105) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (17105) main: PS_GetImage response: 00[0m
+[0;33mW (18975) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (19015) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (19045) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (19065) UART: PS_UPCHAR: response: 09[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (19065) main: Place your finger on the sensor.[0m
+[0;33mW (19085) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (19085) main: PS_GetImage response: 00[0m
+[0;33mW (20965) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (21005) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (21035) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (21055) UART: PS_UPCHAR: response: 88[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (21055) main: Place your finger on the sensor.[0m
+[0;33mW (21075) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (21075) main: PS_GetImage response: 00[0m
+[0;33mW (22945) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (22985) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (23015) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (23035) UART: PS_UPCHAR: response: 88[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (23035) main: Place your finger on the sensor.[0m
+[0;33mW (23055) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (23055) main: PS_GetImage response: 00[0m

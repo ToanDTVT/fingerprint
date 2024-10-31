@@ -1,0 +1,355 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b45ch ( 46172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b484 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d6e0 vaddr=40080000 size=02938h ( 10552) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17230h ( 94768) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037258 vaddr=40082938 size=0ae90h ( 44688) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      1f6ebc2-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Oct 31 2024 11:55:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  33d99c4f6...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) UART: Place your finger on the sensor.[0m
+[0;33mW (2545) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (3925) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (3925) UART: Remove your finger and place it again.
+[0m
+[0;33mW (7345) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (8815) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (9905) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (10935) UART: PS_STORE: response: 00[0m
+[0;32mI (10935) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (10935) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (11935) main: Place your finger on the sensor.[0m
+[0;33mW (13355) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (13355) main: PS_GetImage response: 00[0m
+[0;33mW (14775) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (14815) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (14845) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (14865) UART: PS_UPCHAR: response: 19[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (14865) main: Place your finger on the sensor.[0m
+[0;33mW (14885) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (14885) main: PS_GetImage response: 00[0m
+[0;33mW (16765) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (16805) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (16835) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (16855) UART: PS_UPCHAR: response: 8a[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (16855) main: Place your finger on the sensor.[0m
+[0;33mW (16875) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (16875) main: PS_GetImage response: 00[0m
+[0;33mW (18755) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (18795) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (18825) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (18845) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (18845) main: Place your finger on the sensor.[0m
+[0;33mW (18865) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (18865) main: PS_GetImage response: 00[0m
+[0;33mW (20125) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (20165) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (20195) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (20215) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (20215) main: Place your finger on the sensor.[0m
+[0;33mW (20245) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (20245) main: PS_GetImage response: 00[0m
+[0;33mW (21435) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (21475) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (21505) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (21525) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (21525) main: Place your finger on the sensor.[0m
+[0;33mW (21545) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (21545) main: PS_GetImage response: 00[0m
+[0;33mW (22735) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (22775) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (22805) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (22825) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (22825) main: Place your finger on the sensor.[0m
+[0;33mW (22845) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (22845) main: PS_GetImage response: 00[0m
+[0;33mW (24025) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (24065) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (24095) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (24115) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (24115) main: Place your finger on the sensor.[0m
+[0;33mW (24135) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (24135) main: PS_GetImage response: 00[0m
+[0;33mW (25325) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (25365) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (25395) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (25415) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (25415) main: Place your finger on the sensor.[0m
+[0;33mW (25435) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (25435) main: PS_GetImage response: 00[0m
+[0;33mW (26615) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (26655) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (26685) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (26705) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (26705) main: Place your finger on the sensor.[0m
+[0;33mW (26725) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (26725) main: PS_GetImage response: 00[0m
+[0;33mW (27915) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (27955) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (27985) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (28005) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (28005) main: Place your finger on the sensor.[0m
+[0;33mW (28025) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (28025) main: PS_GetImage response: 00[0m
+[0;33mW (29205) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (29245) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (29275) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (29295) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (29295) main: Place your finger on the sensor.[0m
+[0;33mW (29315) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (29315) main: PS_GetImage response: 00[0m
+[0;33mW (30505) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (30545) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (30575) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (30595) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (30595) main: Place your finger on the sensor.[0m
+[0;33mW (30615) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (30615) main: PS_GetImage response: 00[0m
+[0;33mW (31805) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (31845) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (31875) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (31895) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (31895) main: Place your finger on the sensor.[0m
+[0;33mW (31915) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (31915) main: PS_GetImage response: 00[0m
+[0;33mW (33105) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (33145) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (33175) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (33195) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (33195) main: Place your finger on the sensor.[0m
+[0;33mW (33225) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (33225) main: PS_GetImage response: 00[0m
+[0;33mW (34415) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (34465) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (34485) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (34505) UART: PS_UPCHAR: response: 18[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (34505) main: Place your finger on the sensor.[0m
+[0;33mW (34535) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (34535) main: PS_GetImage response: 00[0m
+[0;33mW (36035) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (36075) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (36105) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (36125) UART: PS_UPCHAR: response: 40[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (36125) main: Place your finger on the sensor.[0m
+[0;33mW (36145) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (36145) main: PS_GetImage response: 00[0m
+[0;33mW (37805) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (37845) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (37875) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (37895) UART: PS_UPCHAR: response: 98[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (37895) main: Place your finger on the sensor.[0m
+[0;33mW (37915) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (37915) main: PS_GetImage response: 00[0m
+[0;33mW (39505) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (39545) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (39575) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (39595) UART: PS_UPCHAR: response: ba[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (39595) main: Place your finger on the sensor.[0m
+[0;33mW (39615) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (39615) main: PS_GetImage response: 00[0m
+[0;33mW (41225) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (41265) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (41295) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (41315) UART: PS_UPCHAR: response: 98[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (41315) main: Place your finger on the sensor.[0m
+[0;33mW (41335) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (41335) main: PS_GetImage response: 00[0m
+[0;33mW (42795) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (42835) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (42865) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (42885) UART: PS_UPCHAR: response: 28[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (42885) main: Place your finger on the sensor.[0m
+[0;33mW (42905) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (42905) main: PS_GetImage response: 00[0m
+[0;33mW (44505) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (44545) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (44575) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (44595) UART: PS_UPCHAR: response: 24[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (44595) main: Place your finger on the sensor.[0m
+[0;33mW (44615) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (44615) main: PS_GetImage response: 00[0m
+[0;33mW (46175) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (46215) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (46245) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (46265) UART: PS_UPCHAR: response: c3[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (46265) main: Place your finger on the sensor.[0m
+[0;33mW (46285) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (46285) main: PS_GetImage response: 00[0m
+[0;33mW (47855) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (47895) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (47925) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (47945) UART: PS_UPCHAR: response: a1[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (47945) main: Place your finger on the sensor.[0m
+[0;33mW (47965) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (47965) main: PS_GetImage response: 00[0m
+[0;33mW (49495) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (49535) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (49565) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (49585) UART: PS_UPCHAR: response: 10[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (49585) main: Place your finger on the sensor.[0m
+[0;33mW (49615) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (49615) main: PS_GetImage response: 00[0m
+[0;33mW (50855) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (50895) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (50925) UART: PS_DOWNCHAR: response: 00[0m
+[0;33mW (50945) UART: PS_UPCHAR: response: 10[0m
+Received data finger: 
+Received 4 bytes: 00 00 00 00 
+[0;33mW (50945) main: Place your finger on the sensor.[0m
+[0;33mW (50965) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (50965) main: PS_GetImage response: 00[0m

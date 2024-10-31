@@ -20,7 +20,7 @@ void app_main(void)
         PS_Enroll(1);
         vTaskDelay(1000/portTICK_PERIOD_MS);
 
-        while(1){
+        //while(1){
             uint8_t status;
             ESP_LOGW(TAG, "Place your finger on the sensor.");
             
@@ -35,8 +35,15 @@ void app_main(void)
                 ESP_LOGE(TAG, "PS_GENCHAR_1: Failed to generate character from image. Error: %d\n", status);
             }
 
-            PS_Search(1, 0, 160);
-        }
+            //PS_Search(1, 0, 160);
+            uint8_t buffer_data[139];
+            PS_UpChar(1, buffer_data);
+
+            PS_DownChar(2, buffer_data);
+
+            PS_UpChar(2, buffer_data);
+
+        //}
 
     }
 

@@ -1,0 +1,89 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b45ch ( 46172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b484 vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d6e0 vaddr=40080000 size=02938h ( 10552) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17254h ( 94804) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=0003727c vaddr=40082938 size=0ae90h ( 44688) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      1f6ebc2-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Oct 31 2024 11:55:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  bff11f919...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) UART: Place your finger on the sensor.[0m
+[0;33mW (2495) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (3825) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (3825) UART: Remove your finger and place it again.
+[0m
+[0;33mW (6935) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (8245) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (9315) UART: PS_REGMODEL: response: 00[0m
+[0;33mW (10345) UART: PS_STORE: response: 00[0m
+[0;32mI (10345) UART: PS_STORE: Fingerprint stored successfully.[0m
+[0;32mI (10345) UART: PS_STORE: Fingerprint enrolled successfully at position 1.
+[0m
+[0;33mW (11345) main: Place your finger on the sensor.[0m
+[0;33mW (12705) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (12705) main: PS_GetImage response: 00[0m
+[0;33mW (14135) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (14175) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 86 EF 01 FF FF FF FF 02 00 82 2E 09 82 DE 33 0F 58 7E 32 97 98 7E 53 A3 5A 9E 28 A5 16 5E 0F A8 D1 5E 70 2A 46 1E 4A AE C7 3E 1D AF D0 BE 57 AF C8 1E 6B B1 47 9E 1F BA 4B 7E 49 3D 0F 5E 19 C0 CA 9E 47 12 DA 3F 1A 95 55 5F 0E 15 93 FF 55 19 9B 3F 5B AA 46 BF 27 AA 94 DF 3A AC 97 9F 13 31 CF 1F 57 3A CA 3F 23 C1 88 5F 4F 43 4F 3F 53 09 84 BC 48 0E 45 1C 14 0E D5 7C 6D 92 DB 9C 73 1D 1B 9C 31 9D D8 DC 3A BE 1B DC 36 26 EF 01 FF FF FF FF 02 00 82 1B 91 00 BD 73 99 DE BD 2E 3C C3 DD 4C 89 84 7A 3F BB DD 3A 71 8C 55 1B 26 9D 96 3B 2A B0 92 7B 0D 0A C0 F8 11 0B 17 78 5F 0E 5B 58 6F 8F 47 D8 2B 9C C2 58 31 38 2B 58 60 0C 04 39 27 B3 CF 59 37 09 83 B6 29 B5 CC 77 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1E 33 EF 01 FF FF FF FF 02 00 82 03 03 54 1F 00 01 20 01 6C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0E 00 07 00 75 00 00 0C 00 CC FF 33 FC FF 3F FF FE FA AA AA AA AA AA AA 99 65 55 51 55 11 51 44 44 04 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 77 EF 01 FF FF FF FF 02 00 82 2D 18 D8 DE 4C 19 DA 9E 4C A2 DA 5E 26 A6 16 3E 6B AA 45 DE 58 AB 86 BE 4A AE 87 7E 1B B0 10 1E 68 B1 87 BE 0E B2 8E 7E 1F 3A 8B 5E 49 BC CF 5E 19 40 CA 5E 34 C3 EB FE 40 93 DA 5F 21 1F 17 
+[0;33mW (14395) UART: PS_DOWNCHAR: response: 57[0m
+[0;33mW (14425) UART: PS_UPCHAR: response: 00[0m
+Received data finger: 
+Received 512 bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 07 00 03 00 00 0A EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 EF 01 FF FF FF FF 02 00 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[0;32mI (14645) main_task: Returned from app_main()[0m
