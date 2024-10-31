@@ -10,7 +10,7 @@ extern DataPacket USER[MAX_USERS];
 extern volatile enum statemachine currentstate;
 
 
-//void create_fingerprint_task(void);
+void create_fingerprint_task(void);
 void func3(void);
 
 #endif // HANDLE_FINGERPRINT_H

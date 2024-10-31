@@ -12,6 +12,8 @@
 typedef struct {
     //uint8_t username;
     uint8_t id;
+	uint8_t password_enable;
+	uint8_t fingerprint_enable;
     char user_password[SIZE_OF_PASSWORD];
     uint8_t user_fingerprint[6][139];
 } DataPacket;

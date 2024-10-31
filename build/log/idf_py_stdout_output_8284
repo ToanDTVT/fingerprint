@@ -1,0 +1,578 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b3ach ( 45996) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001b3d4 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d640 vaddr=40080000 size=029d8h ( 10712) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175dch ( 95708) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00037604 vaddr=400829d8 size=0adf0h ( 44528) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     fingerprint[0m
+[0;32mI (221) cpu_start: App version:      1a000a4-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Nov  1 2024 01:11:34[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  6d973d80c...[0m
+[0;32mI (238) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (248) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (253) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (258) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (325) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (335) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (345) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (385) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1395) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (1615) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (2685) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (2685) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (3695) UART: PS_SEARCH: response: 17[0m
+[0;32mI (3695) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (3695) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (3855) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (5115) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (6305) UART: PS_SEARCH: response: 09[0m
+[0;32mI (6305) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (6305) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (6465) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (7725) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (8725) UART: PS_SEARCH: response: 17[0m
+[0;32mI (8725) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (8725) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (8955) UART: PS_GETIMAGE: response: 00[0m
+1 
+[0;33mW (10025) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (10025) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (11035) UART: PS_SEARCH: response: 17[0m
+[0;32mI (11035) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (11035) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (11195) UART: PS_GETIMAGE: response: 00[0m
+1 
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (12455) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (18455) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (18645) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (19715) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (19715) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+Password: 
+[0;33mW (20725) UART: PS_SEARCH: response: 17[0m
+[0;32mI (20725) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (20725) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (20885) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (22145) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (23145) UART: PS_SEARCH: response: 17[0m
+[0;32mI (23145) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (23145) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (23365) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (24445) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (24445) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (25455) UART: PS_SEARCH: response: 17[0m
+[0;32mI (25455) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (25455) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (25615) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (26875) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (27875) UART: PS_SEARCH: response: 17[0m
+[0;32mI (27875) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (27875) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (28095) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (29175) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (29175) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (30185) UART: PS_SEARCH: response: 17[0m
+[0;32mI (30185) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (30185) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (30345) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (31605) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (32605) UART: PS_SEARCH: response: 17[0m
+[0;32mI (32605) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (32605) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (32825) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (33895) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (33895) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (34905) UART: PS_SEARCH: response: 17[0m
+[0;32mI (34905) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (34905) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (35065) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (36325) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (37325) UART: PS_SEARCH: response: 17[0m
+[0;32mI (37325) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (37325) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (37555) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (38625) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (38625) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (39635) UART: PS_SEARCH: response: 17[0m
+[0;32mI (39635) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (39635) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (39795) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (41055) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (42055) UART: PS_SEARCH: response: 17[0m
+[0;32mI (42055) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (42055) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (42275) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (43355) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (43355) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (44365) UART: PS_SEARCH: response: 17[0m
+[0;32mI (44365) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (44365) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (44525) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (45805) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (46805) UART: PS_SEARCH: response: 17[0m
+[0;32mI (46805) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (46805) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (47005) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (48075) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (48075) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (49085) UART: PS_SEARCH: response: 17[0m
+[0;32mI (49085) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (49085) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (49255) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (50525) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (51525) UART: PS_SEARCH: response: 17[0m
+[0;32mI (51525) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (51525) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (51745) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (52815) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (52815) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (53825) UART: PS_SEARCH: response: 17[0m
+[0;32mI (53825) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (53825) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (53995) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (55275) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (56275) UART: PS_SEARCH: response: 17[0m
+[0;32mI (56275) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (56275) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (56495) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (57565) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (57565) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (58575) UART: PS_SEARCH: response: 17[0m
+[0;32mI (58575) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (58575) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (58745) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (60015) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (61015) UART: PS_SEARCH: response: 17[0m
+[0;32mI (61015) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (61015) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (61235) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (62305) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (62305) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (63315) UART: PS_SEARCH: response: 17[0m
+[0;32mI (63315) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (63315) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (63485) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (64755) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (65755) UART: PS_SEARCH: response: 17[0m
+[0;32mI (65755) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (65755) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (65975) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (67055) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (67055) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (68065) UART: PS_SEARCH: response: 17[0m
+[0;32mI (68065) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (68065) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (68225) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (69495) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (70495) UART: PS_SEARCH: response: 17[0m
+[0;32mI (70495) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (70495) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (70725) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (71795) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (71795) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (72805) UART: PS_SEARCH: response: 17[0m
+[0;32mI (72805) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (72805) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (72965) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (74235) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (75235) UART: PS_SEARCH: response: 17[0m
+[0;32mI (75235) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (75235) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (75465) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (76535) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (76535) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (77545) UART: PS_SEARCH: response: 17[0m
+[0;32mI (77545) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (77545) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (77705) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (78975) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (79975) UART: PS_SEARCH: response: 17[0m
+[0;32mI (79975) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (79975) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (80205) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (81275) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (81275) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (82285) UART: PS_SEARCH: response: 17[0m
+[0;32mI (82285) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (82285) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (82445) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (83715) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (84715) UART: PS_SEARCH: response: 17[0m
+[0;32mI (84715) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (84715) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (84945) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (86015) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (86015) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (87025) UART: PS_SEARCH: response: 17[0m
+[0;32mI (87025) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (87025) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (87195) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (88455) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (89455) UART: PS_SEARCH: response: 17[0m
+[0;32mI (89455) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (89455) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (89685) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (90765) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (90765) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (91775) UART: PS_SEARCH: response: 17[0m
+[0;32mI (91775) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (91775) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (91945) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (93225) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (94225) UART: PS_SEARCH: response: 17[0m
+[0;32mI (94225) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (94225) handle_fingerprint: Place your finger on the sensor.[0m
+1 
+[0;33mW (94445) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (95515) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (95515) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (96525) UART: PS_SEARCH: response: 17[0m
+[0;32mI (96525) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (96525) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (96685) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (97725) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (97725) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (98735) UART: PS_SEARCH: response: 17[0m
+[0;32mI (98735) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (98735) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (98935) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (100475) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (101675) UART: PS_SEARCH: response: 09[0m
+[0;32mI (101675) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (101675) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (101755) UART: PS_GETIMAGE: response: 02[0m
+[0;33mW (101925) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (102995) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (102995) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (104005) UART: PS_SEARCH: response: 17[0m
+[0;32mI (104005) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (104005) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (104155) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (105195) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (105195) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (106205) UART: PS_SEARCH: response: 17[0m
+[0;32mI (106205) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (106205) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (106405) UART: PS_GETIMAGE: response: 00[0m
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (107475) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (107475) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (113475) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (113635) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (114675) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (114675) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (115685) UART: PS_SEARCH: response: 17[0m
+[0;32mI (115685) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (115685) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+[0;33mW (115895) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (116965) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (116965) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (117975) UART: PS_SEARCH: response: 17[0m
+[0;32mI (117975) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (117975) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (118145) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (119185) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (119185) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (120195) UART: PS_SEARCH: response: 17[0m
+[0;32mI (120195) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (120195) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (120385) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (121465) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (121465) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (122475) UART: PS_SEARCH: response: 17[0m
+[0;32mI (122475) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (122475) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (122635) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (123665) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (123665) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (124675) UART: PS_SEARCH: response: 17[0m
+[0;32mI (124675) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (124675) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (124865) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (125935) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (125935) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (126945) UART: PS_SEARCH: response: 17[0m
+[0;32mI (126945) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (126945) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (127095) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (128135) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (128135) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (129145) UART: PS_SEARCH: response: 17[0m
+[0;32mI (129145) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (129145) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (129335) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (130365) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (130365) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (131375) UART: PS_SEARCH: response: 17[0m
+[0;32mI (131375) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (131375) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (131565) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (132645) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (132645) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (133655) UART: PS_SEARCH: response: 17[0m
+[0;32mI (133655) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (133655) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (134015) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (135465) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (136525) UART: PS_SEARCH: response: 00[0m
+[0;32mI (136525) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (136525) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (136935) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (138395) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (144395) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (144795) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (146255) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (147255) UART: PS_SEARCH: response: 17[0m
+[0;32mI (147255) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (147255) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (147585) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (149035) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (150035) UART: PS_SEARCH: response: 17[0m
+[0;32mI (150035) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (150035) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (150375) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (151815) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (152815) UART: PS_SEARCH: response: 17[0m
+[0;32mI (152815) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (152815) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (153175) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (154575) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (155575) UART: PS_SEARCH: response: 17[0m
+[0;32mI (155575) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (155575) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (155965) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (157405) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (158465) UART: PS_SEARCH: response: 00[0m
+[0;32mI (158465) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (158465) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (158885) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (160305) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (166305) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (166415) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (167995) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (169165) UART: PS_SEARCH: response: 09[0m
+[0;32mI (169165) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (169165) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (169395) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (170465) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (170465) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (171475) UART: PS_SEARCH: response: 17[0m
+[0;32mI (171475) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (171475) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (171635) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (172695) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (172695) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (173705) UART: PS_SEARCH: response: 17[0m
+[0;32mI (173705) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (173705) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (173875) UART: PS_GETIMAGE: response: 00[0m
+1 
+1 
+[0;33mW (174945) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (174945) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (175955) UART: PS_SEARCH: response: 17[0m
+[0;32mI (175955) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (175955) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (176115) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (177365) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (183365) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (183545) UART: PS_GETIMAGE: response: 00[0m
+Password: 
+[0;33mW (184625) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (184625) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (185845) UART: PS_SEARCH: response: 09[0m
+[0;32mI (185845) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (185845) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (186245) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (187695) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (188865) UART: PS_SEARCH: response: 00[0m
+[0;32mI (188865) UART: PS_SEARCH: Fingerprint found at position: 2
+[0m
+[0;33mW (188865) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (189285) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (190735) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (196735) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (196945) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (198015) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (198015) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (199025) UART: PS_SEARCH: response: 17[0m
+[0;32mI (199025) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (199025) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (199185) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (200235) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (200235) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (201245) UART: PS_SEARCH: response: 17[0m
+[0;32mI (201245) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (201245) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (201425) UART: PS_GETIMAGE: response: 00[0m

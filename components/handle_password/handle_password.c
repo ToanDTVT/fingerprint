@@ -203,7 +203,7 @@ void password_task (void * pvParameters){
 }
 
 void create_password_task(void){
-    xTaskCreate(password_task, "password task", 2048, NULL, 5, &password_task_handle);
+    xTaskCreate(password_task, "password task", 2048, NULL, 3, &password_task_handle);
 }
 
 
