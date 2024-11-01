@@ -66,4 +66,5 @@ $<TARGET_FILE:__idf_gpio_lib>
 $<TARGET_FILE:__idf_user_data>
 $<TARGET_FILE:__idf_handle_password>
 $<TARGET_FILE:__idf_handle_fingerprint>
+$<TARGET_FILE:__idf_wireless>
 $<TARGET_FILE:__idf_main>
