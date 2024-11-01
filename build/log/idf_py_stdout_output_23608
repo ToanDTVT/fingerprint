@@ -1,0 +1,75 @@
+[1/14] Building C object esp-idf/wireless/CMakeFiles/__idf_wireless.dir/wireless.c.obj
+[2/14] Linking C static library esp-idf\wireless\libwireless.a
+[3/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[4/14] Linking C static library esp-idf\main\libmain.a
+[5/14] Performing configure step for 'bootloader'
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file D:/ESP/ESP project/fingerprint/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32/ld/esp32.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader_support D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/efuse D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_app_format D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_bootloader_format D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/freertos D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/hal D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/log D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader/subproject/main D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/bootloader/subproject/components/micro-ecc D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/newlib D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/soc D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/spi_flash D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/ESP/ESP project/fingerprint/build/bootloader
+[6/14] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\bootloader\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/ESP/ESP project/fingerprint/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[7/13] Completed 'bootloader'
+[8/13] Generating ld/sections.ld
+[9/13] Building C object CMakeFiles/fingerprint.elf.dir/project_elf_src_esp32.c.obj
+[10/13] Linking CXX executable fingerprint.elf
+[11/13] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP/ESP project/fingerprint/build/fingerprint.bin
+[12/13] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/ESP/ESP project/fingerprint/build/partition_table/partition-table.bin" "D:/ESP/ESP project/fingerprint/build/fingerprint.bin""
+fingerprint.bin binary size 0x32b60 bytes. Smallest app partition is 0x100000 bytes. 0xcd4a0 bytes (80%) free.
+[12/13] cmd.exe /C "cd /D D:\ESP\ESP\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\ESP\ESP\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/ESP/ESP/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/ESP/ESP project/fingerprint/esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 fingerprint.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM5
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:7b:5c:28:c2:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00042fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16351...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16351 compressed) at 0x00001000 in 0.8 seconds (effective 280.3 kbit/s)...
+Hash of data verified.
+Compressed 207712 bytes to 110814...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001d2b4... (28 %)
+Writing at 0x000231ae... (42 %)
+Writing at 0x00029105... (57 %)
+Writing at 0x0002f6b3... (71 %)
+Writing at 0x00037ca5... (85 %)
+Writing at 0x0003daf9... (100 %)
+Wrote 207712 bytes (110814 compressed) at 0x00010000 in 2.9 seconds (effective 582.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 489.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+build" -P D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
