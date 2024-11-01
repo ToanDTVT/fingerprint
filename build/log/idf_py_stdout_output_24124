@@ -1,0 +1,1386 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+1 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+1 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Received 25 bytes: 60 F8 FF 00 00 FF 00 FC FF FE FF 80 00 00 FE 00 FE C2 FE FF FE 00 00 01 E0 
+Did not find fingerprint sensor 
+[0;31mE (3997) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Did not find fingerprint sensor 
+[0;31mE (2387) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x40087087 on core 0
+
+
+Backtrace: 0x400816fa:0x3ffb99c0 0x40086645:0x3ffb99e0 0x4008c10d:0x3ffb9a00 0x40087087:0x3ffb9a70
+
+
+
+
+ELF file SHA256: 0d88446a3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9ech ( 47596) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba14 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc80 vaddr=40080000 size=02398h (  9112) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17b1ch ( 97052) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b44 vaddr=40082398 size=0b430h ( 46128) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:51:39[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  0d88446a3...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1397) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (1797) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (2837) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (2837) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (3857) UART: PS_SEARCH: response: 09[0m
+[0;32mI (3857) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (3857) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (4197) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (5667) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (6727) UART: PS_SEARCH: response: 00[0m
+[0;32mI (6727) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (12727) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (12947) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (14017) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (14017) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (15027) UART: PS_SEARCH: response: 17[0m
+[0;32mI (15027) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (15027) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (15387) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (16827) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (17887) UART: PS_SEARCH: response: 00[0m
+[0;32mI (17887) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (23887) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (24027) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (25077) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (25077) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (26087) UART: PS_SEARCH: response: 17[0m
+[0;32mI (26087) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (26087) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (26257) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (27337) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (27337) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (28347) UART: PS_SEARCH: response: 17[0m
+[0;32mI (28347) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (28347) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (28497) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (29557) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (29557) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (30567) UART: PS_SEARCH: response: 17[0m
+[0;32mI (30567) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (30567) handle_fingerprint: Place your finger on the sensor.[0m
+1 
+[0;33mW (30737) UART: PS_GETIMAGE: response: 00[0m
+1 
+[0;33mW (31807) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (31807) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+[0;33mW (32817) UART: PS_SEARCH: response: 17[0m
+[0;32mI (32817) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (32817) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (32977) UART: PS_GETIMAGE: response: 00[0m
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (34027) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (34027) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (35037) UART: PS_SEARCH: response: 17[0m
+[0;32mI (35037) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (41037) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (41157) UART: PS_GETIMAGE: response: 00[0m
+Password: 
+[0;33mW (42197) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (42197) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (43207) UART: PS_SEARCH: response: 17[0m
+[0;32mI (43207) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (43207) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (43407) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (44477) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (44477) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (45487) UART: PS_SEARCH: response: 17[0m
+[0;32mI (45487) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (45487) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (45647) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (46677) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (46677) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (47687) UART: PS_SEARCH: response: 17[0m
+[0;32mI (47687) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (47687) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (47887) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (48927) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (48927) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (49937) UART: PS_SEARCH: response: 17[0m
+[0;32mI (49937) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (49937) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (50137) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (51207) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (51207) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (52217) UART: PS_SEARCH: response: 17[0m
+[0;32mI (52217) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (52217) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (52377) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (53407) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (53407) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (54417) UART: PS_SEARCH: response: 17[0m
+[0;32mI (54417) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (54417) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (54617) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (55657) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (55657) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (56667) UART: PS_SEARCH: response: 17[0m
+[0;32mI (56667) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (56667) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (56857) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (57937) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (57937) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (58947) UART: PS_SEARCH: response: 17[0m
+[0;32mI (58947) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (58947) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (59107) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (60137) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (60137) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (61147) UART: PS_SEARCH: response: 17[0m
+[0;32mI (61147) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (61147) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (61347) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (62377) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (62377) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (63387) UART: PS_SEARCH: response: 17[0m
+[0;32mI (63387) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (63387) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (63587) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (64617) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (64617) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (65627) UART: PS_SEARCH: response: 17[0m
+[0;32mI (65627) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (65627) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (65827) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (66857) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (66857) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (67867) UART: PS_SEARCH: response: 17[0m
+[0;32mI (67867) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (67867) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (68067) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (69097) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (69097) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (70107) UART: PS_SEARCH: response: 17[0m
+[0;32mI (70107) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (70107) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (70307) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (71347) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (71347) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (72357) UART: PS_SEARCH: response: 17[0m
+[0;32mI (72357) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (72357) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (72547) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (73627) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (73627) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (74637) UART: PS_SEARCH: response: 17[0m
+[0;32mI (74637) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (74637) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (74797) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (75827) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (75827) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (76837) UART: PS_SEARCH: response: 17[0m
+[0;32mI (76837) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (76837) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (77037) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (78067) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (78067) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (79077) UART: PS_SEARCH: response: 17[0m
+[0;32mI (79077) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (79077) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (79277) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (80307) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (80307) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (81317) UART: PS_SEARCH: response: 17[0m
+[0;32mI (81317) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (81317) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (81517) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (82547) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (82547) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (83557) UART: PS_SEARCH: response: 17[0m
+[0;32mI (83557) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (83557) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (83757) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (84787) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (84787) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (85797) UART: PS_SEARCH: response: 17[0m
+[0;32mI (85797) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (85797) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (85997) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (87027) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (87027) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (88037) UART: PS_SEARCH: response: 17[0m
+[0;32mI (88037) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (88037) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (88237) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (89267) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (89267) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (90277) UART: PS_SEARCH: response: 17[0m
+[0;32mI (90277) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (90277) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (90477) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (91507) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (91507) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (92517) UART: PS_SEARCH: response: 17[0m
+[0;32mI (92517) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (92517) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (92717) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (93747) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (93747) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (94757) UART: PS_SEARCH: response: 17[0m
+[0;32mI (94757) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (94757) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (94957) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (95987) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (95987) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (96997) UART: PS_SEARCH: response: 17[0m
+[0;32mI (96997) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (96997) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (97197) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (98227) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (98227) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (99237) UART: PS_SEARCH: response: 17[0m
+[0;32mI (99237) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (99237) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (99437) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (100467) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (100467) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (101477) UART: PS_SEARCH: response: 17[0m
+[0;32mI (101477) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (101477) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (101677) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (102707) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (102707) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (103717) UART: PS_SEARCH: response: 17[0m
+[0;32mI (103717) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (103717) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (103917) UART: PS_GETIMAGE: response: 00[0m

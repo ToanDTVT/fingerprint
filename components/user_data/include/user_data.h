@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include "gpio_lib.h"
 
 #define MAX_USERS 10
 #define SIZE_OF_PASSWORD 5
@@ -28,6 +29,8 @@ enum statemachine {
 	STATE_DELETE_FINGERPRINT
 };
 
+
+uint8_t choose_user();
 void func(void);
 
 

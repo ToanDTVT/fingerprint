@@ -642,13 +642,6 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/CMakeFiles/list_install_co
 D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/CMakeFiles/install.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/CMakeFiles/install/local.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/CMakeFiles/install/strip.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/__idf_user_data.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/edit_cache.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/rebuild_cache.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/list_install_components.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install/local.dir
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install/strip.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/__idf_gpio_lib.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/edit_cache.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/rebuild_cache.dir
@@ -656,6 +649,13 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/list_install_co
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install/local.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/CMakeFiles/install/strip.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/__idf_user_data.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/edit_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/rebuild_cache.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/list_install_components.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install/local.dir
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/CMakeFiles/install/strip.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/__idf_handle_password.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/edit_cache.dir
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/CMakeFiles/rebuild_cache.dir

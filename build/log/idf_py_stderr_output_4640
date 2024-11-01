@@ -1,0 +1,8 @@
+CMake Error at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/component.cmake:313 (message):
+  Include directory 'D:/ESP/ESP
+  project/fingerprint/components/user_data/REQUIRED' is not a directory.
+Call Stack (most recent call first):
+  D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/component.cmake:481 (__component_add_include_dirs)
+  components/user_data/CMakeLists.txt:1 (idf_component_register)
+
+

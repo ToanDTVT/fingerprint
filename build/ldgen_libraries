@@ -62,8 +62,8 @@ D:/ESP/ESP project/fingerprint/build/esp-idf/perfmon/libperfmon.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/spiffs/libspiffs.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/uart_lib/libuart_lib.a
-D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/libuser_data.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/gpio_lib/libgpio_lib.a
+D:/ESP/ESP project/fingerprint/build/esp-idf/user_data/libuser_data.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_password/libhandle_password.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/handle_fingerprint/libhandle_fingerprint.a
 D:/ESP/ESP project/fingerprint/build/esp-idf/main/libmain.a

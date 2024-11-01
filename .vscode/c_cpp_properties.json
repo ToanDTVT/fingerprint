@@ -7,7 +7,10 @@
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/**",
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/mocks/esp_hw_support/include",
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/**",
-                "D:/ESP/ESP project/arduino_esp32/arduino-esp32/**"
+                "D:/ESP/ESP project/arduino_esp32/arduino-esp32/**",
+                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mqtt/esp-mqtt/include",
+                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include",
+                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/include"
             ],
             "defines": [
                 "_DEBUG",

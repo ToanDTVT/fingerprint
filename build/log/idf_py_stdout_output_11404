@@ -1,0 +1,861 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9dch ( 47580) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ba04 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001dc70 vaddr=40080000 size=023a8h (  9128) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17afch ( 97020) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037b24 vaddr=400823a8 size=0b420h ( 46112) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     fingerprint[0m
+[0;32mI (222) cpu_start: App version:      e2c91b3-dirty[0m
+[0;32mI (228) cpu_start: Compile time:     Nov  1 2024 12:28:45[0m
+[0;32mI (234) cpu_start: ELF file SHA256:  aa243e273...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (245) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB4C28 len 0002B3D8 (172 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008D7C8 len 00012838 (74 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (327) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (387) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (1397) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (1567) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (2627) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (2627) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (3637) UART: PS_SEARCH: response: 17[0m
+[0;32mI (3637) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (3637) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (4017) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (5467) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (6567) UART: PS_SEARCH: response: 00[0m
+[0;32mI (6567) UART: PS_SEARCH: Fingerprint found at position: 2
+[0m
+[0;33mW (6567) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (6927) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (8377) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (14377) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (14787) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (16237) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (17237) UART: PS_SEARCH: response: 17[0m
+[0;32mI (17237) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (17237) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (17577) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (19037) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (20037) UART: PS_SEARCH: response: 17[0m
+[0;32mI (20037) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (20037) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (20157) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (21197) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (21197) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (22207) UART: PS_SEARCH: response: 17[0m
+[0;32mI (22207) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (22207) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (22607) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (24057) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (25117) UART: PS_SEARCH: response: 00[0m
+[0;32mI (25117) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (25117) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (25527) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (26977) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (32977) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (33187) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (34217) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (34217) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (35227) UART: PS_SEARCH: response: 17[0m
+[0;32mI (35227) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (35227) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (35427) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (36467) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (36467) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (37477) UART: PS_SEARCH: response: 17[0m
+[0;32mI (37477) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (37477) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (37887) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (39357) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (40417) UART: PS_SEARCH: response: 00[0m
+[0;32mI (40417) UART: PS_SEARCH: Fingerprint found at position: 5
+[0m
+[0;33mW (40417) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (40827) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (42267) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (48267) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (49267) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (50267) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (50267) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+[0;33mW (51267) UART: PS_SEARCH: response: 00[0m
+[0;32mI (51267) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;33mW (51267) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (51477) UART: PS_GETIMAGE: response: 80[0m
+1 
+[0;33mW (52477) UART: PS_GETIMAGE: response: 80[0m
+1 
+[0;33mW (52697) UART: PS_GETIMAGE: response: 00[0m
+1 
+[0;33mW (53727) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (53727) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (59727) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (60727) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (61727) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (61727) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+Password: 
+[0;33mW (62727) UART: PS_SEARCH: response: 00[0m
+[0;32mI (62727) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;33mW (62727) handle_fingerprint: Place your finger on the sensor.[0m
+1 
+[0;33mW (63727) UART: PS_GETIMAGE: response: 00[0m
+1 
+1 
+[0;33mW (64727) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (64727) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (70727) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (71307) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (72307) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (73307) UART: PS_SEARCH: response: 01[0m
+[0;32mI (73307) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (73307) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (74307) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (75797) UART: PS_GENCHAR: response: 00[0m
+Password: 
+[0;33mW (76797) UART: PS_SEARCH: response: 01[0m
+[0;32mI (76797) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (76797) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (77797) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (78797) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (78797) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+1 
+[0;33mW (79797) UART: PS_SEARCH: response: 00[0m
+[0;32mI (79797) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;33mW (79797) handle_fingerprint: Place your finger on the sensor.[0m
+1 
+1 
+[0;33mW (80797) UART: PS_GETIMAGE: response: 00[0m
+1 
+[0;33mW (81797) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (81797) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (87797) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (88797) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (89797) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (89797) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+Password: 
+[0;33mW (90797) UART: PS_SEARCH: response: 00[0m
+[0;32mI (90797) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;33mW (90797) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (91087) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (92087) UART: PS_GENCHAR: response: 00[0m
+1 
+1 
+1 
+[0;33mW (98087) handle_fingerprint: Place your finger on the sensor.[0m
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;33mW (99087) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (100087) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (100087) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+[0;33mW (106087) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+[0;33mW (107087) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (108087) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (108087) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+[0;33mW (109087) UART: PS_SEARCH: response: 00[0m
+[0;32mI (109087) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;33mW (109087) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (109467) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (110907) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (116907) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (117907) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (119427) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (120647) UART: PS_SEARCH: response: 09[0m
+[0;32mI (120647) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (120647) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (120827) UART: PS_GETIMAGE: response: 80[0m
+[0;33mW (122627) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (123627) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (123627) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+[0;33mW (124647) UART: PS_SEARCH: response: 09[0m
+[0;32mI (124647) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (124647) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (124797) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (125877) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (125877) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+[0;33mW (126897) UART: PS_SEARCH: response: 09[0m
+[0;32mI (126897) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (126897) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (127287) UART: PS_GETIMAGE: response: 00[0m
+=========================================== 
+         SETTING: 
+1. PASSWORD      2.FINGERPRINT 
+=========================================== 
+[0;33mW (128317) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (128317) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (128317) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (128487) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (129527) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (129527) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (129527) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (129727) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (130757) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (130757) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (130757) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (130967) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (132007) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (132007) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (132007) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (132217) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (133257) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (133257) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (133257) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (133467) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (134507) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (134507) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (134507) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (134727) UART: PS_GETIMAGE: response: 00[0m
+[0;33mW (135727) UART: PS_GENCHAR: response: fb[0m
+[0;31mE (135727) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 251
+[0m
+[0;33mW (135727) handle_fingerprint: Place your finger on the sensor.[0m
+[0;33mW (135827) UART: PS_GETIMAGE: response: 02[0m
+[0;33mW (135997) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136127) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136257) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136387) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136517) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136647) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136777) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (136907) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137157) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137287) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (137917) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138387) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138517) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138647) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (138897) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139787) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (139917) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140047) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140167) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140297) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140427) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140807) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (140937) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141347) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141477) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141737) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141867) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (141997) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142257) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142517) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142647) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142777) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (142907) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143037) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143167) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143297) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143427) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143557) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143687) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143817) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (143947) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144077) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144337) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144467) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144737) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144867) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (144997) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145127) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145257) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145387) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145527) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145787) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (145917) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146047) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146177) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146307) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146567) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146697) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146827) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (146957) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147357) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147487) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147617) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147747) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (147877) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148397) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148527) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (148927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149317) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149577) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149707) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (149837) UART: PS_GETIMAGE: response: 03[0m
+=========================================== 
+          SETTING PASSWORD: 
+1. ADD PASSWORD      2. DELETE PASSWORD 
+=========================================== 
+DELETE PASSWORD: 
+[0;33mW (149967) UART: PS_GETIMAGE: response: 03[0m
+=========================================== 
+          SETTING PASSWORD: 
+1. ADD PASSWORD      2. DELETE PASSWORD 
+=========================================== 
+DELETE PASSWORD: 
+[0;33mW (150097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150357) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150487) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150617) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150747) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (150877) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151397) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151527) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151787) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (151917) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152177) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152307) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152567) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152697) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152827) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (152957) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (153087) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (153427) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (153497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (153877) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (153947) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (154327) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (154387) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (154767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (154837) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (155217) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (155287) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (155667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (155737) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (156117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (156187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (156557) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (156627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157077) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157457) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157527) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157907) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (157977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (158357) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (158417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (158797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (158867) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (159207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (159317) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (159697) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (159767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (160137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (160207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (160587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (160657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161037) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161477) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (161997) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (162377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (162447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (162827) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (162887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (163267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (163337) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (163717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (163787) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164127) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (164977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (165887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (166927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167317) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167577) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167707) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167837) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (167967) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168617) UART: PS_GETIMAGE: response: 03[0m
+=========================================== 
+          SETTING PASSWORD: 
+1. ADD PASSWORD      2. DELETE PASSWORD 
+=========================================== 
+ADD PASSWORD: 
+[0;33mW (168747) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (168887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (169927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170317) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170577) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170707) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170837) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (170967) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (171887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (172927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173317) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (173977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (174887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (175927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176187) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176327) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176447) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176577) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (176977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (177887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178277) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178407) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178807) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (178937) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179067) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179197) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179327) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179457) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (179977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180367) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180637) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (180897) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181157) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181287) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181807) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (181937) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182067) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182337) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182467) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182597) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182727) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182857) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (182987) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183247) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183637) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (183897) UART: PS_GETIMAGE: response: 03[0m
+����������������������������������������������������������������0;33mW (184027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (184167) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (184297) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (184637) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (184707) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (185087) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (185157) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (185537) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (185607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (185987) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (186057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (186437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (186507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (186887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (186957) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (187337) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (187397) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (187777) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (187847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188297) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188467) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188597) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188727) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188857) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (188987) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189247) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189637) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (189767) UART: PS_GETIMAGE: response: 03[0m
+1 
+[0;33mW (189897) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190157) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190287) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190807) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (190937) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191067) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191197) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191327) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191457) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191847) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (191977) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192247) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192637) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192767) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (192897) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193027) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193157) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193287) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193807) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (193937) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194067) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194197) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194327) UART: PS_GETIMAGE: response: 03[0m
+1 
+[0;33mW (194457) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194717) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194857) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (194987) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195247) UART: PS_GETIMAGE: response: 03[0m
+1 
+[0;33mW (195377) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195507) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195647) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195777) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (195907) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196037) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196167) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196297) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196567) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196697) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196827) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (196957) UART: PS_GETIMAGE: response: 03[0m
+1 
+[0;33mW (197097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (197227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (197357) UART: PS_GETIMAGE: response: 03[0m
+
+=========================================== 
+HAVE SLOT!! ADD SUCCESS 
+=========================================== 
+[0;33mW (197487) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (197627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (197757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (197887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198017) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198147) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198287) UART: PS_GETIMAGE: response: 03[0m
+Password: 
+[0;33mW (198417) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198677) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198817) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (198947) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199077) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199337) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199477) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199737) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (199867) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200397) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200527) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200667) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200797) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (200927) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201057) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201197) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201327) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201457) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201587) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201727) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201857) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (201987) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202117) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202257) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202387) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202517) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202647) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202777) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (202917) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203047) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203177) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203307) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203567) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203707) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203837) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (203967) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204097) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204227) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204357) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204497) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204627) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (204887) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (205237) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (205307) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (205687) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (205757) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (206137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (206207) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (206547) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (206657) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (207037) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (207107) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (207487) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (207557) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (207897) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208177) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208307) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208437) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208567) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208697) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208827) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (208957) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209087) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209217) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209347) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209477) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209607) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209747) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (209877) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (210007) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (210137) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (210267) UART: PS_GETIMAGE: response: 03[0m
+[0;33mW (210397) UART: PS_GETIMAGE: response: 03[0m

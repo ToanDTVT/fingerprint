@@ -2,13 +2,13 @@
 #include "handle_password.h"
 
 
-#define TAG "password"
+ #define TAG "password"
 
-char correct_password[SIZE_OF_PASSWORD] = {1, '1', '1', '1', '1'};
-char enter_password[SIZE_OF_PASSWORD];
-int number_fail = 0;
+// char correct_password[SIZE_OF_PASSWORD] = {1, '1', '1', '1', '1'};
+// char enter_password[SIZE_OF_PASSWORD];
+// int number_fail = 0;
 
-TaskHandle_t password_task_handle = NULL;
+// TaskHandle_t password_task_handle = NULL;
 
 
 int check_pass_open_door(char *enter_password){
@@ -147,64 +147,131 @@ void password_task (void * pvParameters){
 
     while(1){
 
-        //if(xSemaphoreTake(xMutex, portMAX_DELAY) == pdTRUE){
+       
 
-            switch(currentstate){
+        switch(currentstate){
 
-                case STATE_IDLE:
-                    memset(enter_password, 0, sizeof(enter_password));
-                    handle_input_password_idle(enter_password);
-                    vTaskDelay(500 / portTICK_PERIOD_MS);
-                break;
+            case STATE_IDLE:
+                memset(enter_password, 0, sizeof(enter_password));
+                handle_input_password_idle(enter_password);
+                vTaskDelay(500 / portTICK_PERIOD_MS);
+            break;
 
-                case STATE_SETTING:
-                    printf("=========================================== \n");
-                    printf("         SETTING: \n");
-                    printf("1. PASSWORD      2.FINGERPRINT \n");
-                    printf("=========================================== \n");
-                    while(1){
-                        char press_keypad_1 = keypad_get_char();
-                        if(press_keypad_1 == '1'){
-                            handle_setting_password(enter_password);
-                            break;
+            case STATE_SETTING:
+                printf("=========================================== \n");
+                printf("         SETTING: \n");
+                printf("1. PASSWORD      2.FINGERPRINT \n");
+                printf("=========================================== \n");
+                while(1){
+                    char press_keypad_1 = keypad_get_char();
+                    if(press_keypad_1 == '1'){
+                        handle_setting_password(enter_password);
+                        break;
+                    }
+                    if(press_keypad_1 == '2'){
+                        printf("=========================================== \n");
+                        printf("          SETTING PASSWORD: \n");
+                        printf("1. ADD PASSWORD      2. DELETE PASSWORD \n");
+                        printf("=========================================== \n");
+
+                        char press_keypad_2 = 0;
+                        while(1){
+                            press_keypad_2 = keypad_get_char();
+                            if(press_keypad_2 == '1'){
+                                printf("ADD PASSWORD: \n");
+                                currentstate = STATE_ADD_FINGERPRINT;
+                                break;
+                            }
+                            if(press_keypad_2 == '2'){ 
+                                printf("DELETE PASSWORD: \n"); 
+                                currentstate = STATE_DELETE_FINGERPRINT; 
+                                break;
+                            }
+                            vTaskDelay(500/portTICK_PERIOD_MS);
                         }
-                        if(press_keypad_1 == '2'){
-                            vTaskDelay(100/portTICK_PERIOD_MS);
-                        }
+
                         vTaskDelay(100/portTICK_PERIOD_MS);
                     }
-                break;
+                    vTaskDelay(100/portTICK_PERIOD_MS);
+                }
+            break;
 
-                case STATE_DISABLE:
-                break;
+            case STATE_DISABLE:
+            break;
 
-                case STATE_IDLE_FINGERPRINT:
-                break;
+            case STATE_IDLE_FINGERPRINT:
+            break;
 
-                case STATE_ADD_FINGERPRINT:
-                break;
+            case STATE_ADD_FINGERPRINT:
+                printf("1.NEW USER        2.OLD USER");
+                
+                char press_keypad_3 = 0;
+                do{
+                    press_keypad_3 = keypad_get_char();
+                    vTaskDelay(500 / portTICK_PERIOD_MS);
+                }while(press_keypad_3 == 0);
+                
+                if(press_keypad_3 == '1'){
+                    ESP_LOGW(TAG, "ADD NEW USER FINGER: ");
+                    for(int i = 1; i <= MAX_USERS; i++){
+                        if((USER[i].id == 0)){
+                            if(USER[i].fingerprint_enable == 0){
+                                PS_Enroll(i);
+                                USER[i].id = i;
+                                USER[i].fingerprint_enable = 1;
+                                ESP_LOGI(TAG, "ADD FINGERPRINT SUCCESS !!");
+                                currentstate = STATE_IDLE;
+                                break;
+                            }
+                        }
+                    }
+                }
+                
+                if(press_keypad_3 == '2'){
+                    ESP_LOGW(TAG, "ADD OLD USER FINGER: ");
+                    uint8_t p = choose_user();
+                    if(USER[p].id == p){
+                        PS_Enroll(p);
+                        USER[p].fingerprint_enable = 1;
+                        ESP_LOGI(TAG, "ADD FINGERPRINT SUCCESS !!");
+                        currentstate = STATE_IDLE;
+                        break;
+                    }else{
+                        ESP_LOGI(TAG, "USER NO EXIST !! ");
+                        currentstate = STATE_IDLE;
+                        break;
+                    }
+                }
+            break;
 
-                case STATE_DELETE_FINGERPRINT:
-                break;
-
-                case STATE_OPENDOOR:
-                    open_door();
-                    vTaskDelay(1000/portTICK_PERIOD_MS);
+            case STATE_DELETE_FINGERPRINT:
+                uint8_t p = choose_user();
+                if(USER[p].id == p){
+                    PS_Delete(p, 1);
                     currentstate = STATE_IDLE;
-                break;
-            }
+                }else{
+                    ESP_LOGI(TAG, "USER NO EXIST !! ");
+                    currentstate = STATE_IDLE;
+                }
+            break;
 
-        //     xSemaphoreGive(xMutex);
-        // }
+            case STATE_OPENDOOR:
+                open_door();
+                vTaskDelay(1000/portTICK_PERIOD_MS);
+                currentstate = STATE_IDLE;
+            break;
+        }
+
+        
 
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 
 }
 
-void create_password_task(void){
-    xTaskCreate(password_task, "password task", 2048, NULL, 3, &password_task_handle);
-}
+// void create_password_task(void){
+//     xTaskCreate(password_task, "password task", 2048, NULL, 3, &password_task_handle);
+// }
 
 
 void func2(void)
