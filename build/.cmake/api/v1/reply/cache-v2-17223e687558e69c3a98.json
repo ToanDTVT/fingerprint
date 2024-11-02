@@ -2,6 +2,30 @@
 	"entries" : 
 	[
 		{
+			"name" : "CCACHE_ENABLE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "1"
+		},
+		{
+			"name" : "CCACHE_FOUND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "D:/ESP/ESP/Espressif/tools/ccache/4.8/ccache-4.8-windows-x86_64/ccache.exe"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -32,22 +56,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "D:/ESP/ESP/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-ar.exe"
-		},
-		{
-			"name" : "CMAKE_ASM_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_AR",
@@ -1634,6 +1642,18 @@
 			"value" : ""
 		},
 		{
+			"name" : "ESP_PLATFORM",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "1"
+		},
+		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Git",
 			"properties" : 
 			[
@@ -1655,7 +1675,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Users/DELL/AppData/Local/Programs/Python/Python311/python.exe][cfound components: Interpreter ][v3.11.5()]"
+			"value" : "[D:/ESP/ESP/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe][cfound components: Interpreter ][v3.11.2()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1878,6 +1898,30 @@
 			"value" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls"
 		},
 		{
+			"name" : "PYTHON",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "D:\\ESP\\ESP\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe"
+		},
+		{
+			"name" : "PYTHON_DEPS_CHECKED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "1"
+		},
+		{
 			"name" : "TIME_T_SIZE",
 			"properties" : 
 			[
@@ -1943,11 +1987,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : ""
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/DELL/AppData/Local/Programs/Python/Python311/python.exe"
+			"value" : "D:/ESP/ESP/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe"
 		},
 		{
 			"name" : "_Python3_INTERPRETER_PROPERTIES",
@@ -1959,7 +2003,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Python;3;11;5;32;;;C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib;C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib;C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages;C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages"
+			"value" : "Python;3;11;2;32;;;D:\\ESP\\ESP\\Espressif\\tools\\idf-python\\3.11.2\\Lib;D:\\ESP\\ESP\\Espressif\\tools\\idf-python\\3.11.2\\Lib;D:\\ESP\\ESP\\Espressif\\python_env\\idf5.2_py3.11_env\\Lib\\site-packages;D:\\ESP\\ESP\\Espressif\\python_env\\idf5.2_py3.11_env\\Lib\\site-packages"
 		},
 		{
 			"name" : "_Python3_INTERPRETER_SIGNATURE",
@@ -1971,7 +2015,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "37a3632dfd50e7e5c07a90a750fa2553"
+			"value" : "d6e6dcb237e934e15a8477da92d6d543"
 		},
 		{
 			"name" : "esp-idf_BINARY_DIR",

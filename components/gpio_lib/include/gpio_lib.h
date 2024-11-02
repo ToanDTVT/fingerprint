@@ -3,16 +3,20 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/event_groups.h"
 #include "esp_compiler.h"
 #include "esp_log.h"
 #include "driver/dedic_gpio.h"
 #include "driver/gpio.h"
 #include "driver/uart.h"
 #include "esp_rom_sys.h"
+#include "esp_system.h"
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "mqtt_client.h"
 #include "nvs_flash.h"
+#include "lwip/err.h"
+#include "lwip/sys.h"
 
 //#include "user_data.h"
 

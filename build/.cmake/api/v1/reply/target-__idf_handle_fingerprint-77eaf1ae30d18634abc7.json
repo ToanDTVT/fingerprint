@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "esp-idf/esp_app_format/libesp_app_format.a"
+			"path" : "esp-idf/handle_fingerprint/libhandle_fingerprint.a"
 		}
 	],
 	"backtrace" : 2,
@@ -13,18 +13,20 @@
 		[
 			"add_library",
 			"idf_component_register",
+			"set_property",
+			"__component_set_dependencies",
+			"__component_set_all_dependencies",
 			"add_compile_options",
 			"add_c_compile_options",
 			"add_compile_definitions",
 			"include_directories",
 			"target_include_directories",
-			"__component_add_include_dirs",
-			"set_source_files_properties"
+			"__component_add_include_dirs"
 		],
 		"files" : 
 		[
 			"D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/component.cmake",
-			"D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_app_format/CMakeLists.txt",
+			"components/handle_fingerprint/CMakeLists.txt",
 			"D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/utilities.cmake"
 		],
 		"nodes" : 
@@ -35,7 +37,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 12,
+				"line" : 1,
 				"parent" : 0
 			},
 			{
@@ -45,52 +47,76 @@
 				"parent" : 1
 			},
 			{
-				"command" : 2,
+				"command" : 4,
 				"file" : 0,
-				"line" : 464,
+				"line" : 513,
 				"parent" : 1
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 466,
-				"parent" : 1
+				"line" : 354,
+				"parent" : 3
 			},
 			{
 				"command" : 2,
-				"file" : 2,
-				"line" : 281,
+				"file" : 0,
+				"line" : 339,
 				"parent" : 4
 			},
 			{
-				"command" : 4,
+				"command" : 2,
 				"file" : 0,
-				"line" : 465,
-				"parent" : 1
+				"line" : 339,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 339,
+				"parent" : 4
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 463,
-				"parent" : 1
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 481,
+				"line" : 464,
 				"parent" : 1
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 315,
-				"parent" : 8
+				"line" : 466,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 281,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 465,
+				"parent" : 1
 			},
 			{
 				"command" : 8,
-				"file" : 1,
-				"line" : 33,
-				"parent" : 0
+				"file" : 0,
+				"line" : 463,
+				"parent" : 1
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 481,
+				"parent" : 1
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 315,
+				"parent" : 13
 			}
 		]
 	},
@@ -103,115 +129,111 @@
 					"fragment" : "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-ffunction-sections"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fdata-sections"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Werror=all"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-error=unused-function"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-error=unused-variable"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-error=unused-but-set-variable"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-error=deprecated-declarations"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-unused-parameter"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-sign-compare"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Wno-enum-conversion"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-gdwarf-4"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-ggdb"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-Og"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fno-shrink-wrap"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "\"-fmacro-prefix-map=D:/ESP/ESP project/fingerprint=.\""
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fmacro-prefix-map=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2=/IDF"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fstrict-volatile-bitfields"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fno-jump-tables"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 8,
 					"fragment" : "-fno-tree-switch-conversion"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 10,
 					"fragment" : "-std=gnu17"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 10,
 					"fragment" : "-Wno-old-style-declaration"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 10,
-					"define" : " PROJECT_NAME=\"fingerprint\""
-				},
-				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "ESP_PLATFORM"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "IDF_VER=\"v5.2.2-dirty\""
 				},
 				{
-					"backtrace" : 10,
-					"define" : "PROJECT_VER=\"ea3211a-dirty\""
+					"backtrace" : 5,
+					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
 				},
 				{
 					"backtrace" : 2,
@@ -222,31 +244,31 @@
 					"define" : "SOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "_GLIBCXX_HAVE_POSIX_SEMAPHORE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "_GLIBCXX_USE_POSIX_SEMAPHORE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "_GNU_SOURCE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 11,
 					"define" : "_POSIX_READER_WRITER_LOCKS"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 12,
 					"path" : "D:/ESP/ESP project/fingerprint/build/config"
 				},
 				{
-					"backtrace" : 9,
-					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_app_format/include"
+					"backtrace" : 14,
+					"path" : "D:/ESP/ESP project/fingerprint/components/handle_fingerprint/include"
 				},
 				{
 					"backtrace" : 2,
@@ -403,6 +425,202 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP project/fingerprint/components/uart_lib/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/analog_comparator/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/dac/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gpio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/gptimer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2c/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/i2s/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/ledc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/mcpwm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/parlio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/pcnt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/rmt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdio_slave/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sdmmc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/sigma_delta/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/spi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/temperature_sensor/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/twai/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/uart/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/driver/touch_sensor/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_pm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_ringbuf/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP project/fingerprint/components/gpio_lib/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/wifi_apps/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_event/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_phy/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_phy/esp32/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_netif/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mqtt/esp-mqtt/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp-tls-crypto"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/port/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls/library"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/esp_crt_bundle/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls/3rdparty/everest/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls/3rdparty/p256-m"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_timer/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/nvs_flash/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/spi_flash/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_partition/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "D:/ESP/ESP project/fingerprint/components/user_data/include"
 				}
 			],
 			"language" : "C",
@@ -415,16 +633,33 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "__idf_bootloader_support::@d88583f91142925c6676"
+			"backtrace" : 2,
+			"id" : "__idf_xtensa::@1daaaad7abe597e030f9"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "__idf_gpio_lib::@e3cb9b1aa0df9da66bcf"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_uart_lib::@c2f44fdc32978b7f8fc3"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "__idf_user_data::@32e20b3a89a57dbcf44b"
 		}
 	],
-	"id" : "__idf_esp_app_format::@08c2bdce7fd85cdbea06",
-	"name" : "__idf_esp_app_format",
-	"nameOnDisk" : "libesp_app_format.a",
+	"id" : "__idf_handle_fingerprint::@09b29088c91e3a1ecb3a",
+	"name" : "__idf_handle_fingerprint",
+	"nameOnDisk" : "libhandle_fingerprint.a",
 	"paths" : 
 	{
-		"build" : "esp-idf/esp_app_format",
-		"source" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_app_format"
+		"build" : "esp-idf/handle_fingerprint",
+		"source" : "components/handle_fingerprint"
 	},
 	"sourceGroups" : 
 	[
@@ -441,7 +676,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_app_format/esp_app_desc.c",
+			"path" : "components/handle_fingerprint/handle_fingerprint.c",
 			"sourceGroupIndex" : 0
 		}
 	],

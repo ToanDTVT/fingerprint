@@ -1856,7 +1856,7 @@
 				{
 					"directoryIndex" : 17,
 					"id" : "__idf_esp_app_format::@08c2bdce7fd85cdbea06",
-					"jsonFile" : "target-__idf_esp_app_format-57cd807807ddfabeba00.json",
+					"jsonFile" : "target-__idf_esp_app_format-de8938751379bd6b760b.json",
 					"name" : "__idf_esp_app_format",
 					"projectIndex" : 1
 				},
@@ -1926,7 +1926,7 @@
 				{
 					"directoryIndex" : 66,
 					"id" : "__idf_esp_https_ota::@55ee5ec07370a5473c2b",
-					"jsonFile" : "target-__idf_esp_https_ota-36820892a8938211536b.json",
+					"jsonFile" : "target-__idf_esp_https_ota-774c6428f424c9995d86.json",
 					"name" : "__idf_esp_https_ota",
 					"projectIndex" : 1
 				},
@@ -1947,7 +1947,7 @@
 				{
 					"directoryIndex" : 72,
 					"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef",
-					"jsonFile" : "target-__idf_esp_local_ctrl-f019a1769b0ae3545765.json",
+					"jsonFile" : "target-__idf_esp_local_ctrl-d40ab5d9a89a338ef84b.json",
 					"name" : "__idf_esp_local_ctrl",
 					"projectIndex" : 1
 				},
@@ -2059,14 +2059,14 @@
 				{
 					"directoryIndex" : 92,
 					"id" : "__idf_handle_fingerprint::@09b29088c91e3a1ecb3a",
-					"jsonFile" : "target-__idf_handle_fingerprint-4ff7144c4e130ef36a46.json",
+					"jsonFile" : "target-__idf_handle_fingerprint-77eaf1ae30d18634abc7.json",
 					"name" : "__idf_handle_fingerprint",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 91,
 					"id" : "__idf_handle_password::@88d669e108a670708d97",
-					"jsonFile" : "target-__idf_handle_password-77dad43d6253ff5cd328.json",
+					"jsonFile" : "target-__idf_handle_password-fe5cb4eab05f49b14093.json",
 					"name" : "__idf_handle_password",
 					"projectIndex" : 1
 				},
@@ -2108,7 +2108,7 @@
 				{
 					"directoryIndex" : 94,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-84671bd1a50728e4f781.json",
+					"jsonFile" : "target-__idf_main-a61ac2b9187421f9ee3b.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -2248,7 +2248,7 @@
 				{
 					"directoryIndex" : 87,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-f2dd0aa45e16b58e9adc.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-4b5d12f9711cced5807b.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
@@ -2276,7 +2276,7 @@
 				{
 					"directoryIndex" : 26,
 					"id" : "__ldgen_output_sections.ld::@874df54e61e20112dfd4",
-					"jsonFile" : "target-__ldgen_output_sections.ld-122070fd7d4ad4346fd5.json",
+					"jsonFile" : "target-__ldgen_output_sections.ld-be57e2a3f820a1bb0ddc.json",
 					"name" : "__ldgen_output_sections.ld",
 					"projectIndex" : 1
 				},
@@ -2423,14 +2423,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fingerprint.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fingerprint.elf-a87e7ff75551cc2ab755.json",
+					"jsonFile" : "target-fingerprint.elf-945b395ca55b53f3f7d6.json",
 					"name" : "fingerprint.elf",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "flash::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-flash-a8fe1c68ce7fbd18ef9f.json",
+					"jsonFile" : "target-flash-25aa82407d932dfad2b2.json",
 					"name" : "flash",
 					"projectIndex" : 0
 				},

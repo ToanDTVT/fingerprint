@@ -30,7 +30,7 @@ void app_main(void)
     gpio_init();
     uart_init();
     keypad_init();
-
+    task_wifi_init();
     func4();
 
     currentstate = STATE_IDLE;
