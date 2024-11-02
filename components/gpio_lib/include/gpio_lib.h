@@ -9,6 +9,11 @@
 #include "driver/gpio.h"
 #include "driver/uart.h"
 #include "esp_rom_sys.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "mqtt_client.h"
+#include "nvs_flash.h"
+
 //#include "user_data.h"
 
 

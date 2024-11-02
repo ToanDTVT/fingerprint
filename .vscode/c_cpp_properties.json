@@ -11,7 +11,8 @@
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/mqtt/esp-mqtt/include",
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include",
                 "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/include",
-                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_event/include"
+                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esp_event/include",
+                "D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/log/include"
             ],
             "defines": [
                 "_DEBUG",

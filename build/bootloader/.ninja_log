@@ -106,8 +106,8 @@
 28866	29729	7513278130541621	bootloader.elf	e40f00b86bedb427
 29729	36749	7513278201772644	.bin_timestamp	5504f561e055c5b6
 29729	36749	7513278201772644	D:/ESP/ESP project/fingerprint/build/bootloader/.bin_timestamp	5504f561e055c5b6
-20	154	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-20	154	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-12	8258	7521510002335483	build.ninja	bd5cc1aa5ca6f6b4
-26	508	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-26	508	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+28	206	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+28	206	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+12	8258	7521531393618162	build.ninja	bd5cc1aa5ca6f6b4
+24	164	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+24	164	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23

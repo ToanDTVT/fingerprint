@@ -1856,7 +1856,7 @@
 				{
 					"directoryIndex" : 17,
 					"id" : "__idf_esp_app_format::@08c2bdce7fd85cdbea06",
-					"jsonFile" : "target-__idf_esp_app_format-d2de37087d8970b308a1.json",
+					"jsonFile" : "target-__idf_esp_app_format-57cd807807ddfabeba00.json",
 					"name" : "__idf_esp_app_format",
 					"projectIndex" : 1
 				},
@@ -1926,7 +1926,7 @@
 				{
 					"directoryIndex" : 66,
 					"id" : "__idf_esp_https_ota::@55ee5ec07370a5473c2b",
-					"jsonFile" : "target-__idf_esp_https_ota-774c6428f424c9995d86.json",
+					"jsonFile" : "target-__idf_esp_https_ota-36820892a8938211536b.json",
 					"name" : "__idf_esp_https_ota",
 					"projectIndex" : 1
 				},
@@ -2031,7 +2031,7 @@
 				{
 					"directoryIndex" : 76,
 					"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7",
-					"jsonFile" : "target-__idf_fatfs-65595e3f6d4bb085b79e.json",
+					"jsonFile" : "target-__idf_fatfs-06a7407e3862e5d54a15.json",
 					"name" : "__idf_fatfs",
 					"projectIndex" : 1
 				},
@@ -2045,7 +2045,7 @@
 				{
 					"directoryIndex" : 89,
 					"id" : "__idf_gpio_lib::@e3cb9b1aa0df9da66bcf",
-					"jsonFile" : "target-__idf_gpio_lib-23c542e747ca81296b20.json",
+					"jsonFile" : "target-__idf_gpio_lib-11a06ffcb75a4ddb2ff6.json",
 					"name" : "__idf_gpio_lib",
 					"projectIndex" : 1
 				},
@@ -2059,14 +2059,14 @@
 				{
 					"directoryIndex" : 92,
 					"id" : "__idf_handle_fingerprint::@09b29088c91e3a1ecb3a",
-					"jsonFile" : "target-__idf_handle_fingerprint-0a11525a7fa656ac5449.json",
+					"jsonFile" : "target-__idf_handle_fingerprint-4ff7144c4e130ef36a46.json",
 					"name" : "__idf_handle_fingerprint",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 91,
 					"id" : "__idf_handle_password::@88d669e108a670708d97",
-					"jsonFile" : "target-__idf_handle_password-df14090b2db9fa82c3f1.json",
+					"jsonFile" : "target-__idf_handle_password-77dad43d6253ff5cd328.json",
 					"name" : "__idf_handle_password",
 					"projectIndex" : 1
 				},
@@ -2108,7 +2108,7 @@
 				{
 					"directoryIndex" : 94,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-cf0cc565152320194e4f.json",
+					"jsonFile" : "target-__idf_main-84671bd1a50728e4f781.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -2227,7 +2227,7 @@
 				{
 					"directoryIndex" : 90,
 					"id" : "__idf_user_data::@32e20b3a89a57dbcf44b",
-					"jsonFile" : "target-__idf_user_data-6cd9b7beacf8ded02180.json",
+					"jsonFile" : "target-__idf_user_data-d81d4f5bb3efa8134ed3.json",
 					"name" : "__idf_user_data",
 					"projectIndex" : 1
 				},
@@ -2248,14 +2248,14 @@
 				{
 					"directoryIndex" : 87,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-da41f15c18e06aa98ebb.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-f2dd0aa45e16b58e9adc.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 93,
 					"id" : "__idf_wireless::@8256e429551d461d2811",
-					"jsonFile" : "target-__idf_wireless-dcebe328f99ef9577665.json",
+					"jsonFile" : "target-__idf_wireless-a6408964d70f4d2f291e.json",
 					"name" : "__idf_wireless",
 					"projectIndex" : 1
 				},
@@ -2276,7 +2276,7 @@
 				{
 					"directoryIndex" : 26,
 					"id" : "__ldgen_output_sections.ld::@874df54e61e20112dfd4",
-					"jsonFile" : "target-__ldgen_output_sections.ld-26191eb80c4aa173cbf7.json",
+					"jsonFile" : "target-__ldgen_output_sections.ld-122070fd7d4ad4346fd5.json",
 					"name" : "__ldgen_output_sections.ld",
 					"projectIndex" : 1
 				},
@@ -2423,14 +2423,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fingerprint.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fingerprint.elf-bcc60ffe2cb4d644cb05.json",
+					"jsonFile" : "target-fingerprint.elf-a87e7ff75551cc2ab755.json",
 					"name" : "fingerprint.elf",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "flash::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-flash-25aa82407d932dfad2b2.json",
+					"jsonFile" : "target-flash-a8fe1c68ce7fbd18ef9f.json",
 					"name" : "flash",
 					"projectIndex" : 0
 				},

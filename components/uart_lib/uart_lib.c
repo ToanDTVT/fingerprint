@@ -22,76 +22,17 @@ void uart_init() {
 
 
 
-
-//Hàm tính tổng kiểm tra
-uint16_t calculate_checksum(uint8_t *packet, int length) {
-    uint16_t checksum = 0;
-    for (int i = 6; i < length; i++) {
-        checksum += packet[i];
-    }
-    return checksum;
-}
-
-// Hàm gửi gói lệnh
-void send_command(uint8_t command, uint8_t *data, int data_len) {
-    uint8_t packet[data_len + 12];
-    int index = 0;
-
-    // Header
-    packet[index++] = 0xEF; printf("Header: %02x ", packet[index - 1]);
-    packet[index++] = 0x01; printf("%02x \n", packet[index - 1]);
-
-    // Address (mặc định 4 byte 0xFFFFFFFF)
-    for (int i = 0; i < 4; i++) {
-        packet[index++] = 0xFF; printf("Address: %02x \n", packet[index - 1]);
-    }
-
-    // Xác định loại gói (01: gói lệnh,    02: gói dữ liệu,     07: gói phản hồi)
-    packet[index++] = 0x01;  printf("Packet identifier: %02x \n", packet[index - 1]);
-
-    // Length
-    packet[index++] = ((data_len + 2) >> 8) & 0xFF;  printf("Lenghth: %02x ", packet[index - 1]);
-    packet[index++] = (data_len + 2) & 0xFF;         printf("%02x \n", packet[index - 1]);
-
-    //Command (13: xác minh mật khẩu,    01: lấy hình ảnh,     02: chuyển đổi hình ảnh thành vân tay,  05: tìm kiếm vân tay)
-    packet[index++] = command;                 printf("command: %02x \n", packet[index - 1]);
-
-    // Data
-    for (int i = 0; i <= data_len; i++) {
-        packet[index++] = data[i];             
-    }
-    printf("Data_len: %d \n", index - 1);
-
-
-    // Checksum
-    uint16_t checksum = calculate_checksum(packet, index);
-    packet[index++] = (checksum >> 8) & 0xFF;  printf("Checksum: %02x ", packet[index - 1]);
-    packet[index++] = checksum & 0xFF;         printf("%02x ", packet[index - 1]);   printf("   %d \n", index);  
-
-    // Gửi gói lệnh qua UART
-    uart_write_bytes(UART_NUM, (const char *)packet, index);
-    printf("send %d bytes: ", index);
-    for (int t = 0; t < index; t++){
-        printf("%02x ", packet[t]);
-    }
-    printf("\n");
-}
-
-void receive_response(uint8_t *response, int len) {
-    int length = uart_read_bytes(UART_NUM, response, len, 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-}
-
-
 bool verify_password_of_AS608(){
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x07, 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1B};
-                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                 |Checksum   |
+    uint8_t command[] = {
+        0xEF, 0x01,                                   // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                       // Address (4 bytes)
+        0x01,                                         // Packet Identifier (1 bytes)
+        0x00, 0x07,                                   // Length (2 bytes)
+        0x13,                                         // Intruction Code (command) (1 bytes)
+        0x00, 0x00, 0x00, 0x00,                       // Data (N bytes)
+        0x00, 0x1B                                    // Checksum (2 bytes)
+    };
+
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     printf("Send %d byte: ", sizeof(command));
     for (int t = 0; t < sizeof(command); t++){
@@ -117,8 +58,14 @@ bool verify_password_of_AS608(){
 // Lấy ảnh vân tay từ cảm biến
 uint8_t PS_GetImage() {
 
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x01, 0x00, 0x05};
-                     // | Header   | Address               | PI  | Length    | Cmmd||Checksum  |
+    uint8_t command[] = {
+        0xEF, 0x01,                                 // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                     // Address (4 bytes)
+        0x01,                                       // Packet Identifier (1 bytes)
+        0x00, 0x03,                                 // Length (2 bytes)
+        0x01,                                       // Intruction Code (1 bytes)
+        0x00, 0x05                                  // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     // printf("Send %d byte: ", sizeof(command));
     // for (int t = 0; t < sizeof(command); t++){
@@ -144,8 +91,15 @@ uint8_t PS_GetImage() {
 // Tạo đặc trưng vân tay từ hình ảnh (buffer_id = 1 hoặc 2)
 uint8_t PS_GenChar(uint8_t buffer_id) {
     //uint8_t data[1] = {buffer_id};
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x02, buffer_id, 0x00, (0x07 + buffer_id)};
-                     // | Header   | Address               | PI  | Length    | Cmmd|  Data    |Checksum                 |
+    uint8_t command[] = {
+        0xEF, 0x01,                            // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                // Address (4 bytes)
+        0x01,                                  // Packet Identifier (1 bytes)
+        0x00, 0x04,                            // Length (2 bytes)
+        0x02,                                  // Intruction Code (1 bytes)
+        buffer_id,                             // CharBuffer1 or CharBuffer2 (1 bytes)
+        0x00, (0x07 + buffer_id)               // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     
     uint8_t response[128];
@@ -166,8 +120,14 @@ uint8_t PS_GenChar(uint8_t buffer_id) {
 // Kết hợp hai đặc trưng vân tay thành mẫu
 uint8_t PS_RegModel() {
     //send_command(0x03, NULL, 0); // Gửi lệnh kết hợp đặc trưng vân tay
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x03, 0x05, 0x00, 0x09};
-                     // | Header   | Address               | PI  | Length    | Cmmd||Checksum   |
+    uint8_t command[] = {
+        0xEF, 0x01,                       // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,           // Address (4 bytes)
+        0x01,                             // Packet Identifier (1 bytes)
+        0x00, 0x03,                       // Length (2 bytes)
+        0x05,                             // Intruction Code (1 bytes)
+        0x00, 0x09                        // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     // printf("Send %d byte: ", sizeof(command));
     // for (int t = 0; t < sizeof(command); t++){
@@ -201,8 +161,16 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
     uint8_t high_byte_page_id = (page_id >> 8) & 0xFF; 
     uint8_t low_byte_page_id = page_id & 0xFF ;
     uint16_t check_sum = 0x01 + 0x06 + 0x06 + buffer_id + page_id;
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x06, 0x06, buffer_id, high_byte_page_id, low_byte_page_id, (check_sum >> 8) & 0xFF, (check_sum & 0xFF)};
-                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                                         |Checksum                                    |
+    uint8_t command[] = {
+        0xEF, 0x01,                                              // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                                  // Address (4 bytes)
+        0x01,                                                    // Packet Identifier (1 bytes)
+        0x00, 0x06,                                              // Length (2 bytes)
+        0x06,                                                    // Intruction Code (1 bytes)
+        buffer_id,                                               // CharBuffer1 or CharBuffer2 (1 bytes) (buffer nào được chọn để gáng đặc trưng)
+        high_byte_page_id, low_byte_page_id,                     // Page ID (2 bytes) (page được chọn để lưu dữ liệu vân tay từ buffer được chọn)
+        (check_sum >> 8) & 0xFF, (check_sum & 0xFF)              // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     // printf("Send %d byte: ", sizeof(command));
     // for (int t = 0; t < sizeof(command); t++){
@@ -233,8 +201,15 @@ uint8_t PS_Store(uint8_t buffer_id, uint16_t page_id) {
 
 void PS_UpChar(uint8_t buffer_id, uint8_t buffer_data_fingerprint[6][139]){
     uint16_t checksum = 0x01 + 0x04 + 0x08 + buffer_id;
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x08, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
-                     // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
+    uint8_t command[] = {
+        0xEF, 0x01,                                      // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                          // Address (4 bytes)
+        0x01,                                            // Packet Identifier (1 bytes)
+        0x00, 0x04,                                      // Length (2 bytes)
+        0x08,                                            // Intruction Code (1 bytes)
+        buffer_id,                                       // CharBuffer được chọn để lưu đặc trưng (1 or 2) (1 bytes)
+        ((checksum >> 8) & 0xFF), (checksum & 0xFF)      // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
 
     uint8_t ACK_packet[12];  //gói ACK gồm 12 bytes
@@ -443,8 +418,17 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
     uint8_t low_byte_page_num = page_num & 0xFF ;
 
     uint16_t checksum = 0x01 + 0x08 + 0x04 + buffer_id + start_page + page_num;
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x08, 0x04, buffer_id, high_byte_start_page, low_byte_start_page, high_byte_page_num, low_byte_page_num, (checksum >> 8) & 0xFF, (checksum & 0xFF)};
-                     // | Header   | Address               | PI  | Length    | Cmmd|  Data                                                                                      |Checksum                                    |
+    uint8_t command[] = {
+        0xEF, 0x01,                                           // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                               // Address (4 bytes)
+        0x01,                                                 // Packet Identifier (1 bytes)
+        0x00, 0x08,                                           // Length (2 bytes)
+        0x04,                                                 // Intruction Code (1 bytes)
+        buffer_id,                                            // CharBuffer được chọn để tìm dữ liệu (1 or 2 ) (1 bytes)
+        high_byte_start_page, low_byte_start_page,            // Page bắt đầu tìm  (2 bytes)
+        high_byte_page_num, low_byte_page_num,                // Số lượng page  (2 bytes )
+        (checksum >> 8) & 0xFF, (checksum & 0xFF)             // Checksum (2 bytes)
+    };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     // printf("Send %d byte: ", sizeof(command));
     // for (int t = 0; t < sizeof(command); t++){
@@ -484,7 +468,16 @@ void PS_Delete(uint16_t page_id, uint16_t num) {
     
     // send_command(0x0C, data, 4);
     uint16_t checksum = 0x01 + 0x07 + 0x0C + page_id + num;
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x07, 0x0C, ((page_id >> 8) & 0xFF), (page_id & 0xFF), ((num >> 8) & 0xFF), (num & 0xFF), ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
+    uint8_t command[] = {
+        0xEF, 0x01,                                         // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                             // Address (4 bytes)
+        0x01,                                               // Packet Identifier (1 bytes)
+        0x00, 0x07,                                         // Length (2 bytes)
+        0x0C,                                               // Intruction Code (1 bytes)
+        ((page_id >> 8) & 0xFF), (page_id & 0xFF),          // PageID bắt đầu muốn xóa (2 bytes)
+        ((num >> 8) & 0xFF), (num & 0xFF),                  // Số lượng PageID xóa dần từ PageID bắt đầu (2 bytes)
+        ((checksum >> 8) & 0xFF), (checksum & 0xFF)         // Checksum (2 bytes)
+    };
                      // | Header   | Address               | PI  | Length    | Cmmd| page_id                                  | num                              | Checksum                                   |
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
 

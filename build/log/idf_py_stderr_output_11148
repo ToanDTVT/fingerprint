@@ -1,0 +1,31 @@
+CMake Error at D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/component.cmake:250 (message):
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\__main__.py", line 6, in <module>
+      main()
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 132, in main
+      args.func(args)
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 43, in inject_requirements
+      ).inject_requirements(
+        ^^^^^^^^^^^^^^^^^^^^
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\core.py", line 111, in wrapper
+      return func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\core.py", line 823, in inject_requirements
+      requirements = requirements_manager.load()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages\idf_component_manager\cmake_component_requirements.py", line 96, in load
+      with open(self.path, mode='r', encoding='utf-8') as f:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  FileNotFoundError: [Errno 2] No such file or directory: 'D:/ESP/ESP
+  project/fingerprint/build/component_requires.temp.cmake'
+
+Call Stack (most recent call first):
+  D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/build.cmake:578 (__component_get_requirements)
+  D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:11 (project)
+
+
