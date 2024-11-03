@@ -106,16 +106,34 @@
 28866	29729	7513278130541621	bootloader.elf	e40f00b86bedb427
 29729	36749	7513278201772644	.bin_timestamp	5504f561e055c5b6
 29729	36749	7513278201772644	D:/ESP/ESP project/fingerprint/build/bootloader/.bin_timestamp	5504f561e055c5b6
-24	164	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-24	164	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-12	8258	7522752288940941	build.ninja	bd5cc1aa5ca6f6b4
-27	214	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-27	214	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-26	438	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-26	438	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-25	372	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-25	372	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-28	240	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-28	240	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-23	258	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
-23	258	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+81	364	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+81	364	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+12	8258	7523498232596076	build.ninja	bd5cc1aa5ca6f6b4
+23	169	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+23	169	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	177	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	177	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+30	587	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+30	587	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+16	148	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+16	148	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+24	197	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+24	197	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+23	174	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+23	174	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+40	800	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+40	800	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	213	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	213	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+84	392	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+84	392	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+20	188	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+20	188	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+23	176	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+23	176	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	344	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+22	344	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+18	168	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+18	168	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+21	197	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23
+21	197	0	D:/ESP/ESP project/fingerprint/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	cf71fc5778bede23

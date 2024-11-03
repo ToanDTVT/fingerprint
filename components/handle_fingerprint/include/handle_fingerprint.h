@@ -11,6 +11,8 @@ extern volatile enum statemachine currentstate;
 
 
 //void create_fingerprint_task(void);
+
+void handle_setting_fingerprint();
 void func3(void);
 
 #endif // HANDLE_FINGERPRINT_H

@@ -7,10 +7,6 @@
 #include "wireless.h"
 
 
-#define SSID "Theshowcoffee T1"
-#define PASS "Icanfly9"
-
-
 DataPacket USER[MAX_USERS];
 volatile enum statemachine currentstate = STATE_IDLE;
 
@@ -22,20 +18,14 @@ char enter_password[SIZE_OF_PASSWORD];
 int number_fail = 0;
 
 
-
-
-
 void app_main(void)
 {
     gpio_init();
     uart_init();
     keypad_init();
     task_wifi_init();
-    func4();
 
     currentstate = STATE_IDLE;
-    
-    
 
     while(1){
 
@@ -48,10 +38,7 @@ void app_main(void)
             break;
 
             case STATE_SETTING:
-                printf("=========================================== \n");
-                printf("         SETTING: \n");
-                printf("1. PASSWORD      2.FINGERPRINT \n");
-                printf("=========================================== \n");
+                ESP_LOGI(TAG, "SETTING:   1.PASSWORD     2.FINGERPRINT");
                 while(1){
                     char press_keypad_1 = keypad_get_char();
                     if(press_keypad_1 == '1'){
@@ -59,30 +46,10 @@ void app_main(void)
                         break;
                     }
                     if(press_keypad_1 == '2'){
-                        printf("=========================================== \n");
-                        printf("          SETTING PASSWORD: \n");
-                        printf("1. ADD PASSWORD      2. DELETE PASSWORD \n");
-                        printf("=========================================== \n");
-
-                        char press_keypad_2 = 0;
-                        while(1){
-                            press_keypad_2 = keypad_get_char();
-                            if(press_keypad_2 == '1'){
-                                printf("ADD PASSWORD: \n");
-                                currentstate = STATE_ADD_FINGERPRINT;
-                                break;
-                            }
-                            if(press_keypad_2 == '2'){ 
-                                printf("DELETE PASSWORD: \n"); 
-                                currentstate = STATE_DELETE_FINGERPRINT; 
-                                break;
-                            }
-                            vTaskDelay(500/portTICK_PERIOD_MS);
-                        }
-
-                        vTaskDelay(100/portTICK_PERIOD_MS);
+                        handle_setting_fingerprint();
+                        break;
                     }
-                    vTaskDelay(100/portTICK_PERIOD_MS);
+                    vTaskDelay(500/portTICK_PERIOD_MS);
                 }
             break;
 

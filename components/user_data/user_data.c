@@ -5,7 +5,7 @@
 uint8_t choose_user(){
     uint8_t userID = 0;
     char press_keypad = 0;
-    printf("USER ID: ");
+    printf("USER ID: \n");
     while(1){
         press_keypad = keypad_get_char();
         if((press_keypad >= '0') && (press_keypad <= '9')){

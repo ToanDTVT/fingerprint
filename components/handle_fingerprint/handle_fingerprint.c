@@ -5,6 +5,79 @@ static const char* TAG = "handle_fingerprint";
 
 // TaskHandle_t fingerprint_task_handle = NULL;
 
+
+
+void handle_setting_fingerprint(){
+    ESP_LOGI(TAG, "SETTING FINGERPRINT:  1.ADD FINGERPRINT       2.DELETE FINGERPRINT");
+    char press_keypad_2;
+    while(1){
+        press_keypad_2 = keypad_get_char();
+
+        if(press_keypad_2 == '1'){ 
+            printf("ADD FINGERPRINT: \n");
+            printf("1.NEW USER        2.OLD USER");
+            char press_keypad_3;
+            do{
+                press_keypad_3 = keypad_get_char();
+                vTaskDelay(500 / portTICK_PERIOD_MS);
+            }while(press_keypad_3 == 0);
+            
+            if(press_keypad_3 == '1'){
+                ESP_LOGW(TAG, "ADD NEW USER FINGER: ");
+                for(int i = 1; i <= MAX_USERS; i++){
+                    if((USER[i].id == 0)){
+                        if(USER[i].fingerprint_enable == 0){
+                            PS_Enroll(i);
+                            USER[i].id = i;
+                            USER[i].fingerprint_enable = 1;
+                            ESP_LOGI(TAG, "ADD FINGERPRINT SUCCESS !!");
+                            currentstate = STATE_IDLE;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            if(press_keypad_3 == '2'){
+                ESP_LOGW(TAG, "ADD OLD USER FINGER: ");
+                uint8_t p = choose_user();
+                if(USER[p].id == p){
+                    PS_Enroll(p);
+                    USER[p].fingerprint_enable = 1;
+                    ESP_LOGI(TAG, "ADD FINGERPRINT SUCCESS !!");
+                    press_keypad_3 = 0;
+                    currentstate = STATE_IDLE;
+                    break;
+                }else{
+                    ESP_LOGI(TAG, "USER NO EXIST !! ");
+                    press_keypad_3 = 0;
+                    currentstate = STATE_IDLE;
+                    break;
+                }
+            }
+            press_keypad_2 = 0;
+            break;
+        }
+
+        if(press_keypad_2 == '2'){
+            printf("DELETE FINGERPRINT: \n"); 
+            uint8_t p = choose_user();
+            if(USER[p].id == p){
+                PS_Delete(p, 1);
+                ESP_LOGI(TAG, "DELETE FINGERPRINT OF USER %d", p);
+                currentstate = STATE_IDLE;
+            }else{
+                ESP_LOGI(TAG, "USER NO EXIST !! ");
+                currentstate = STATE_IDLE;
+            }
+            press_keypad_2 = 0;
+            break;
+        }
+        vTaskDelay(500/portTICK_PERIOD_MS);
+    }
+}
+
+
 void fingerprint_task(){
 
     if(verify_password_of_AS608() == true){

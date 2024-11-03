@@ -38,36 +38,36 @@ char keypad_get_char(){
     gpio_set_level(ROW_2, 0);
     gpio_set_level(ROW_3, 0);
     gpio_set_level(ROW_4, 0);
-    if(gpio_get_level(COL_1) == 1) return keypad_value[0][0];
-        else if(gpio_get_level(COL_2) == 1) return keypad_value[0][1];
-            else if(gpio_get_level(COL_3) == 1) return keypad_value[0][2];
+    if(gpio_get_level(COL_1) == 1) {keypad_init(); return keypad_value[0][0];}
+        else if(gpio_get_level(COL_2) == 1) {keypad_init(); return keypad_value[0][1];}
+            else if(gpio_get_level(COL_3) == 1) {keypad_init(); return keypad_value[0][2];}
 
     /*check ROW 2*/
     gpio_set_level(ROW_1, 0);
     gpio_set_level(ROW_2, 1);
     gpio_set_level(ROW_3, 0);
     gpio_set_level(ROW_4, 0);
-    if(gpio_get_level(COL_1) == 1) return keypad_value[1][0];
-        else if(gpio_get_level(COL_2) == 1) return keypad_value[1][1];
-            else if(gpio_get_level(COL_3) == 1) return keypad_value[1][2];
+    if(gpio_get_level(COL_1) == 1) {keypad_init(); return keypad_value[1][0];}
+        else if(gpio_get_level(COL_2) == 1) {keypad_init(); return keypad_value[1][1];}
+            else if(gpio_get_level(COL_3) == 1) {keypad_init(); return keypad_value[1][2];}
 
     /*check ROW 3*/
     gpio_set_level(ROW_1, 0);
     gpio_set_level(ROW_2, 0);
     gpio_set_level(ROW_3, 1);
     gpio_set_level(ROW_4, 0);
-    if(gpio_get_level(COL_1) == 1) return keypad_value[2][0];
-        else if(gpio_get_level(COL_2) == 1) return keypad_value[2][1];
-            else if(gpio_get_level(COL_3) == 1) return keypad_value[2][2];
+    if(gpio_get_level(COL_1) == 1) {keypad_init(); return keypad_value[2][0];}
+        else if(gpio_get_level(COL_2) == 1) {keypad_init(); return keypad_value[2][1];}
+            else if(gpio_get_level(COL_3) == 1) {keypad_init(); return keypad_value[2][2];}
 
     /*check ROW 4*/
     gpio_set_level(ROW_1, 0);
     gpio_set_level(ROW_2, 0);
     gpio_set_level(ROW_3, 0);
     gpio_set_level(ROW_4, 1);
-    if(gpio_get_level(COL_1) == 1) return keypad_value[3][0];
-        else if(gpio_get_level(COL_2) == 1) return keypad_value[3][1];
-            else if(gpio_get_level(COL_3) == 1) return keypad_value[3][2];
+    if(gpio_get_level(COL_1) == 1) {keypad_init(); return keypad_value[3][0];}
+        else if(gpio_get_level(COL_2) == 1) {keypad_init(); return keypad_value[3][1];}
+            else if(gpio_get_level(COL_3) == 1) {keypad_init(); return keypad_value[3][2];}
 
     return '\0';
 }
@@ -79,6 +79,10 @@ void keypad_init(){
     gpio_set_level(ROW_2, 1);
     gpio_set_level(ROW_3, 1);
     gpio_set_level(ROW_4, 1);
+
+    gpio_set_level(COL_1, 0);
+    gpio_set_level(COL_2, 0);
+    gpio_set_level(COL_3, 0);
 }
 
 

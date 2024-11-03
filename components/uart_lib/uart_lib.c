@@ -32,7 +32,6 @@ bool verify_password_of_AS608(){
         0x00, 0x00, 0x00, 0x00,                       // Data (N bytes)
         0x00, 0x1B                                    // Checksum (2 bytes)
     };
-
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     printf("Send %d byte: ", sizeof(command));
     for (int t = 0; t < sizeof(command); t++){
@@ -410,7 +409,6 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
     // data[1] = start_page & 0xFF;
     // data[2] = (page_num >> 8) & 0xFF;
     // data[3] = page_num & 0xFF;
-    
     // send_command(0x04, data, 4);
     uint8_t high_byte_start_page = (start_page >> 8) & 0xFF; 
     uint8_t low_byte_start_page = start_page & 0xFF ;

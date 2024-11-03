@@ -106,12 +106,12 @@ int check_password(char *enter_password, char press_keypad_2){
 
 void handle_setting_password(char *enter_password){
     
-    printf("=========================================== \n");
-    printf("          SETTING PASSWORD: \n");
-    printf("1. ADD PASSWORD      2. DELETE PASSWORD \n");
-    printf("=========================================== \n");
-
-    char press_keypad_2 = 0;
+    // printf("=========================================== \n");
+    // printf("          SETTING PASSWORD: \n");
+    // printf("1. ADD PASSWORD      2. DELETE PASSWORD \n");
+    // printf("=========================================== \n");
+    ESP_LOGI(TAG, "SETTING PASSWORD: 1.ADD PASSWORD         2.DELETE PASSWORD");
+    char press_keypad_2;
     while(1){
         press_keypad_2 = keypad_get_char();
         if(press_keypad_2 == '1'){ printf("ADD PASSWORD: \n"); break;}
@@ -122,7 +122,7 @@ void handle_setting_password(char *enter_password){
     vTaskDelay(500/portTICK_PERIOD_MS);
 
     int i = 1;
-    char press_keypad_3 = 0; 
+    char press_keypad_3; 
     memset(enter_password, 0, sizeof(enter_password));
     enter_password[0] = 1;
     while(i < SIZE_OF_PASSWORD){
@@ -170,20 +170,20 @@ void password_task (void * pvParameters){
                     }
                     if(press_keypad_1 == '2'){
                         printf("=========================================== \n");
-                        printf("          SETTING PASSWORD: \n");
-                        printf("1. ADD PASSWORD      2. DELETE PASSWORD \n");
+                        printf("          SETTING FINGERPRINT: \n");
+                        printf("1. ADD FINGERPRINT      2. DELETE FINGERPRINT \n");
                         printf("=========================================== \n");
 
                         char press_keypad_2 = 0;
                         while(1){
                             press_keypad_2 = keypad_get_char();
                             if(press_keypad_2 == '1'){
-                                printf("ADD PASSWORD: \n");
+                                printf("ADD FINGERPRINT: \n");
                                 currentstate = STATE_ADD_FINGERPRINT;
                                 break;
                             }
                             if(press_keypad_2 == '2'){ 
-                                printf("DELETE PASSWORD: \n"); 
+                                printf("DELETE FINGERPRINT: \n"); 
                                 currentstate = STATE_DELETE_FINGERPRINT; 
                                 break;
                             }
