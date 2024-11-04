@@ -414,7 +414,6 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
     uint8_t low_byte_start_page = start_page & 0xFF ;
     uint8_t high_byte_page_num = (page_num >> 8) & 0xFF; 
     uint8_t low_byte_page_num = page_num & 0xFF ;
-
     uint16_t checksum = 0x01 + 0x08 + 0x04 + buffer_id + start_page + page_num;
     uint8_t command[] = {
         0xEF, 0x01,                                           // Header (2 bytes)

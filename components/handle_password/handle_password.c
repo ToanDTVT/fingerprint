@@ -112,6 +112,8 @@ void handle_setting_password(char *enter_password){
     // printf("=========================================== \n");
     ESP_LOGI(TAG, "SETTING PASSWORD: 1.ADD PASSWORD         2.DELETE PASSWORD");
     char press_keypad_2;
+    vTaskDelay(500/portTICK_PERIOD_MS);
+
     while(1){
         press_keypad_2 = keypad_get_char();
         if(press_keypad_2 == '1'){ printf("ADD PASSWORD: \n"); break;}

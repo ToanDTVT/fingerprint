@@ -10,13 +10,15 @@ static const char* TAG = "handle_fingerprint";
 void handle_setting_fingerprint(){
     ESP_LOGI(TAG, "SETTING FINGERPRINT:  1.ADD FINGERPRINT       2.DELETE FINGERPRINT");
     char press_keypad_2;
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     while(1){
         press_keypad_2 = keypad_get_char();
-
+        vTaskDelay(500/portTICK_PERIOD_MS);
         if(press_keypad_2 == '1'){ 
             printf("ADD FINGERPRINT: \n");
             printf("1.NEW USER        2.OLD USER");
             char press_keypad_3;
+
             do{
                 press_keypad_3 = keypad_get_char();
                 vTaskDelay(500 / portTICK_PERIOD_MS);
