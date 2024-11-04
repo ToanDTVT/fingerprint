@@ -73,15 +73,15 @@ uint8_t PS_GetImage() {
     //printf("\n");
 
     uint8_t response[12];
-    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    //int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    // if (length > 0) {
-    //     printf("Received %d bytes: ", length);
-    //     for (int i = 0; i < length; i++) {
-    //         printf("%02X ", response[i]);
-    //     }
-    //     printf("\n");
-    // }
+    //uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
     ESP_LOGW(TAG, "PS_GETIMAGE: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
@@ -102,15 +102,15 @@ uint8_t PS_GenChar(uint8_t buffer_id) {
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     
     uint8_t response[128];
-    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    //int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    // if (length > 0) {
-    //     printf("Received %d bytes: ", length);
-    //     for (int i = 0; i < length; i++) {
-    //         printf("%02X ", response[i]);
-    //     }
-    //     printf("\n");
-    // }
+    //uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    if (length > 0) {
+        printf("Received %d bytes: ", length);
+        for (int i = 0; i < length; i++) {
+            printf("%02X ", response[i]);
+        }
+        printf("\n");
+    }
     ESP_LOGW(TAG, "PS_GENCHAR: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
@@ -314,8 +314,15 @@ void PS_UpChar(uint8_t buffer_id, uint8_t buffer_data_fingerprint[6][139]){
 
 void PS_DownChar(uint8_t buffer_id, uint8_t buffer_data_fingerprint[6][139]){
     uint16_t checksum = 0x01 + 0x04 + 0x09 + buffer_id;
-    uint8_t command[] = {0xEF, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x00, 0x04, 0x09, buffer_id, ((checksum >> 8) & 0xFF), (checksum & 0xFF)};
-                     // | Header   | Address               | PI  | Length    | Cmmd| Data     | Checksum                                   |
+    uint8_t command[] = {
+        0xEF, 0x01,                                      // Header (2 bytes)
+        0xFF, 0xFF, 0xFF, 0xFF,                          // Address (4 bytes)
+        0x01,                                            // Packet Identifier (1 bytes)
+        0x00, 0x04,                                      // Length (2 bytes)
+        0x09,                                            // Intruction Code (1 bytes)
+        buffer_id,                                       // CharBuffer được chọn để tải xuống
+        ((checksum >> 8) & 0xFF), (checksum & 0xFF)      // Checksum (2 bytes)
+    };              
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
 
     uint8_t ACK_packet[12];

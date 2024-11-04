@@ -19,7 +19,7 @@ void handle_input_password_idle(char *enter_password);
 int check_pass_open_door(char *enter_password);
 
 void password_task (void * pvParameters);
-//void create_password_task(void);
+void create_password_task(void);
 
 
 #endif //HANDLE_PASSWORD_H

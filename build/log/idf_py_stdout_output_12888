@@ -1,0 +1,1681 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (407) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2998) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4038) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4038) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5058) UART: PS_SEARCH: response: 09[0m
+[0;32mI (5058) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5058) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2838) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3068) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4108) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4108) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5128) UART: PS_SEARCH: response: 09[0m
+[0;32mI (5128) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5128) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 02 00 0C 
+[0;33mW (2888) UART: PS_GETIMAGE: response: 02[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3058) UART: PS_GETIMAGE: response: 00[0m
+Received 13 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 00 
+[0;33mW (4878) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4878) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5878) UART: PS_SEARCH: response: 00[0m
+[0;32mI (5878) UART: PS_SEARCH: Fingerprint found at position: 8
+[0m
+[0;31mE (5878) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+����������������������������������������������������������������[0;33mW (2818) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 81 FF FF FF FF 87 80 83 80 80 8A 
+[0;33mW (3188) UART: PS_GETIMAGE: response: 80[0m
+[0;33mW (4188) UART: PS_GETIMAGE: response: 80[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4598) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (6038) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (7218) UART: PS_SEARCH: response: 09[0m
+[0;32mI (7218) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (7218) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2928) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4238) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (5448) UART: PS_SEARCH: response: 09[0m
+[0;32mI (5448) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5448) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3058) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4088) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4088) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5098) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5098) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5098) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3258) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4678) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (5868) UART: PS_SEARCH: response: 09[0m
+[0;32mI (5868) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5868) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2948) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4418) UART: PS_GENCHAR: response: 00[0m
+[0;33mW (5428) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5428) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5428) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3038) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4068) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4068) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5078) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5078) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5078) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2978) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4018) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4018) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+[0;33mW (5028) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5028) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5028) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2958) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (3998) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (3998) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+2 
+2 
+[0;33mW (5008) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5008) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5008) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2828) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2988) UART: PS_GETIMAGE: response: 00[0m
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4028) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4028) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (4628) main: SETTING:   1.PASSWORD     2.FINGERPRINT[0m
+[0;33mW (5038) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5038) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5038) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (2818) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 02 00 0C 
+[0;33mW (2888) UART: PS_GETIMAGE: response: 02[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3058) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (4098) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (4098) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (5488) UART: PS_SEARCH: response: 17[0m
+[0;32mI (5488) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (5488) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;33mW (2818) handle_fingerprint: Place your finger on the sensor.[0m
+Password: 
+Received 12 bytes: EF 81 FF FF FF FF 87 80 83 80 80 8A 
+[0;33mW (3018) UART: PS_GETIMAGE: response: 80[0m
+[0;33mW (4018) UART: PS_GETIMAGE: response: 80[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4238) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (5268) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (5268) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (6288) UART: PS_SEARCH: response: 09[0m
+[0;32mI (6288) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;31mE (6288) FreeRTOS: FreeRTOS Task "fingerprint tas" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008ab73 on core 0
+
+
+Backtrace: 0x400818da:0x3ffc9550 0x40089f8d:0x3ffc9570 0x40091845:0x3ffc9590 0x4008ab73:0x3ffc9600
+
+
+
+
+ELF file SHA256: 449d3f334
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=213bch (136124) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000313e4 vaddr=3ffb0000 size=03bach ( 15276) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00034f98 vaddr=40080000 size=0b080h ( 45184) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=85a64h (547428) map[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5a8c vaddr=4008b080 size=0c6e8h ( 50920) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     fingerprint[0m
+[0;32mI (424) cpu_start: App version:      4819b56-dirty[0m
+[0;32mI (429) cpu_start: Compile time:     Nov  4 2024 13:29:08[0m
+[0;32mI (435) cpu_start: ELF file SHA256:  449d3f334...[0m
+[0;32mI (441) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (446) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (451) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (456) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (474) heap_init: At 3FFB9D68 len 00026298 (152 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40097768 len 00008898 (34 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (518) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (518) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (528) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (538) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (548) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (558) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (568) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (578) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (638) wifi:wifi driver task: 3ffc296c, prio:23, stack:6656, core=0
+I (648) wifi:wifi firmware version: 3e0076f
+I (658) wifi:wifi certification version: v7.0
+I (658) wifi:config NVS flash: enabled
+I (658) wifi:config nano formating: disabled
+I (658) wifi:Init data frame dynamic rx buffer num: 32
+I (658) wifi:Init static rx mgmt buffer num: 5
+I (668) wifi:Init management short buffer num: 32
+I (668) wifi:Init dynamic tx buffer num: 32
+I (678) wifi:Init static rx buffer size: 1600
+I (678) wifi:Init static rx buffer num: 10
+I (678) wifi:Init dynamic rx buffer num: 32
+[0;32mI (688) wifi_init: rx ba win: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (698) wifi_init: udp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp mbox: 6[0m
+[0;32mI (698) wifi_init: tcp tx win: 5760[0m
+[0;32mI (708) wifi_init: tcp rx win: 5760[0m
+[0;32mI (708) wifi_init: tcp mss: 1440[0m
+[0;32mI (718) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (718) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (728) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (818) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (818) wifi:enable tsf
