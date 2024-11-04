@@ -24,8 +24,8 @@ void task_wifi_init(){
 
     wifi_config_t sta_cfg = {
         .sta = {
-            .ssid = "BaPhuQuy",
-            .password = "BaTrpTNMT62",
+            .ssid = "Theshowcoffee T1",
+            .password = "Icanfly9",
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         }
     };
