@@ -15,16 +15,31 @@ int check_pass_open_door(char *enter_password){
     int i;
     for(i = 0; i <= MAX_USERS; i++){
         if((strcmp(enter_password, correct_password) == 0) || (strcmp(enter_password, USER[i].user_password) == 0)){
+            if(USER[i].en == 0){
+                break;
+            }
             printf("=========================================== \n");
             printf("SUCCESSFUL!! OPEN THE DOOR! \n");
             printf("id: %d \n", USER[i].id);
             printf("=========================================== \n");
+
+            action.pass_open_door = true;
+            data.user = USER[i].id;
+            strcpy(data.type, "password");
+
+            // // Gửi JSON data lên ThingsBoard trên topic "v1/devices/me/telemetry"
+            // char json_data[100];
+            // snprintf(json_data, sizeof(json_data), "{\"user\": %d, \"type\": %s}", data.user, data.type);
+            // int msg_id = esp_mqtt_client_publish(client, "v1/devices/me/telemetry", json_data, 0, 1, 0);
+            // ESP_LOGI("MQTT", "Sent telemetry data, msg_id=%d", msg_id);
+
             return 1;    //Mat khau dung
         }
     }
     printf("=========================================== \n");
     printf("FAILURE!! TRY AGAIN! \n");
     printf("=========================================== \n");
+    action.pass_open_door = false;
     return 0;   //Mat khau sai
 }
 
@@ -69,7 +84,8 @@ int check_password(char *enter_password, char press_keypad_2){
         for(i = 1; i <= MAX_USERS; i++){
             if(USER[i].id == 0){
                 for(int z = 0; z < SIZE_OF_PASSWORD; z++){USER[i].user_password[z] = enter_password[z];}
-                USER[i].id = i;                           //người sử dụng thứ i
+                USER[i].en = 1;                           //cho phép
+                USER[i].id = i;                           //người sử dụng thứ i 
                 ESP_LOGI(TAG, "HAVE SLOT!! ADD SUCCESS !!");
                 return 1;                                 //còn chỗ trống
             }

@@ -11,13 +11,24 @@
 //#define SIZE_OF_FINGERPRINT 512
 
 typedef struct {
-    //uint8_t username;
+	uint8_t en;
     uint8_t id;
 	uint8_t password_enable;
 	uint8_t fingerprint_enable;
     char user_password[SIZE_OF_PASSWORD];
     uint8_t user_fingerprint[6][139];
 } DataPacket;
+
+
+typedef struct {
+	uint8_t user;
+	char type[15];
+}Data_send_server;
+
+typedef struct {
+	bool pass_open_door;
+	bool fing_open_door;
+}Type_open_door;
 
 enum statemachine {
 	STATE_IDLE,

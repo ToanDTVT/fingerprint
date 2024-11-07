@@ -1,0 +1,84 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\bootloader\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/ESP/ESP project/fingerprint/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/wireless/CMakeFiles/__idf_wireless.dir/wireless.c.obj
+[3/8] Linking C static library esp-idf\wireless\libwireless.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable fingerprint.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP/ESP project/fingerprint/build/fingerprint.bin
+[7/8] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/ESP/ESP project/fingerprint/build/partition_table/partition-table.bin" "D:/ESP/ESP project/fingerprint/build/fingerprint.bin""
+fingerprint.bin binary size 0xe7450 bytes. Smallest app partition is 0x100000 bytes. 0x18bb0 bytes (10%) free.
+[7/8] cmd.exe /C "cd /D D:\ESP\ESP\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\ESP\ESP\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/ESP/ESP/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/ESP/ESP project/fingerprint/build" -P D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_seresptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 fingerprint.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM5
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:7b:5c:28:c2:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16351...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16351 compressed) at 0x00001000 in 0.8 seconds (effective 277.6 kbit/s)...
+Hash of data verified.
+Compressed 947280 bytes to 594672...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e06c... (5 %)
+Writing at 0x000277bd... (8 %)
+Writing at 0x0002c615... (10 %)
+Writing at 0x00034b24... (13 %)
+Writing at 0x0003de82... (16 %)
+Writing at 0x00043c42... (18 %)
+Writing at 0x000497a9... (21 %)
+Writing at 0x0004f5dd... (24 %)
+Writing at 0x0005540b... (27 %)
+Writing at 0x0005b158... (29 %)
+Writing at 0x00060ce2... (32 %)
+Writing at 0x00066c58... (35 %)
+Writing at 0x0006d0bd... (37 %)
+Writing at 0x00072e2f... (40 %)
+Writing at 0x00078836... (43 %)
+Writing at 0x0007dadb... (45 %)
+Writing at 0x00083000... (48 %)
+Writing at 0x000882ea... (51 %)
+Writing at 0x0008d92f... (54 %)
+Writing at 0x00092f3b... (56 %)
+Writing at 0x00098683... (59 %)
+Writing at 0x0009e690... (62 %)
+Writing at 0x000a3ffc... (64 %)
+Writing at 0x000a9d0d... (67 %)
+Writing at 0x000afa5f... (70 %)
+Writing at 0x000b529a... (72 %)
+Writing at 0x000bad63... (75 %)
+Writing at 0x000c0aa1... (78 %)
+Writing at 0x000c63c5... (81 %)
+Writing at 0x000cc06f... (83 %)
+Writing at 0x000d66ae... (86 %)
+Writing at 0x000de934... (89 %)
+Writing at 0x000e4577... (91 %)
+Writing at 0x000ea068... (94 %)
+Writing at 0x000f0441... (97 %)
+Writing at 0x000f56eb... (100 %)
+Wrote 947280 bytes (594672 compressed) at 0x00010000 in 14.4 seconds (effective 525.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 524.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+ial_tool.cmake"

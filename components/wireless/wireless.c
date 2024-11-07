@@ -24,8 +24,8 @@ void task_wifi_init(){
 
     wifi_config_t sta_cfg = {
         .sta = {
-            .ssid = "BaPhuQuy",
-            .password = "BaTrpTNMT62",
+            .ssid = "Theshowcoffee T2",                    //BaPhuQuy
+            .password = "Icanfly9",                        //BaTrpTNMT62
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         }
     };
@@ -36,10 +36,153 @@ void task_wifi_init(){
 
 }
 
-// void create_task_wireless(void){
-//     xTaskCreate(task_wifi_init, "wifi init", 2048, NULL, 5, &wireless_task);
-// }
 
-void func4(void){
 
+/*=============================================================================================================*/
+//{clientId:"3112",userName:"esp32",password:"Toan"}
+esp_mqtt_client_config_t mqtt_cfg = {
+    .broker = {
+        .address = {
+            .hostname = "demo.thingsboard.io",    // Set hostname only
+            .port = 1883,                         // Default MQTT port
+            .transport = MQTT_TRANSPORT_OVER_TCP,      // Set transport type, or remove this line
+        },
+        .verification = {
+            .use_global_ca_store = false,
+        },
+    },
+    .credentials = {
+        .username = "esp32",
+        .client_id = "9073d5b0-9b89-11ef-af67-a38a7671daf5",
+        .set_null_client_id = false,
+        .authentication = {
+            .password = "Toan",
+        },
+    },
+    .session = {
+        .keepalive = 120,
+        .disable_clean_session = false,
+    },
+    .network = {
+        .reconnect_timeout_ms = 10000,
+        .timeout_ms = 10000,
+        .disable_auto_reconnect = false,
+    },
+    .task = {
+        .priority = 5,
+        .stack_size = 4096,
+    }, 
+    .buffer = {
+        .size = 1024,
+    },
+    .outbox = {
+        .limit = 2048,
+    },
+};
+
+
+/*=========================================================================================================*/
+static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data) {
+    esp_mqtt_event_handle_t event = event_data;
+    esp_mqtt_client_handle_t client = event->client;
+
+    switch (event->event_id) {
+        case MQTT_EVENT_CONNECTED:
+            ESP_LOGI("MQTT", "MQTT_EVENT_CONNECTED");
+
+            //if(action.pass_open_door == true){
+                // Gửi JSON data lên ThingsBoard trên topic "v1/devices/me/telemetry"
+                char json_data[100];
+                snprintf(json_data, sizeof(json_data), "{\"user\": %d, \"type\": %s}", data.user, data.type);
+                int msg_id = esp_mqtt_client_publish(client, "v1/devices/me/telemetry", json_data, 0, 1, 0);
+                ESP_LOGI("MQTT", "Sent telemetry data, msg_id=%d", msg_id);
+                action.pass_open_door = false;
+            //}
+
+            //esp_mqtt_client_subscribe
+            esp_mqtt_client_subscribe(event->client, "v1/devices/me/rpc/request/+", 0);
+            ESP_LOGI("MQTT", "Subscribed to RPC requests");
+            break;
+        case MQTT_EVENT_DATA:
+            ESP_LOGI("MQTT", "MQTT_EVENT_DATA");
+            printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
+            printf("DATA=%.*s\r\n", event->data_len, event->data);
+
+            // cJSON *json_data = cJSON_ParseWithLength(event->data, event->data_len);
+            // if (json_data == NULL) {
+            //     ESP_LOGE("MQTT", "Failed to parse JSON data");
+            //     return;
+            // }
+
+            // cJSON *params = cJSON_GetObjectItem(json_data, "params");
+            // if (params != NULL) {
+            //     // Check the value of params and control GPIO13
+            //     if (cJSON_IsBool(params)) {
+            //         if (cJSON_IsTrue(params)) {
+            //             // Enable GPIO13
+            //             gpio_set_level(RELAY, 1);
+            //             ESP_LOGI("GPIO", "GPIO13 enabled");
+            //         } else {
+            //             // Disable GPIO13
+            //             gpio_set_level(RELAY, 0);
+            //             ESP_LOGI("GPIO", "GPIO13 disabled");
+            //         }
+            //     }
+            // } else {
+            //     ESP_LOGE("MQTT", "No params field in JSON data");
+            // }
+
+            // cJSON_Delete(json_data); // Clean up JSON object
+
+
+
+            
+            // Kiểm tra method cho RELAY
+            if (strstr(event->data, "\"method\":\"getValue\"") != NULL) {
+                if (strstr(event->data, "\"params\":true") != NULL) {
+                    gpio_set_level(RELAY, 1);  // Bật LED1
+                } else if (strstr(event->data, "\"params\":false") != NULL) {
+                    gpio_set_level(RELAY, 0);  // Tắt LED1
+                }
+            }
+            // Kiểm tra method cho USER1
+            if (strstr(event->data, "\"method\":\"setUSER1\"") != NULL) {
+                if (strstr(event->data, "\"params\":true") != NULL) {
+                    //gpio_set_level(GPIO_PIN, 1);  // Bật LED1
+                    USER[1].en = 1;
+                } else if (strstr(event->data, "\"params\":false") != NULL) {
+                    //gpio_set_level(GPIO_PIN, 0);  // Tắt LED1
+                    USER[1].en = 0;
+                }
+            }
+            // Kiểm tra method cho USER2
+            else if (strstr(event->data, "\"method\":\"setUSER2\"") != NULL) {
+                if (strstr(event->data, "\"params\":true") != NULL) {
+                    //gpio_set_level(GPIO_PIN, 1);  // Bật LED2
+                    USER[2].en = 1;
+                } else if (strstr(event->data, "\"params\":false") != NULL) {
+                    //gpio_set_level(GPIO_PIN, 0);  // Tắt LED2
+                    USER[2].en = 0;
+                }
+            }
+
+            break;
+        default:
+            ESP_LOGI("MQTT", "Event ID: %d", event->event_id);
+            break;
+    }
 }
+
+
+void mqtt_app_start(){
+    
+    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
+    esp_mqtt_client_start(client);
+}
+
+
+// void send_data_via_mqtt(char *data){
+//     const char* topic = "user in";
+//     esp_mqtt_client_publish(client, topic, data, 0, 1, 0);
+// }

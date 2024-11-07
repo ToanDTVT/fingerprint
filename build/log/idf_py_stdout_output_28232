@@ -1,0 +1,254 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26fech (159724) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00037014 vaddr=3ffb0000 size=03c9ch ( 15516) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003acb8 vaddr=40080000 size=05360h ( 21344) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a59c0h (678336) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e59e8 vaddr=40085360 size=12564h ( 75108) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) cpu_start: Application information:[0m
+[0;32mI (472) cpu_start: Project name:     fingerprint[0m
+[0;32mI (477) cpu_start: App version:      20f8422-dirty[0m
+[0;32mI (482) cpu_start: Compile time:     Nov  5 2024 00:22:55[0m
+[0;32mI (489) cpu_start: ELF file SHA256:  48f7ec73d...[0m
+[0;32mI (494) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (499) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (504) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (521) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFBA458 len 00025BA8 (150 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (539) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 400978C4 len 0000873C (33 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (572) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (572) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (582) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (592) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (602) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (682) wifi:wifi driver task: 3ffc3d5c, prio:23, stack:6656, core=0
+I (702) wifi:wifi firmware version: 3e0076f
+I (702) wifi:wifi certification version: v7.0
+I (702) wifi:config NVS flash: enabled
+I (702) wifi:config nano formating: disabled
+I (702) wifi:Init data frame dynamic rx buffer num: 32
+I (712) wifi:Init static rx mgmt buffer num: 5
+I (712) wifi:Init management short buffer num: 32
+I (712) wifi:Init dynamic tx buffer num: 32
+I (722) wifi:Init static rx buffer size: 1600
+I (722) wifi:Init static rx buffer num: 10
+I (732) wifi:Init dynamic rx buffer num: 32
+[0;32mI (732) wifi_init: rx ba win: 6[0m
+[0;32mI (732) wifi_init: tcpip mbox: 32[0m
+[0;32mI (742) wifi_init: udp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp tx win: 5760[0m
+[0;32mI (752) wifi_init: tcp rx win: 5760[0m
+[0;32mI (752) wifi_init: tcp mss: 1440[0m
+[0;32mI (762) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (762) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (772) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (862) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (862) wifi:enable tsf
+[0;32mI (1862) MQTT: Event ID: 7[0m
+[0;31mE (1862) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1872) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1872) mqtt_client: Error transport connect[0m
+[0;32mI (1872) MQTT: Event ID: 0[0m
+[0;32mI (1882) MQTT: Event ID: 2[0m
+I (1862) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (1892) wifi:state: init -> auth (b0)
+Send 16 byte: I (1892) wifi:state: auth -> assoc (0)
+ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+I (1902) wifi:state: assoc -> run (10)
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:6
+I (2012) wifi:connected with BaPhuQuy, aid = 2, channel 1, BW20, bssid = e0:b6:68:22:70:2b
+I (2012) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (2022) wifi:pm start, type: 1
+
+I (2022) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2032) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (2902) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+I (4092) wifi:<ba-add>idx:0 (ifx:0, e0:b6:68:22:70:2b), tid:6, ssn:2, winSize:64
+[0;32mI (5042) esp_netif_handlers: sta ip: 192.168.2.17, mask: 255.255.255.0, gw: 192.168.2.253[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+1 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+1 
+1 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+1 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 0 
+=========================================== 
+[0;32mI (11892) MQTT: Event ID: 7[0m
+I (12062) wifi:<ba-add>idx:1 (ifx:0, e0:b6:68:22:70:2b), tid:0, ssn:0, winSize:64
+[0;32mI (12572) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (12582) MQTT: Published: {
+	"user":	{
+		"id":	1,
+		"password_enable":	1,
+		"fingerprint_enable":	1,
+		"user_password":	"1111",
+		"fingerprints":	["\u0001\u0002\u0003"]
+	}
+}[0m
+[0;32mI (12592) MQTT: Subscribed to RPC requests[0m
+[0;32mI (12982) MQTT: Event ID: 5[0m
+[0;32mI (13222) MQTT: Event ID: 3[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+2 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+2 
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+[0;32mI (26702) password: SETTING:   1.PASSWORD     2.FINGERPRINT[0m
+[0;32mI (29702) password: SETTING PASSWORD: 1.ADD PASSWORD         2.DELETE PASSWORD[0m
+[0;31mE (31352) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (31352) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (31352) task_wdt: Tasks currently running:[0m
+[0;31mE (31352) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (31352) task_wdt: CPU 1: fingerprint tas[0m
+[0;31mE (31352) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084FBA:0x3FFB23A0 0x400834C5:0x3FFB23C0 0x400D7B72:0x3FFCD950 0x4008AB59:0x3FFCD970
+
+ADD PASSWORD: 
+[0;31mE (36352) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (36352) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (36352) task_wdt: Tasks currently running:[0m
+[0;31mE (36352) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (36352) task_wdt: CPU 1: fingerprint tas[0m
+[0;31mE (36352) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084FBA:0x3FFB23A0 0x400834C5:0x3FFB23C0 0x400D7B70:0x3FFCD950 0x4008AB59:0x3FFCD970
+
+2 
+2 
+2 
+2 
+
+[0;32mI (41302) password: HAVE SLOT!! ADD SUCCESS !![0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+2 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+2 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+
+=========================================== 
+SUCCESSFUL!! OPEN THE DOOR! 
+id: 1 
+=========================================== 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;32mI (62542) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/444
+DATA={"method":"setUSER1","params":true}
+[0;32mI (62552) GPIO: GPIO13 enabled[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;32mI (67712) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/445
+DATA={"method":"setUSER1","params":false}
+[0;32mI (67712) GPIO: GPIO13 disabled[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+2 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+2 
+
+=========================================== 
+FAILURE!! TRY AGAIN! 
+=========================================== 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 

@@ -1,0 +1,1991 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2739ch (160668) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000373c4 vaddr=3ffb0000 size=03c9ch ( 15516) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003b068 vaddr=40080000 size=04fb0h ( 20400) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a5944h (678212) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e596c vaddr=40084fb0 size=12914h ( 76052) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) cpu_start: Application information:[0m
+[0;32mI (472) cpu_start: Project name:     fingerprint[0m
+[0;32mI (477) cpu_start: App version:      20f8422-dirty[0m
+[0;32mI (483) cpu_start: Compile time:     Nov  5 2024 00:22:55[0m
+[0;32mI (489) cpu_start: ELF file SHA256:  709098d41...[0m
+[0;32mI (494) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (500) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (504) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (521) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFBA448 len 00025BB8 (150 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 400978C4 len 0000873C (33 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (572) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (572) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (582) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (592) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (602) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (682) wifi:wifi driver task: 3ffc3d4c, prio:23, stack:6656, core=0
+I (702) wifi:wifi firmware version: 3e0076f
+I (702) wifi:wifi certification version: v7.0
+I (702) wifi:config NVS flash: enabled
+I (702) wifi:config nano formating: disabled
+I (702) wifi:Init data frame dynamic rx buffer num: 32
+I (712) wifi:Init static rx mgmt buffer num: 5
+I (712) wifi:Init management short buffer num: 32
+I (712) wifi:Init dynamic tx buffer num: 32
+I (722) wifi:Init static rx buffer size: 1600
+I (722) wifi:Init static rx buffer num: 10
+I (732) wifi:Init dynamic rx buffer num: 32
+[0;32mI (732) wifi_init: rx ba win: 6[0m
+[0;32mI (732) wifi_init: tcpip mbox: 32[0m
+[0;32mI (742) wifi_init: udp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp tx win: 5760[0m
+[0;32mI (752) wifi_init: tcp rx win: 5760[0m
+[0;32mI (752) wifi_init: tcp mss: 1440[0m
+[0;32mI (762) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (762) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (772) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (862) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (862) wifi:enable tsf
+[0;32mI (1862) MQTT: Event ID: 7[0m
+[0;31mE (1862) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1862) transport_base: Failed to open a new connection: 32769[0m
+I (1872) wifi:[0;31mE (1872) mqtt_client: Error transport connect[0m
+new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (1872) MQTT: Event ID: 0[0m
+I (1882) wifi:state: init -> auth (b0)[0;32mI (1882) MQTT: Event ID: 2[0m
+
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+I (1892) wifi:state: auth -> assoc (0)
+I (1902) wifi:state: assoc -> run (10)
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (2002) wifi:[ADDBA]rx delba, code:39, delete tid:6
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (2902) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3902) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4082) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (5122) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (5122) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (6132) UART: PS_SEARCH: response: 17[0m
+[0;32mI (6132) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (6132) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (6322) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (7362) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (7362) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (8372) UART: PS_SEARCH: response: 17[0m
+[0;32mI (8372) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (8372) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (8562) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (9602) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (9602) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (10612) UART: PS_SEARCH: response: 17[0m
+[0;32mI (10612) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (10612) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (10802) UART: PS_GETIMAGE: response: 00[0m
+I (11012) wifi:state: run -> init (fc0)
+I (11012) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (11842) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (11842) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (11892) MQTT: Event ID: 7[0m
+[0;31mE (11892) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (11892) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (11892) mqtt_client: Error transport connect[0m
+[0;32mI (11902) MQTT: Event ID: 0[0m
+[0;32mI (11902) MQTT: Event ID: 2[0m
+[0;33mW (12852) UART: PS_SEARCH: response: 17[0m
+[0;32mI (12852) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (12852) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (13042) UART: PS_GETIMAGE: response: 00[0m
+����������������������������������������������������������������ceived 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (14072) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (14072) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (15082) UART: PS_SEARCH: response: 17[0m
+[0;32mI (15082) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (15082) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (15272) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (16312) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (16312) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (17322) UART: PS_SEARCH: response: 17[0m
+[0;32mI (17322) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (17322) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (17512) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (18552) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (18552) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (19562) UART: PS_SEARCH: response: 17[0m
+[0;32mI (19562) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (19562) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (19752) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (20792) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (20792) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (21802) UART: PS_SEARCH: response: 17[0m
+[0;32mI (21802) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (21802) handle_fingerprint: Place your finger on the sensor.[0m
+[0;32mI (21912) MQTT: Event ID: 7[0m
+[0;31mE (21912) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (21912) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (21912) mqtt_client: Error transport connect[0m
+[0;32mI (21922) MQTT: Event ID: 0[0m
+[0;32mI (21922) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (21992) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (23032) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (23032) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (24042) UART: PS_SEARCH: response: 17[0m
+[0;32mI (24042) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (24042) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (24232) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (25272) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (25272) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (26282) UART: PS_SEARCH: response: 17[0m
+[0;32mI (26282) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (26282) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (26472) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (27512) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (27512) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (28522) UART: PS_SEARCH: response: 17[0m
+[0;32mI (28522) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (28522) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (28712) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (29752) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (29752) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (30762) UART: PS_SEARCH: response: 17[0m
+[0;32mI (30762) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (30762) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (30952) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (31932) MQTT: Event ID: 7[0m
+[0;31mE (31932) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (31932) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (31932) mqtt_client: Error transport connect[0m
+[0;32mI (31942) MQTT: Event ID: 0[0m
+[0;32mI (31942) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (31992) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (31992) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (33002) UART: PS_SEARCH: response: 17[0m
+[0;32mI (33002) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (33002) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (33192) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (34232) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (34232) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (35242) UART: PS_SEARCH: response: 17[0m
+[0;32mI (35242) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (35242) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (35432) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (36472) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (36472) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (37482) UART: PS_SEARCH: response: 17[0m
+[0;32mI (37482) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (37482) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (37682) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (38712) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (38712) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (39722) UART: PS_SEARCH: response: 17[0m
+[0;32mI (39722) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (39722) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (39912) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (40952) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (40952) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (41952) MQTT: Event ID: 7[0m
+[0;31mE (41952) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (41952) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (41952) mqtt_client: Error transport connect[0m
+[0;33mW (41962) UART: PS_SEARCH: response: 17[0m
+[0;32mI (41962) MQTT: Event ID: 0[0m
+[0;32mI (41962) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;32mI (41972) MQTT: Event ID: 2[0m
+[0;33mW (41972) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (42172) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (43202) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (43202) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (44212) UART: PS_SEARCH: response: 17[0m
+[0;32mI (44212) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (44212) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (44412) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (45442) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (45442) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (46452) UART: PS_SEARCH: response: 17[0m
+[0;32mI (46452) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (46452) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (46652) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (47682) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (47682) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (48692) UART: PS_SEARCH: response: 17[0m
+[0;32mI (48692) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (48692) handle_fingerprint: Place your finger on the sensor.[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 23 2024 02:16:28[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2739ch (160668) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000373c4 vaddr=3ffb0000 size=03c9ch ( 15516) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003b068 vaddr=40080000 size=04fb0h ( 20400) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a5944h (678212) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e596c vaddr=40084fb0 size=12914h ( 76052) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) cpu_start: Application information:[0m
+[0;32mI (472) cpu_start: Project name:     fingerprint[0m
+[0;32mI (477) cpu_start: App version:      20f8422-dirty[0m
+[0;32mI (483) cpu_start: Compile time:     Nov  5 2024 00:22:55[0m
+[0;32mI (489) cpu_start: ELF file SHA256:  709098d41...[0m
+[0;32mI (494) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (500) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (504) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (521) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFBA448 len 00025BB8 (150 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 400978C4 len 0000873C (33 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (572) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (572) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (582) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (592) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (602) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+I (682) wifi:wifi driver task: 3ffc3d4c, prio:23, stack:6656, core=0
+I (702) wifi:wifi firmware version: 3e0076f
+I (702) wifi:wifi certification version: v7.0
+I (702) wifi:config NVS flash: enabled
+I (702) wifi:config nano formating: disabled
+I (702) wifi:Init data frame dynamic rx buffer num: 32
+I (712) wifi:Init static rx mgmt buffer num: 5
+I (712) wifi:Init management short buffer num: 32
+I (712) wifi:Init dynamic tx buffer num: 32
+I (722) wifi:Init static rx buffer size: 1600
+I (722) wifi:Init static rx buffer num: 10
+I (732) wifi:Init dynamic rx buffer num: 32
+[0;32mI (732) wifi_init: rx ba win: 6[0m
+[0;32mI (732) wifi_init: tcpip mbox: 32[0m
+[0;32mI (742) wifi_init: udp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp tx win: 5760[0m
+[0;32mI (752) wifi_init: tcp rx win: 5760[0m
+[0;32mI (752) wifi_init: tcp mss: 1440[0m
+[0;32mI (762) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (762) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (772) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (862) wifi:mode : sta (cc:7b:5c:28:c2:a8)
+I (862) wifi:enable tsf
+[0;32mI (1862) MQTT: Event ID: 7[0m
+[0;31mE (1862) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1872) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1872) mqtt_client: Error transport connect[0m
+[0;32mI (1872) MQTT: Event ID: 0[0m
+[0;32mI (1882) MQTT: Event ID: 2[0m
+I (1862) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (1892) wifi:state: init -> auth (b0)
+Send 16 byte: I (1892) wifi:state: auth -> assoc (0)
+ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+I (1902) wifi:state: assoc -> run (10)
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+Password: 
+Send 16 byte: ef 01 ff ff ff ff 01 00 07 13 00 00 00 00 00 1b 
+[0;32mI (2902) main_task: Returned from app_main()[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (3902) handle_fingerprint: Place your finger on the sensor.[0m
+I (4012) wifi:connected with BaPhuQuy, aid = 2, channel 1, BW20, bssid = e0:b6:68:21:44:4f
+I (4012) wifi:security: WPA2-PSK, phy: bgn, rssi: -81
+I (4012) wifi:pm start, type: 1
+
+I (4012) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4082) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (4122) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (5152) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (5152) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (6162) UART: PS_SEARCH: response: 17[0m
+[0;32mI (6162) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (6162) handle_fingerprint: Place your finger on the sensor.[0m
+I (6162) wifi:<ba-add>idx:0 (ifx:0, e0:b6:68:21:44:4f), tid:6, ssn:3, winSize:64
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (6362) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (7392) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (7392) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (8402) UART: PS_SEARCH: response: 17[0m
+[0;32mI (8402) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (8402) handle_fingerprint: Place your finger on the sensor.[0m
+[0;32mI (8522) esp_netif_handlers: sta ip: 192.168.2.17, mask: 255.255.255.0, gw: 192.168.2.253[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (8602) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (9632) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (9632) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (10642) UART: PS_SEARCH: response: 17[0m
+[0;32mI (10642) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (10642) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (10842) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (11882) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (11882) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (11892) MQTT: Event ID: 7[0m
+[0;33mW (12892) UART: PS_SEARCH: response: 17[0m
+[0;32mI (12892) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (12892) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (13092) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (14122) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (14122) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (15132) UART: PS_SEARCH: response: 17[0m
+[0;32mI (15132) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (15132) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (15332) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (16372) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (16372) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (17382) UART: PS_SEARCH: response: 17[0m
+[0;32mI (17382) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (17382) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (17582) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (18612) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (18612) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (18892) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (18892) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (18892) mqtt_client: Error transport connect[0m
+[0;32mI (18902) MQTT: Event ID: 0[0m
+[0;32mI (18902) MQTT: Event ID: 2[0m
+[0;33mW (19622) UART: PS_SEARCH: response: 17[0m
+[0;32mI (19622) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (19622) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (19822) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (20862) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (20862) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (21872) UART: PS_SEARCH: response: 17[0m
+[0;32mI (21872) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (21872) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (22072) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (23102) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (23102) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (24112) UART: PS_SEARCH: response: 17[0m
+[0;32mI (24112) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (24112) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (24312) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (25352) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (25352) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (26362) UART: PS_SEARCH: response: 17[0m
+[0;32mI (26362) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (26362) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (26562) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (27592) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (27592) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (28602) UART: PS_SEARCH: response: 17[0m
+[0;32mI (28602) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (28602) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (28802) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (29832) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (29832) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (30842) UART: PS_SEARCH: response: 17[0m
+[0;32mI (30842) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (30842) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (31042) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (32072) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (32072) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (33082) UART: PS_SEARCH: response: 17[0m
+[0;32mI (33082) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (33082) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (33282) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (33902) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (34312) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (34312) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (35322) UART: PS_SEARCH: response: 17[0m
+[0;32mI (35322) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (35322) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (35522) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (36552) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (36552) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (37562) UART: PS_SEARCH: response: 17[0m
+[0;32mI (37562) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (37562) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (37762) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (38792) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (38792) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (39802) UART: PS_SEARCH: response: 17[0m
+[0;32mI (39802) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (39802) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (40002) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (40902) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (40902) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (40902) mqtt_client: Error transport connect[0m
+[0;32mI (40912) MQTT: Event ID: 0[0m
+[0;32mI (40912) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (41032) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (41032) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (42042) UART: PS_SEARCH: response: 17[0m
+[0;32mI (42042) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (42042) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (42242) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (43272) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (43272) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (44282) UART: PS_SEARCH: response: 17[0m
+[0;32mI (44282) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (44282) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (44482) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (45512) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (45512) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (46522) UART: PS_SEARCH: response: 17[0m
+[0;32mI (46522) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (46522) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (46722) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (47762) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (47762) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (48772) UART: PS_SEARCH: response: 17[0m
+[0;32mI (48772) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (48772) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (48962) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (50002) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (50002) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (51012) UART: PS_SEARCH: response: 17[0m
+[0;32mI (51012) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (51012) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (51212) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (52242) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (52242) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (53252) UART: PS_SEARCH: response: 17[0m
+[0;32mI (53252) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (53252) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (53452) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (54482) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (54482) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (55492) UART: PS_SEARCH: response: 17[0m
+[0;32mI (55492) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (55492) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (55692) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (55912) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (56722) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (56722) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (57732) UART: PS_SEARCH: response: 17[0m
+[0;32mI (57732) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (57732) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (57932) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (58972) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (58972) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (59982) UART: PS_SEARCH: response: 17[0m
+[0;32mI (59982) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (59982) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (60172) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (61212) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (61212) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (62222) UART: PS_SEARCH: response: 17[0m
+[0;32mI (62222) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (62222) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (62412) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (62912) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (62912) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (62912) mqtt_client: Error transport connect[0m
+[0;32mI (62922) MQTT: Event ID: 0[0m
+[0;32mI (62922) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (63452) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (63452) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (64462) UART: PS_SEARCH: response: 17[0m
+[0;32mI (64462) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (64462) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (64662) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (65692) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (65692) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (66702) UART: PS_SEARCH: response: 17[0m
+[0;32mI (66702) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (66702) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (66902) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (67932) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (67932) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (68942) UART: PS_SEARCH: response: 17[0m
+[0;32mI (68942) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (68942) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (69142) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (70172) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (70172) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (71182) UART: PS_SEARCH: response: 17[0m
+[0;32mI (71182) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (71182) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (71382) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (72412) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (72412) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (73422) UART: PS_SEARCH: response: 17[0m
+[0;32mI (73422) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (73422) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (73622) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (74652) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (74652) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (75662) UART: PS_SEARCH: response: 17[0m
+[0;32mI (75662) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (75662) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (75862) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (76892) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (76892) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (77902) UART: PS_SEARCH: response: 17[0m
+[0;32mI (77902) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (77902) handle_fingerprint: Place your finger on the sensor.[0m
+[0;32mI (77922) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (78102) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (79132) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (79132) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (80142) UART: PS_SEARCH: response: 17[0m
+[0;32mI (80142) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (80142) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (80342) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (81372) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (81372) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (82382) UART: PS_SEARCH: response: 17[0m
+[0;32mI (82382) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (82382) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (82582) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (83612) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (83612) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (84622) UART: PS_SEARCH: response: 17[0m
+[0;32mI (84622) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (84622) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (84822) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (84922) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (84922) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (84922) mqtt_client: Error transport connect[0m
+[0;32mI (84932) MQTT: Event ID: 0[0m
+[0;32mI (84932) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (85852) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (85852) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (86862) UART: PS_SEARCH: response: 17[0m
+[0;32mI (86862) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (86862) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (87062) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (88092) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (88092) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (89102) UART: PS_SEARCH: response: 17[0m
+[0;32mI (89102) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (89102) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (89302) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (90332) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (90332) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (91342) UART: PS_SEARCH: response: 17[0m
+[0;32mI (91342) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (91342) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (91542) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (92582) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (92582) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (93592) UART: PS_SEARCH: response: 17[0m
+[0;32mI (93592) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (93592) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (93792) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (94822) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (94822) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (95832) UART: PS_SEARCH: response: 17[0m
+[0;32mI (95832) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (95832) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (96032) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (97062) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (97062) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (98072) UART: PS_SEARCH: response: 17[0m
+[0;32mI (98072) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (98072) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (98272) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (99302) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (99302) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (99932) MQTT: Event ID: 7[0m
+[0;33mW (100312) UART: PS_SEARCH: response: 17[0m
+[0;32mI (100312) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (100312) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (100512) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (101552) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (101552) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (102562) UART: PS_SEARCH: response: 17[0m
+[0;32mI (102562) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (102562) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (102762) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (103792) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (103792) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (104802) UART: PS_SEARCH: response: 17[0m
+[0;32mI (104802) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (104802) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (105002) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (106032) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (106032) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (106932) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (106932) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (106932) mqtt_client: Error transport connect[0m
+[0;32mI (106942) MQTT: Event ID: 0[0m
+[0;32mI (106942) MQTT: Event ID: 2[0m
+[0;33mW (107042) UART: PS_SEARCH: response: 17[0m
+[0;32mI (107042) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (107042) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (107242) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (108282) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (108282) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (109292) UART: PS_SEARCH: response: 17[0m
+[0;32mI (109292) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (109292) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (109492) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (110522) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (110522) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (111532) UART: PS_SEARCH: response: 17[0m
+[0;32mI (111532) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (111532) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (111732) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (112762) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (112762) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (113772) UART: PS_SEARCH: response: 17[0m
+[0;32mI (113772) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (113772) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (113972) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (115002) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (115002) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (116012) UART: PS_SEARCH: response: 17[0m
+[0;32mI (116012) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (116012) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (116212) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (117242) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (117242) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (118252) UART: PS_SEARCH: response: 17[0m
+[0;32mI (118252) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (118252) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (118452) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (119482) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (119482) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (120492) UART: PS_SEARCH: response: 17[0m
+[0;32mI (120492) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (120492) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (120692) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (121722) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (121722) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (121942) MQTT: Event ID: 7[0m
+[0;33mW (122732) UART: PS_SEARCH: response: 17[0m
+[0;32mI (122732) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (122732) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (122932) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (123962) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (123962) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (124972) UART: PS_SEARCH: response: 17[0m
+[0;32mI (124972) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (124972) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (125172) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (126202) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (126202) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (127212) UART: PS_SEARCH: response: 17[0m
+[0;32mI (127212) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (127212) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (127412) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (128442) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (128442) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (128942) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (128942) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (128942) mqtt_client: Error transport connect[0m
+[0;32mI (128952) MQTT: Event ID: 0[0m
+[0;32mI (128952) MQTT: Event ID: 2[0m
+[0;33mW (129452) UART: PS_SEARCH: response: 17[0m
+[0;32mI (129452) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (129452) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (129652) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (130682) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (130682) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (131692) UART: PS_SEARCH: response: 17[0m
+[0;32mI (131692) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (131692) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (131892) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (132922) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (132922) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (133932) UART: PS_SEARCH: response: 17[0m
+[0;32mI (133932) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (133932) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (134132) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (135172) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (135172) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (136182) UART: PS_SEARCH: response: 17[0m
+[0;32mI (136182) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (136182) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (136382) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (137412) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (137412) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (138422) UART: PS_SEARCH: response: 17[0m
+[0;32mI (138422) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (138422) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (138622) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (139652) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (139652) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (140662) UART: PS_SEARCH: response: 17[0m
+[0;32mI (140662) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (140662) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (140862) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (141902) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (141902) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (142912) UART: PS_SEARCH: response: 17[0m
+[0;32mI (142912) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (142912) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (143112) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (143952) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (144142) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (144142) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (145152) UART: PS_SEARCH: response: 17[0m
+[0;32mI (145152) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (145152) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (145352) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (146382) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (146382) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (147392) UART: PS_SEARCH: response: 17[0m
+[0;32mI (147392) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (147392) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (147592) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (148632) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (148632) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (149642) UART: PS_SEARCH: response: 17[0m
+[0;32mI (149642) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (149642) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (149832) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (150872) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (150872) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (150952) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (150952) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (150952) mqtt_client: Error transport connect[0m
+[0;32mI (150962) MQTT: Event ID: 0[0m
+[0;32mI (150962) MQTT: Event ID: 2[0m
+[0;33mW (151882) UART: PS_SEARCH: response: 17[0m
+[0;32mI (151882) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (151882) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (152082) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (153112) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (153112) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (154122) UART: PS_SEARCH: response: 17[0m
+[0;32mI (154122) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (154122) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (154322) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (155352) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (155352) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (156362) UART: PS_SEARCH: response: 17[0m
+[0;32mI (156362) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (156362) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (156562) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (157602) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (157602) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (158612) UART: PS_SEARCH: response: 17[0m
+[0;32mI (158612) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (158612) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (158802) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (159842) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (159842) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (160852) UART: PS_SEARCH: response: 17[0m
+[0;32mI (160852) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (160852) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (161052) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (162082) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (162082) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (163092) UART: PS_SEARCH: response: 17[0m
+[0;32mI (163092) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (163092) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (163292) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (164322) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (164322) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (165332) UART: PS_SEARCH: response: 17[0m
+[0;32mI (165332) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (165332) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (165532) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (165962) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (166562) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (166562) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (167572) UART: PS_SEARCH: response: 17[0m
+[0;32mI (167572) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (167572) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (167772) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (168812) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (168812) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (169822) UART: PS_SEARCH: response: 17[0m
+[0;32mI (169822) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (169822) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (170022) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (171052) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (171052) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (172062) UART: PS_SEARCH: response: 17[0m
+[0;32mI (172062) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (172062) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (172262) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (172962) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (172962) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (172962) mqtt_client: Error transport connect[0m
+[0;32mI (172972) MQTT: Event ID: 0[0m
+[0;32mI (172972) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (173302) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (173302) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (174312) UART: PS_SEARCH: response: 17[0m
+[0;32mI (174312) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (174312) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (174512) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (175542) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (175542) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (176552) UART: PS_SEARCH: response: 17[0m
+[0;32mI (176552) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (176552) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (176752) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (177782) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (177782) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (178792) UART: PS_SEARCH: response: 17[0m
+[0;32mI (178792) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (178792) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (178992) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (180032) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (180032) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (181042) UART: PS_SEARCH: response: 17[0m
+[0;32mI (181042) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (181042) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (181242) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (182272) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (182272) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (183282) UART: PS_SEARCH: response: 17[0m
+[0;32mI (183282) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (183282) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (183482) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (184522) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (184522) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (185532) UART: PS_SEARCH: response: 17[0m
+[0;32mI (185532) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (185532) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (185732) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (186762) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (186762) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (187772) UART: PS_SEARCH: response: 17[0m
+[0;32mI (187772) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (187772) handle_fingerprint: Place your finger on the sensor.[0m
+[0;32mI (187972) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (187972) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (189012) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (189012) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (190022) UART: PS_SEARCH: response: 17[0m
+[0;32mI (190022) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (190022) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (190222) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (191252) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (191252) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (192262) UART: PS_SEARCH: response: 17[0m
+[0;32mI (192262) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (192262) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (192462) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (193492) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (193492) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (194502) UART: PS_SEARCH: response: 17[0m
+[0;32mI (194502) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (194502) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (194702) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (194972) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (194972) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (194972) mqtt_client: Error transport connect[0m
+[0;32mI (194982) MQTT: Event ID: 0[0m
+[0;32mI (194982) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (195742) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (195742) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (196752) UART: PS_SEARCH: response: 17[0m
+[0;32mI (196752) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (196752) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (196952) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (197982) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (197982) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (198992) UART: PS_SEARCH: response: 17[0m
+[0;32mI (198992) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (198992) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (199192) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (200222) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (200222) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (201232) UART: PS_SEARCH: response: 17[0m
+[0;32mI (201232) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (201232) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (201432) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (202472) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (202472) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (203482) UART: PS_SEARCH: response: 17[0m
+[0;32mI (203482) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (203482) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (203682) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (204712) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (204712) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (205722) UART: PS_SEARCH: response: 17[0m
+[0;32mI (205722) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (205722) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (205922) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (206962) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (206962) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (207972) UART: PS_SEARCH: response: 17[0m
+[0;32mI (207972) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (207972) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (208172) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (209202) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (209202) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (209982) MQTT: Event ID: 7[0m
+[0;33mW (210212) UART: PS_SEARCH: response: 17[0m
+[0;32mI (210212) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (210212) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (210412) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (211452) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (211452) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (212462) UART: PS_SEARCH: response: 17[0m
+[0;32mI (212462) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (212462) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (212662) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (213692) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (213692) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (214702) UART: PS_SEARCH: response: 17[0m
+[0;32mI (214702) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (214702) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (214902) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (215942) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (215942) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (216952) UART: PS_SEARCH: response: 17[0m
+[0;32mI (216952) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (216952) handle_fingerprint: Place your finger on the sensor.[0m
+[0;31mE (216982) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (216982) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (216982) mqtt_client: Error transport connect[0m
+[0;32mI (216992) MQTT: Event ID: 0[0m
+[0;32mI (216992) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (217152) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (218182) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (218182) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (219192) UART: PS_SEARCH: response: 17[0m
+[0;32mI (219192) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (219192) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (219392) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (220432) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (220432) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (221442) UART: PS_SEARCH: response: 17[0m
+[0;32mI (221442) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (221442) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (221642) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (222672) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (222672) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (223682) UART: PS_SEARCH: response: 17[0m
+[0;32mI (223682) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (223682) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (223882) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (224922) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (224922) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (225932) UART: PS_SEARCH: response: 17[0m
+[0;32mI (225932) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (225932) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (226132) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (227162) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (227162) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (228172) UART: PS_SEARCH: response: 17[0m
+[0;32mI (228172) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (228172) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (228372) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (229412) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (229412) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (230422) UART: PS_SEARCH: response: 17[0m
+[0;32mI (230422) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (230422) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (230622) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (231652) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (231652) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (231992) MQTT: Event ID: 7[0m
+[0;33mW (232662) UART: PS_SEARCH: response: 17[0m
+[0;32mI (232662) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (232662) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (232862) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (233902) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (233902) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (234912) UART: PS_SEARCH: response: 17[0m
+[0;32mI (234912) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (234912) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (235112) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (236152) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (236152) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (237162) UART: PS_SEARCH: response: 17[0m
+[0;32mI (237162) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (237162) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (237362) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (238392) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (238392) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (238992) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (238992) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (238992) mqtt_client: Error transport connect[0m
+[0;32mI (239002) MQTT: Event ID: 0[0m
+[0;32mI (239002) MQTT: Event ID: 2[0m
+[0;33mW (239402) UART: PS_SEARCH: response: 17[0m
+[0;32mI (239402) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (239402) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (239602) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (240642) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (240642) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (241652) UART: PS_SEARCH: response: 17[0m
+[0;32mI (241652) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (241652) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (241852) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (242882) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (242882) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (243892) UART: PS_SEARCH: response: 17[0m
+[0;32mI (243892) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (243892) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (244092) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (245132) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (245132) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (246142) UART: PS_SEARCH: response: 17[0m
+[0;32mI (246142) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (246142) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (246342) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (247372) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (247372) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (248382) UART: PS_SEARCH: response: 17[0m
+[0;32mI (248382) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (248382) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (248582) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (249622) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (249622) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (250632) UART: PS_SEARCH: response: 17[0m
+[0;32mI (250632) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (250632) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (250832) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (251862) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (251862) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (252872) UART: PS_SEARCH: response: 17[0m
+[0;32mI (252872) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (252872) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (253072) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (254002) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (254102) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (254102) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (255112) UART: PS_SEARCH: response: 17[0m
+[0;32mI (255112) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (255112) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (255312) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (256352) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (256352) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (257362) UART: PS_SEARCH: response: 17[0m
+[0;32mI (257362) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (257362) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (257562) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (258592) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (258592) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (259602) UART: PS_SEARCH: response: 17[0m
+[0;32mI (259602) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (259602) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (259802) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (260842) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (260842) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;31mE (261002) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (261002) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (261002) mqtt_client: Error transport connect[0m
+[0;32mI (261012) MQTT: Event ID: 0[0m
+[0;32mI (261012) MQTT: Event ID: 2[0m
+[0;33mW (261852) UART: PS_SEARCH: response: 17[0m
+[0;32mI (261852) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (261852) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (262052) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (263082) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (263082) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (264092) UART: PS_SEARCH: response: 17[0m
+[0;32mI (264092) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (264092) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (264292) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (265322) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (265322) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (266332) UART: PS_SEARCH: response: 17[0m
+[0;32mI (266332) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (266332) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (266532) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (267572) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (267572) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (268582) UART: PS_SEARCH: response: 17[0m
+[0;32mI (268582) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (268582) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (268782) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (269812) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (269812) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (270822) UART: PS_SEARCH: response: 17[0m
+[0;32mI (270822) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (270822) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (271022) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (272052) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (272052) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (273062) UART: PS_SEARCH: response: 17[0m
+[0;32mI (273062) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (273062) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (273262) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (274292) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (274292) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (275302) UART: PS_SEARCH: response: 17[0m
+[0;32mI (275302) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (275302) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (275502) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (276012) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (276542) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (276542) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (277552) UART: PS_SEARCH: response: 17[0m
+[0;32mI (277552) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (277552) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (277752) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (278782) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (278782) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (279792) UART: PS_SEARCH: response: 17[0m
+[0;32mI (279792) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (279792) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (279992) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (281032) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (281032) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (282042) UART: PS_SEARCH: response: 17[0m
+[0;32mI (282042) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (282042) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (282242) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (283012) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (283012) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (283012) mqtt_client: Error transport connect[0m
+[0;32mI (283022) MQTT: Event ID: 0[0m
+[0;32mI (283022) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (283272) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (283272) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (284282) UART: PS_SEARCH: response: 17[0m
+[0;32mI (284282) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (284282) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (284482) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (285522) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (285522) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (286532) UART: PS_SEARCH: response: 17[0m
+[0;32mI (286532) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (286532) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (286732) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (287762) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (287762) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (288772) UART: PS_SEARCH: response: 17[0m
+[0;32mI (288772) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (288772) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (288972) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (290012) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (290012) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (291022) UART: PS_SEARCH: response: 17[0m
+[0;32mI (291022) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (291022) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (291222) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (292252) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (292252) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (293262) UART: PS_SEARCH: response: 17[0m
+[0;32mI (293262) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (293262) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (293462) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (294502) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (294502) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (295512) UART: PS_SEARCH: response: 17[0m
+[0;32mI (295512) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (295512) handle_fingerprint: Place your finger on the sensor.[0m
+����������������������������������������������������������������eived 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (295712) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (296742) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (296742) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (297752) UART: PS_SEARCH: response: 17[0m
+[0;32mI (297752) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (297752) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (297952) UART: PS_GETIMAGE: response: 00[0m
+[0;32mI (298022) MQTT: Event ID: 7[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (298992) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (298992) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (300002) UART: PS_SEARCH: response: 17[0m
+[0;32mI (300002) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (300002) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (300202) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (301232) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (301232) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (302242) UART: PS_SEARCH: response: 17[0m
+[0;32mI (302242) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (302242) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (302442) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (303482) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (303482) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (304492) UART: PS_SEARCH: response: 17[0m
+[0;32mI (304492) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (304492) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (304692) UART: PS_GETIMAGE: response: 00[0m
+[0;31mE (305022) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (305022) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (305022) mqtt_client: Error transport connect[0m
+[0;32mI (305032) MQTT: Event ID: 0[0m
+[0;32mI (305032) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (305722) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (305722) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (306732) UART: PS_SEARCH: response: 17[0m
+[0;32mI (306732) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (306732) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (306932) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (307972) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (307972) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (308982) UART: PS_SEARCH: response: 17[0m
+[0;32mI (308982) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (308982) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (309182) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (310212) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (310212) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (311222) UART: PS_SEARCH: response: 17[0m
+[0;32mI (311222) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (311222) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (311422) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (312452) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (312452) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (313462) UART: PS_SEARCH: response: 17[0m
+[0;32mI (313462) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (313462) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (313662) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (314702) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (314702) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (315712) UART: PS_SEARCH: response: 17[0m
+[0;32mI (315712) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (315712) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (315912) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (316942) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (316942) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (317952) UART: PS_SEARCH: response: 17[0m
+[0;32mI (317952) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (317952) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (318152) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (319182) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (319182) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;32mI (320032) MQTT: Event ID: 7[0m
+[0;33mW (320192) UART: PS_SEARCH: response: 17[0m
+[0;32mI (320192) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (320192) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (320392) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (321432) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (321432) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (322442) UART: PS_SEARCH: response: 17[0m
+[0;32mI (322442) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (322442) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (322642) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (323682) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (323682) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (324692) UART: PS_SEARCH: response: 17[0m
+[0;32mI (324692) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (324692) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (324882) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (325922) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (325922) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (326932) UART: PS_SEARCH: response: 17[0m
+[0;32mI (326932) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (326932) handle_fingerprint: Place your finger on the sensor.[0m
+[0;31mE (327032) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (327032) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (327032) mqtt_client: Error transport connect[0m
+[0;32mI (327042) MQTT: Event ID: 0[0m
+[0;32mI (327042) MQTT: Event ID: 2[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (327132) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (328162) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (328162) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m
+[0;33mW (329172) UART: PS_SEARCH: response: 17[0m
+[0;32mI (329172) UART: PS_SEARCH: Fingerprint not found.
+[0m
+[0;33mW (329172) handle_fingerprint: Place your finger on the sensor.[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 00 00 0A 
+[0;33mW (329372) UART: PS_GETIMAGE: response: 00[0m
+Received 12 bytes: EF 01 FF FF FF FF 07 00 03 07 00 11 
+[0;33mW (330412) UART: PS_GENCHAR: response: 07[0m
+[0;31mE (330412) handle_fingerprint: PS_GENCHAR_1: Failed to generate character from image. Error: 7
+[0m

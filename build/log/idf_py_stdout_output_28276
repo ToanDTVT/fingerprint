@@ -1,0 +1,97 @@
+[1/20] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\bootloader\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/ESP/ESP project/fingerprint/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/18] Building C object esp-idf/handle_password/CMakeFiles/__idf_handle_password.dir/handle_password.c.obj
+[3/18] Building C object esp-idf/user_data/CMakeFiles/__idf_user_data.dir/user_data.c.obj
+[4/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/ESP/ESP project/fingerprint/main/main.c:13:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   13 | static const char* TAG = "main";
+      |                    ^~~
+[5/18] Building C object esp-idf/wireless/CMakeFiles/__idf_wireless.dir/wireless.c.obj
+[6/18] Building C object esp-idf/handle_fingerprint/CMakeFiles/__idf_handle_fingerprint.dir/handle_fingerprint.c.obj
+[7/18] Building C object esp-idf/uart_lib/CMakeFiles/__idf_uart_lib.dir/uart_lib.c.obj
+[8/18] Linking C static library esp-idf\user_data\libuser_data.a
+[9/18] Linking C static library esp-idf\wireless\libwireless.a
+[10/18] Linking C static library esp-idf\uart_lib\libuart_lib.a
+[11/18] Linking C static library esp-idf\handle_password\libhandle_password.a
+[12/18] Linking C static library esp-idf\handle_fingerprint\libhandle_fingerprint.a
+[13/18] Linking C static library esp-idf\main\libmain.a
+[14/18] Generating ld/sections.ld
+[15/18] Linking CXX executable fingerprint.elf
+[16/18] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP/ESP project/fingerprint/build/fingerprint.bin
+[17/18] cmd.exe /C "cd /D "D:\ESP\ESP project\fingerprint\build\esp-idf\esptool_py" && D:\ESP\ESP\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/ESP/ESP project/fingerprint/build/partition_table/partition-table.bin" "D:/ESP/ESP project/fingerprint/build/fingerprint.bin""
+fingerprint.bin binary size 0xe8070 bytes. Smallest app partition is 0x100000 bytes. 0x17f90 bytes (9%) free.
+[17/18] cmd.exe /C "cd /D D:\ESP\ESP\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\ESP\ESP\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/ESP/ESP/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/ESP/ESP project/fingerprint/besptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 fingerprint.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM5
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:7b:5c:28:c2:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16351...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16351 compressed) at 0x00001000 in 0.8 seconds (effective 283.2 kbit/s)...
+Hash of data verified.
+Compressed 950384 bytes to 596617...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e0fc... (5 %)
+Writing at 0x000278b1... (8 %)
+Writing at 0x0002c71a... (10 %)
+Writing at 0x00034bf5... (13 %)
+Writing at 0x0003df5e... (16 %)
+Writing at 0x00043d20... (18 %)
+Writing at 0x000498bd... (21 %)
+Writing at 0x0004f5ec... (24 %)
+Writing at 0x00055564... (27 %)
+Writing at 0x0005b248... (29 %)
+Writing at 0x00060dda... (32 %)
+Writing at 0x00066cf2... (35 %)
+Writing at 0x0006d25c... (37 %)
+Writing at 0x00072f92... (40 %)
+Writing at 0x000789d8... (43 %)
+Writing at 0x0007db98... (45 %)
+Writing at 0x000830a3... (48 %)
+Writing at 0x000884d7... (51 %)
+Writing at 0x0008d9ca... (54 %)
+Writing at 0x00092fef... (56 %)
+Writing at 0x00098794... (59 %)
+Writing at 0x0009e60b... (62 %)
+Writing at 0x000a41db... (64 %)
+Writing at 0x000a9e08... (67 %)
+Writing at 0x000afa7c... (70 %)
+Writing at 0x000b53be... (72 %)
+Writing at 0x000bae29... (75 %)
+Writing at 0x000c0c4d... (78 %)
+Writing at 0x000c64d4... (81 %)
+Writing at 0x000cbe46... (83 %)
+Writing at 0x000d5d0a... (86 %)
+Writing at 0x000de8bc... (89 %)
+Writing at 0x000e4572... (91 %)
+Writing at 0x000ea1ef... (94 %)
+Writing at 0x000f06ab... (97 %)
+Writing at 0x000f5972... (100 %)
+Wrote 950384 bytes (596617 compressed) at 0x00010000 in 14.3 seconds (effective 530.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 524.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+uild" -P D:/ESP/ESP/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

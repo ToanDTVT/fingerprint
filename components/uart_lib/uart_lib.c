@@ -21,6 +21,48 @@ void uart_init() {
 }
 
 
+void uart2_init() {
+    const uart_config_t uart_config = {
+        .baud_rate = 57600,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    };
+    
+    // Cấu hình UART
+    ESP_ERROR_CHECK(uart_param_config(UART_NUM2, &uart_config));
+    ESP_ERROR_CHECK(uart_set_pin(UART_NUM2, TX_PIN_2, RX_PIN_2, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    ESP_ERROR_CHECK(uart_driver_install(UART_NUM2, BUF_SIZE * 2, 0, 0, NULL, 0));
+}
+
+void send_data_to_rasp(void) {
+    DataPacket command;  // Initialize the structure (add actual data if needed)
+    command.id = 0;
+    command.fingerprint_enable = 1;
+    command.password_enable = 1;
+
+
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 139; j++) {
+            command.user_fingerprint[i][j] = 3;  // Giá trị ngẫu nhiên từ 0 đến 255
+        }
+    }
+
+
+    for (int i = 0; i < SIZE_OF_PASSWORD - 1; i++) {
+        command.user_password[i] = 7;  // Ký tự ngẫu nhiên từ 'A' đến 'Z'
+    }
+    command.user_password[SIZE_OF_PASSWORD - 1] = '\0';
+
+
+    size_t packet_size = sizeof(command);  // Get the size of the structure
+    
+    uint8_t buffer[packet_size];
+    memcpy(buffer, &command, packet_size);  // Copy the structure data into the buffer
+    
+    uart_write_bytes(UART_NUM2, (const char*) buffer, packet_size);  // Send buffer over UART
+}
 
 bool verify_password_of_AS608(){
     uint8_t command[] = {
@@ -33,21 +75,22 @@ bool verify_password_of_AS608(){
         0x00, 0x1B                                    // Checksum (2 bytes)
     };
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
-    printf("Send %d byte: ", sizeof(command));
-    for (int t = 0; t < sizeof(command); t++){
-        printf("%02x ", command[t]);
-    }
-    printf("\n");
+    // printf("Send %d byte: ", sizeof(command));
+    // for (int t = 0; t < sizeof(command); t++){
+    //     printf("%02x ", command[t]);
+    // }
+    // printf("\n");
 
     uint8_t response[128];
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
     if(response[9] == 0x00){
         return true;
     }else return false;
@@ -73,16 +116,16 @@ uint8_t PS_GetImage() {
     //printf("\n");
 
     uint8_t response[12];
-    //uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-    ESP_LOGW(TAG, "PS_GETIMAGE: response: %02x", response[9]);
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    //ESP_LOGW(TAG, "PS_GETIMAGE: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -102,16 +145,16 @@ uint8_t PS_GenChar(uint8_t buffer_id) {
     uart_write_bytes(UART_NUM, (const char*) command, sizeof(command));
     
     uint8_t response[128];
-    //uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
-    if (length > 0) {
-        printf("Received %d bytes: ", length);
-        for (int i = 0; i < length; i++) {
-            printf("%02X ", response[i]);
-        }
-        printf("\n");
-    }
-    ESP_LOGW(TAG, "PS_GENCHAR: response: %02x", response[9]);
+    uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // int length = uart_read_bytes(UART_NUM, response, sizeof(response), 1000 / portTICK_PERIOD_MS);
+    // if (length > 0) {
+    //     printf("Received %d bytes: ", length);
+    //     for (int i = 0; i < length; i++) {
+    //         printf("%02X ", response[i]);
+    //     }
+    //     printf("\n");
+    // }
+    //ESP_LOGW(TAG, "PS_GENCHAR: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -144,7 +187,7 @@ uint8_t PS_RegModel() {
     //     }
     //     printf("\n");
     // }
-    ESP_LOGW(TAG, "PS_REGMODEL: response: %02x", response[9]);
+    //ESP_LOGW(TAG, "PS_REGMODEL: response: %02x", response[9]);
     return response[9]; // Mã phản hồi
 }
 
@@ -452,12 +495,12 @@ uint8_t PS_Search(uint8_t buffer_id, uint16_t start_page, uint16_t page_num) {
     //     printf("\n");
     // }
 
-    ESP_LOGW(TAG, "PS_SEARCH: response: %02x", response[9]);
+    //ESP_LOGW(TAG, "PS_SEARCH: response: %02x", response[9]);
     if (response[9] == 0x00) {
-        ESP_LOGI(TAG, "PS_SEARCH: Fingerprint found at position: %d\n", (response[10] << 8) | response[11]);
+        //ESP_LOGI(TAG, "PS_SEARCH: Fingerprint found at position: %d\n", (response[10] << 8) | response[11]);
         return ((response[10] << 8) | response[11]);
     } else {
-        ESP_LOGI(TAG, "PS_SEARCH: Fingerprint not found.\n");
+        //ESP_LOGI(TAG, "PS_SEARCH: Fingerprint not found.\n");
         return 0;
     }
 }

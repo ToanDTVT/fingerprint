@@ -11,18 +11,25 @@ TaskHandle_t fingerprint_task_handle = NULL;
 void handle_input_fingerprint_idle(){
 
     uint8_t status;
-    ESP_LOGW(TAG, "Place your finger on the sensor.");
+    //ESP_LOGW(TAG, "Place your finger on the sensor.");
     do {
         status = PS_GetImage();
     } while (status != 0x00); // Chờ lấy ảnh thành công
     status = PS_GenChar(1); // Tạo đặc trưng ở buffer 1
     if (status != 0x00) {
-        ESP_LOGE(TAG, "PS_GENCHAR_1: Failed to generate character from image. Error: %d\n", status);
+    //    ESP_LOGE(TAG, "PS_GENCHAR_1: Failed to generate character from image. Error: %d\n", status);
     }
 
     uint8_t x = PS_Search(1, 0, 160); 
     if(x != 0){
-        currentstate = STATE_OPENDOOR;
+        if(USER[x].en == 1){
+            ESP_LOGI(TAG, "PS_SEARCH: Fingerprint found at position: %d\n", x);
+            currentstate = STATE_OPENDOOR;
+        }
+        else if(USER[x].en == 0){
+            ESP_LOGI(TAG, "PS_SEARCH: Fingerprint not found.\n");
+            currentstate = STATE_IDLE;
+        }
     }
     
 }
@@ -53,6 +60,7 @@ void handle_setting_fingerprint(){
                         if(USER[i].fingerprint_enable == 0){
                             PS_Enroll(i);
                             USER[i].id = i;
+                            USER[i].en = 1;
                             USER[i].fingerprint_enable = 1;
                             ESP_LOGI(TAG, "ADD FINGERPRINT SUCCESS !!");
                             currentstate = STATE_IDLE;
@@ -104,7 +112,7 @@ void handle_setting_fingerprint(){
 
 void fingerprint_task(){
 
-    if(verify_password_of_AS608() == true){
+    //if(verify_password_of_AS608() == true){
 
         while(1){
 
@@ -136,13 +144,13 @@ void fingerprint_task(){
 
         }
         
-    }else{
+    // }else{
 
-        printf("Did not find fingerprint sensor \n");
+    //     printf("Did not find fingerprint sensor \n");
 
-    }
+    // }
 
-    vTaskDelay(1000/portTICK_PERIOD_MS);
+    // vTaskDelay(1000/portTICK_PERIOD_MS);
 
 }
 

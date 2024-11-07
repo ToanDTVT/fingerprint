@@ -4,8 +4,11 @@
 #include "gpio_lib.h"
 #include "uart_lib.h"
 #include "user_data.h"
+//#include "wireless.h"
 
 extern DataPacket USER[MAX_USERS];
+extern Data_send_server data;
+extern Type_open_door action;
 
 extern volatile enum statemachine currentstate;
 

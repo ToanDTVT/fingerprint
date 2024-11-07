@@ -8,6 +8,8 @@
 
 
 DataPacket USER[MAX_USERS];
+Data_send_server data;
+Type_open_door action;
 volatile enum statemachine currentstate = STATE_IDLE;
 
 static const char* TAG = "main";
@@ -20,10 +22,18 @@ int number_fail = 0;
 
 void app_main(void)
 {
+    USER[0].en = 1;
+    USER[0].user_password[0] = 1;
+    USER[0].user_password[1] = '1';
+    USER[0].user_password[2] = '1';
+    USER[0].user_password[2] = '1';
+    USER[0].user_password[4] = '1';
     gpio_init();
     uart_init();
+    uart2_init();
     keypad_init();
     task_wifi_init();
+    mqtt_app_start();
     verify_password_of_AS608();
 
     currentstate = STATE_IDLE;
